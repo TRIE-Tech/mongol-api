@@ -2,6 +2,10 @@
 
 Welcome to the documentation for the Mongol-API service, providing crucial information about Mongolia. This API allows you to retrieve various aspects of Mongolia's culture, geography, history, and more.
 
+## Author
+
+`Duurenbayar Ulziiduuren ` and ` Elbeg Amarbayasgalan`
+
 ## Base URL
 
 https://mongol-api.com
