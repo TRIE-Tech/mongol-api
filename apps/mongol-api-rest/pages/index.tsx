@@ -1,9 +1,6 @@
-export function Index() {
-  /*
-   * Replace the elements below with your own.
-   *
-   * Note: The corresponding styles are in the ./index.none file.
-   */
+/* eslint-disable no-secrets/no-secrets */
+/* eslint-disable max-lines */
+const Index = () => {
   return (
     <>
       <div className="wrapper">
@@ -411,6 +408,6 @@ export function Index() {
       </div>
     </>
   );
-}
+};
 
 export default Index;
