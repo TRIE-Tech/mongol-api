@@ -1,8 +1,87 @@
 {
   "root": true,
-  "ignorePatterns": ["**/*"],
-  "plugins": ["@nx"],
+  "ignorePatterns": ["!**/*", ".next/**/*"],
+
+  "plugins": ["@nx", "eslint-plugin-unicorn", "no-secrets", "promise"],
   "overrides": [
+    {
+      "files": ["*.jsx", "*.tsx"], // for JSX component
+      "rules": {
+        "unicorn/prefer-module": "off",
+        "unicorn/filename-case": [
+          "error",
+          {
+            "case": "pascalCase"
+          }
+        ],
+        "react/function-component-definition": [
+          "error",
+          {
+            "namedComponents": "arrow-function",
+            "unnamedComponents": "arrow-function"
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "*.js",
+        "*.ts",
+        "**/pages/**/*.tsx",
+        "**/pages/**/*.jsx",
+        "**/app/**/page.tsx",
+        "**/app/**/layout.tsx",
+        "**/app/**/template.tsx",
+        "**/app/**/loading.tsx",
+        "**/app/**/error.tsx",
+        "**/app/**/global-error.tsx",
+        "**/app/**/not-found.tsx",
+        "mdx-components.tsx"
+      ], // for other js files & nextjs pages
+      "rules": {
+        "unicorn/prefer-module": "off",
+        "unicorn/filename-case": [
+          "error",
+          {
+            "case": "kebabCase"
+          }
+        ]
+      }
+    },
+    {
+      "files": ["use[A-Z]*.js", "use[A-Z]*.ts"], // for React hooks
+      "rules": {
+        "unicorn/prefer-module": "off",
+        "unicorn/filename-case": [
+          "error",
+          {
+            "case": "camelCase"
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.native.tsx"],
+      "rules": {
+        "unicorn/filename-case": [
+          "off",
+          {
+            "case": "pascalCase"
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.cy.ts", "*.cy.tsx", "*.spec.ts", "*.spec.tsx"],
+      "rules": {
+        "unicorn/filename-case": [
+          "off",
+          {
+            "case": "kebabCase"
+          }
+        ]
+      }
+    },
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "rules": {
@@ -18,17 +97,60 @@
               }
             ]
           }
+        ],
+        "camelcase": [
+          "error",
+          {
+            "properties": "always"
+          }
         ]
       }
     },
     {
       "files": ["*.ts", "*.tsx"],
       "extends": ["plugin:@nx/typescript"],
-      "rules": {}
+      "plugins": ["spellcheck"],
+      "rules": {
+        "no-unused-vars": [
+          "error",
+          {
+            "vars": "all",
+            "args": "after-used",
+            "argsIgnorePattern": "^_",
+            "ignoreRestSiblings": true
+          }
+        ],
+        "no-magic-numbers": [
+          "off",
+          {
+            "ignore": [],
+            "ignoreArrayIndexes": true,
+            "enforceConst": true,
+            "detectObjects": false
+          }
+        ],
+        "no-secrets/no-secrets": "error",
+        "max-lines": ["error", { "max": 160 }],
+        "complexity": ["error", { "max": 5 }],
+        "max-nested-callbacks": ["error", 3],
+        "max-depth": ["error", 4]
+      }
     },
     {
       "files": ["*.js", "*.jsx"],
       "extends": ["plugin:@nx/javascript"],
+      "rules": {}
+    },
+    {
+      "files": ["*.spec.ts", "*.spec.tsx", "*.spec.js", "*.spec.jsx"],
+      "env": {
+        "jest": true
+      },
+      "rules": {}
+    },
+    {
+      "files": "*.json",
+      "parser": "jsonc-eslint-parser",
       "rules": {}
     }
   ]
