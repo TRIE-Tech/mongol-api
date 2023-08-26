@@ -1,9 +1,6 @@
-export function Index() {
-  /*
-   * Replace the elements below with your own.
-   *
-   * Note: The corresponding styles are in the ./index.none file.
-   */
+/* eslint-disable max-lines */
+/* eslint-disable no-secrets/no-secrets */
+const Index = () => {
   return (
     <>
       <div className="wrapper">
@@ -11,7 +8,7 @@ export function Index() {
           <div id="welcome">
             <h1>
               <span> Hello there, </span>
-              Welcome mongol-api-graphql 👋
+              Welcome mongol-api-graphql.👋
             </h1>
           </div>
 
@@ -411,6 +408,6 @@ export function Index() {
       </div>
     </>
   );
-}
+};
 
 export default Index;

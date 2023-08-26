@@ -1,0 +1,65 @@
+# Include Husky
+. "$(dirname "$0")/_/husky.sh"
+
+# Set up script variables
+SCRIPT_DIR=$(dirname "$0")
+RED="\033[31m"
+GREEN="\033[32m"
+YELLOW="\033[33m"
+RESET="\033[0m"
+
+# Disable commit to main branch
+branch="$(git rev-parse --abbrev-ref HEAD)"
+if [ "$branch" = "main" ]; then
+    echo "You can't commit directly to main branch"
+    exit 1
+fi
+
+# Disable commit to branch created locally
+valid_chars="^([0-9]+)-([a-z0-9-]+)$"
+message='Your branch must be created from issue in mongol-api project. e.g. 1234-branch-name'
+if [[ ! $branch =~ $valid_chars ]]; then
+    printf '%s\n' "$message"
+    exit 1
+fi
+
+# Get affected apps
+affected_apps=$(yarn nx show projects --affected)
+pattern=$(echo "$affected_apps" | grep -oE '[a-zA-Z0-9-]+')
+
+# Get modified files
+files=$(git diff --cached --name-status)
+
+# Find modified projects
+matches=$(echo "$files" | grep -oE "$pattern" | tr ' ' '\n' | sort | uniq)
+
+for match in $matches; do
+    if [[ $match == "in" || $match == "projects" || $match == "yarn" ]]; then
+        echo "\n >  Skipped $match. \n"
+    fi
+
+    echo "\n >${GREEN}Running ESLINT on $match. ${RESET}\n"
+
+    lintOutput="$(yarn nx lint $match)"
+    
+    if [[ $lintOutput == *"Successfully"* ]]; then
+        echo "\n >${GREEN}Successfully linted the project $match. ${RESET}\n"
+    else
+        echo "\n >$lintOutput\n "
+        echo "\n >${RED}Lint failed for project $match. Exiting script.${RESET}\n"
+        exit 1
+    fi
+
+    echo "\n > ${GREEN}Starts testing build for $match${RESET} \n"
+    buildOutput="$(yarn nx build $match)"
+
+    if [[ $buildOutput == *"Successfully"* ]]; then
+        echo "\n > ${GREEN}Successfully ran target build for project $match ${RESET}. \n"
+        echo "\n > ${GREEN}Running e2e tests for project $match ${RESET}. \n"
+        bash "$SCRIPT_DIR/../tools/scripts/e2e-script.sh" "$match"
+    else
+        echo "\n >${RED}Build failed for project $match. Exiting script.${RESET} \n"
+        exit 1
+    fi
+done
+
