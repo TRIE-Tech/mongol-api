@@ -36,30 +36,27 @@ matches=$(echo "$files" | grep -oE "$pattern" | tr ' ' '\n' | sort | uniq)
 for match in $matches; do
     if [[ $match == "in" || $match == "projects" || $match == "yarn" ]]; then
         echo "\n >  Skipped $match. \n"
-    fi
-
-    echo "\n >${GREEN}Running ESLINT on $match. ${RESET}\n"
-
-    lintOutput="$(yarn nx lint $match)"
-    
-    if [[ $lintOutput == *"Successfully"* ]]; then
-        echo "\n >${GREEN}Successfully linted the project $match. ${RESET}\n"
     else
-        echo "\n >$lintOutput\n "
-        echo "\n >${RED}Lint failed for project $match. Exiting script.${RESET}\n"
-        exit 1
-    fi
+        echo "\n >${GREEN}Running ESLINT on $match. ${RESET}\n"
 
-    echo "\n > ${GREEN}Starts testing build for $match${RESET} \n"
-    buildOutput="$(yarn nx build $match)"
+        lintOutput="$(yarn nx lint $match)"
 
-    if [[ $buildOutput == *"Successfully"* ]]; then
-        echo "\n > ${GREEN}Successfully ran target build for project $match ${RESET}. \n"
-        echo "\n > ${GREEN}Running e2e tests for project $match ${RESET}. \n"
-        bash "$SCRIPT_DIR/../tools/scripts/e2e-script.sh" "$match"
-    else
-        echo "\n >${RED}Build failed for project $match. Exiting script.${RESET} \n"
-        exit 1
+        if [[ $lintOutput == *"Successfully"* ]]; then
+            echo "\n >${GREEN}Successfully linted the project $match. ${RESET}\n"
+        else
+            echo "\n >$lintOutput\n "
+            echo "\n >${RED}Lint failed for project $match. Exiting script.${RESET}\n"
+            exit 1
+        fi
+
+        echo "\n > ${GREEN}Starts testing build for $match${RESET} \n"
+        buildOutput="$(yarn nx build $match)"
+
+        if [[ $buildOutput == *"Successfully"* ]]; then
+            echo "\n > ${GREEN}Successfully ran target build for project $match ${RESET}. \n"
+        else
+            echo "\n >${RED}Build failed for project $match. Exiting script.${RESET} \n"
+            exit 1
+        fi
     fi
 done
-

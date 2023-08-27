@@ -1,45 +1,61 @@
 {
   "name": "mongol-api-rest",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/mongol-api-rest",
+  "sourceRoot": "apps/mongol-api-rest/src",
   "projectType": "application",
   "targets": {
     "build": {
-      "executor": "@nx/next:build",
+      "executor": "@nx/esbuild:esbuild",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/mongol-api-rest"
+        "platform": "node",
+        "outputPath": "dist/apps/mongol-api-rest",
+        "format": ["cjs"],
+        "bundle": false,
+        "main": "apps/mongol-api-rest/src/main.ts",
+        "tsConfig": "apps/mongol-api-rest/tsconfig.app.json",
+        "assets": ["apps/mongol-api-rest/src/assets"],
+        "generatePackageJson": true,
+        "esbuildOptions": {
+          "sourcemap": true,
+          "outExtension": {
+            ".js": ".js"
+          }
+        }
       },
       "configurations": {
-        "development": {
-          "outputPath": "apps/mongol-api-rest"
-        },
-        "production": {}
-      }
-    },
-    "serve": {
-      "executor": "@nx/next:server",
-      "defaultConfiguration": "development",
-      "options": {
-        "buildTarget": "mongol-api-rest:build",
-        "dev": true
-      },
-      "configurations": {
-        "development": {
-          "buildTarget": "mongol-api-rest:build:development",
-          "dev": true
-        },
+        "development": {},
         "production": {
-          "buildTarget": "mongol-api-rest:build:production",
-          "dev": false
+          "esbuildOptions": {
+            "sourcemap": false,
+            "outExtension": {
+              ".js": ".js"
+            }
+          }
         }
       }
     },
-    "export": {
-      "executor": "@nx/next:export",
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "mongol-api-rest:build:production"
+        "buildTarget": "mongol-api-rest:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "mongol-api-rest:build:development"
+        },
+        "production": {
+          "buildTarget": "mongol-api-rest:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/mongol-api-rest/**/*.ts"]
       }
     },
     "test": {
@@ -54,13 +70,6 @@
           "ci": true,
           "codeCoverage": true
         }
-      }
-    },
-    "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["apps/mongol-api-rest/**/*.{ts,tsx,js,jsx}"]
       }
     }
   },
