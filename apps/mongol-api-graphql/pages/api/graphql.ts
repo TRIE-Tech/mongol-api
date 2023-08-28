@@ -2,7 +2,7 @@ import { gql } from '@apollo/client';
 import { buildSubgraphSchema } from '@apollo/subgraph';
 import { InMemoryLRUCache } from '@apollo/utils.keyvaluecache';
 import { ApolloServer } from 'apollo-server-cloud-functions';
-import TraditionClothes from '../../../../libs/data/clothes.json';
+import { clothesData } from '@mongol-api-data';
 
 const typeDefs = gql`
   extend schema
@@ -30,7 +30,7 @@ const resolvers = {
   Query: {
     hello: () => 'Hello Worlds',
     getTraditionalClothes: () => {
-      return TraditionClothes;
+      return clothesData();
     },
   },
 };
