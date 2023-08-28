@@ -1,0 +1,92 @@
+[
+  {
+    "id": "1",
+    "name": "Khalkha",
+    "linguistic": "Mongolic",
+    "population": 2500000,
+    "traditionalCostume": ["costume_url_1_1", "costume_url_1_2"],
+    "thumbnail": "thumbnail_url_1",
+    "images": ["image_url_1_1", "image_url_1_2"]
+  },
+  {
+    "id": "2",
+    "name": "Buryat",
+    "linguistic": "Mongolic",
+    "population": 458000,
+    "traditionalCostume": ["costume_url_2_1", "costume_url_2_2"],
+    "thumbnail": "thumbnail_url_2",
+    "images": ["image_url_2_1", "image_url_2_2"]
+  },
+  {
+    "id": "3",
+    "name": "Oirat",
+    "linguistic": "Mongolic",
+    "population": 220000,
+    "traditionalCostume": ["costume_url_3_1", "costume_url_3_2"],
+    "thumbnail": "thumbnail_url_3",
+    "images": ["image_url_3_1", "image_url_3_2"]
+  },
+  {
+    "id": "4",
+    "name": "Khoton",
+    "linguistic": "Mongolic",
+    "population": 6000,
+    "traditionalCostume": ["costume_url_4_1", "costume_url_4_2"],
+    "thumbnail": "thumbnail_url_4",
+    "images": ["image_url_4_1", "image_url_4_2"]
+  },
+  {
+    "id": "5",
+    "name": "Uriankhai",
+    "linguistic": "Mongolic",
+    "population": 5000,
+    "traditionalCostume": ["costume_url_5_1", "costume_url_5_2"],
+    "thumbnail": "thumbnail_url_5",
+    "images": ["image_url_5_1", "image_url_5_2"]
+  },
+  {
+    "id": "6",
+    "name": "Kazakh",
+    "linguistic": "Turkic",
+    "population": 101000,
+    "traditionalCostume": ["costume_url_6_1", "costume_url_6_2"],
+    "thumbnail": "thumbnail_url_6",
+    "images": ["image_url_6_1", "image_url_6_2"]
+  },
+  {
+    "id": "7",
+    "name": "Tuvan",
+    "linguistic": "Turkic",
+    "population": 3000,
+    "traditionalCostume": ["costume_url_7_1", "costume_url_7_2"],
+    "thumbnail": "thumbnail_url_7",
+    "images": ["image_url_7_1", "image_url_7_2"]
+  },
+  {
+    "id": "8",
+    "name": "Uzemchin",
+    "linguistic": "Mongolic",
+    "population": 2000,
+    "traditionalCostume": ["costume_url_8_1", "costume_url_8_2"],
+    "thumbnail": "thumbnail_url_8",
+    "images": ["image_url_8_1", "image_url_8_2"]
+  },
+  {
+    "id": "9",
+    "name": "Daur",
+    "linguistic": "Tungusic",
+    "population": 4000,
+    "traditionalCostume": ["costume_url_9_1", "costume_url_9_2"],
+    "thumbnail": "thumbnail_url_9",
+    "images": ["image_url_9_1", "image_url_9_2"]
+  },
+  {
+    "id": "10",
+    "name": "Monguor",
+    "linguistic": "Mongolic",
+    "population": 100000,
+    "traditionalCostume": ["costume_url_10_1", "costume_url_10_2"],
+    "thumbnail": "thumbnail_url_10",
+    "images": ["image_url_10_1", "image_url_10_2"]
+  }
+]
