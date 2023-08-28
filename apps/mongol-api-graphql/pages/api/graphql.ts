@@ -2,6 +2,7 @@ import { gql } from '@apollo/client';
 import { buildSubgraphSchema } from '@apollo/subgraph';
 import { InMemoryLRUCache } from '@apollo/utils.keyvaluecache';
 import { ApolloServer } from 'apollo-server-cloud-functions';
+import TraditionClothes from '../../../../libs/data/clothes.json';
 
 const typeDefs = gql`
   extend schema
@@ -9,14 +10,28 @@ const typeDefs = gql`
       url: "https://specs.apollo.dev/federation/v2.0"
       import: ["@key", "@shareable"]
     )
+
+  type TraditionalClothes {
+    id: String
+    name: String
+    description: String
+    timePeriod: String
+    materials: [String]
+    images: [String]
+  }
+
   type Query {
     hello: String
+    getTraditionalClothes: [TraditionalClothes]
   }
 `;
 
 const resolvers = {
   Query: {
     hello: () => 'Hello Worlds',
+    getTraditionalClothes: () => {
+      return TraditionClothes;
+    },
   },
 };
 
