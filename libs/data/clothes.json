@@ -1,0 +1,82 @@
+[
+  {
+    "id": "1",
+    "name": "Deel",
+    "description": "The deel is a traditional Mongolian clothing item, usually made from silk, cotton, or wool. It has a distinctive design with a wide cut and high collar.",
+    "timePeriod": "13th - 21st centuries",
+    "materials": ["Silk", "Cotton", "Wool"],
+    "images": ["image_url_deel_1", "image_url_deel_2"]
+  },
+  {
+    "id": "2",
+    "name": "Tsaatan Coat",
+    "description": "The Tsaatan coat is worn by the Tsaatan people, an ethnic group of reindeer herders. It's made from reindeer hide and provides warmth in the harsh Mongolian climate.",
+    "timePeriod": "20th - 21st centuries",
+    "materials": ["Reindeer hide", "Fur"],
+    "images": ["image_url_tsaatan_coat_1", "image_url_tsaatan_coat_2"]
+  },
+  {
+    "id": "3",
+    "name": "Khadag",
+    "description": "The khadag is a ceremonial silk scarf used in various occasions, symbolizing respect and good wishes. It's often presented as a sign of honor and appreciation.",
+    "timePeriod": "17th - 21st centuries",
+    "materials": ["Silk"],
+    "images": ["image_url_khadag_1", "image_url_khadag_2"]
+  },
+  {
+    "id": "4",
+    "name": "Khuudag",
+    "description": "The khuudag is a traditional Mongolian hat made from felt or sheepskin. It's often worn to keep warm during the cold winters.",
+    "timePeriod": "14th - 21st centuries",
+    "materials": ["Felt", "Sheepskin"],
+    "images": ["image_url_khuudag_1", "image_url_khuudag_2"]
+  },
+  {
+    "id": "5",
+    "name": "Zodog",
+    "description": "The zodog is a traditional Mongolian vest, typically worn by men. It's often made from colorful fabric and can be decorated with intricate patterns.",
+    "timePeriod": "18th - 21st centuries",
+    "materials": ["Fabric"],
+    "images": ["image_url_zodog_1", "image_url_zodog_2"]
+  },
+  {
+    "id": "6",
+    "name": "Gutul",
+    "description": "The gutul is a type of traditional Mongolian boots. They are durable and practical, designed to withstand the challenges of nomadic life.",
+    "timePeriod": "14th - 21st centuries",
+    "materials": ["Leather"],
+    "images": ["image_url_gutul_1", "image_url_gutul_2"]
+  },
+  {
+    "id": "7",
+    "name": "Khaalag",
+    "description": "The khaalag is a traditional Mongolian headwear, often adorned with decorative elements. It's worn by both men and women.",
+    "timePeriod": "16th - 21st centuries",
+    "materials": ["Fabric", "Decorative elements"],
+    "images": ["image_url_khaalag_1", "image_url_khaalag_2"]
+  },
+  {
+    "id": "8",
+    "name": "Gutal",
+    "description": "The gutal is a traditional Mongolian shoe, similar to the gutul boots but more lightweight and suitable for everyday wear.",
+    "timePeriod": "15th - 21st centuries",
+    "materials": ["Leather"],
+    "images": ["image_url_gutal_1", "image_url_gutal_2"]
+  },
+  {
+    "id": "9",
+    "name": "Dergee",
+    "description": "The dergee is a traditional Mongolian coat, often lined with fur for added warmth. It's commonly worn during winter months.",
+    "timePeriod": "16th - 21st centuries",
+    "materials": ["Fabric", "Fur"],
+    "images": ["image_url_dergee_1", "image_url_dergee_2"]
+  },
+  {
+    "id": "10",
+    "name": "Khantaaz",
+    "description": "The khantaaz is a traditional Mongolian robe-like clothing item. It's made from silk and often worn during formal occasions.",
+    "timePeriod": "17th - 21st centuries",
+    "materials": ["Silk"],
+    "images": ["image_url_khantaaz_1", "image_url_khantaaz_2"]
+  }
+]
