@@ -62,6 +62,46 @@
       "options": {
         "lintFilePatterns": ["apps/mongol-api-graphql/**/*.{ts,tsx,js,jsx}"]
       }
+    },
+
+    "clean": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["rm -rf .vercel", "rm -rf dist/apps/mongol-api-graphql"]
+      }
+    },
+
+    "preview": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "npx dotenv -v VERCEL_ORG_ID=o9MY67XW3sHiB6lhFI2pyFpD -v VERCEL_PROJECT_ID=prj_3YOm3a7NenIDwglGB58m2Hh3FDfu -- vercel pull --yes --environment=preview",
+          "vercel build",
+          "npx dotenv -v VERCEL_ORG_ID=o9MY67XW3sHiB6lhFI2pyFpD -v VERCEL_PROJECT_ID=prj_3YOm3a7NenIDwglGB58m2Hh3FDfu -- vercel --prebuilt "
+        ],
+        "parallel": false
+      },
+      "dependsOn": [
+        {
+          "target": "clean"
+        }
+      ]
+    },
+    "deploy-prod": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "npx dotenv -v VERCEL_ORG_ID=o9MY67XW3sHiB6lhFI2pyFpD -v VERCEL_PROJECT_ID=prj_3YOm3a7NenIDwglGB58m2Hh3FDfu -- vercel pull --yes --environment=production",
+          "vercel build --prod",
+          "npx dotenv -v VERCEL_ORG_ID=o9MY67XW3sHiB6lhFI2pyFpD -v VERCEL_PROJECT_ID=prj_3YOm3a7NenIDwglGB58m2Hh3FDfu -- vercel --prebuilt --prod"
+        ],
+        "parallel": false
+      },
+      "dependsOn": [
+        {
+          "target": "clean"
+        }
+      ]
     }
   },
   "tags": []
