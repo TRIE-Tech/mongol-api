@@ -5,35 +5,24 @@
   "projectType": "application",
   "targets": {
     "build": {
-      "executor": "@nx/esbuild:esbuild",
+      "executor": "@nx/webpack:webpack",
       "outputs": ["{options.outputPath}"],
-      "defaultConfiguration": "production",
+      "defaultConfiguration": "local",
       "options": {
-        "platform": "node",
+        "target": "node",
+        "compiler": "tsc",
         "outputPath": "dist/apps/mongol-api-rest",
-        "format": ["cjs"],
-        "bundle": false,
         "main": "apps/mongol-api-rest/src/main.ts",
         "tsConfig": "apps/mongol-api-rest/tsconfig.app.json",
         "assets": ["apps/mongol-api-rest/src/assets"],
+        "isolatedConfig": true,
+        "webpackConfig": "apps/mongol-api-rest/webpack.config.js",
         "generatePackageJson": true,
-        "esbuildOptions": {
-          "sourcemap": true,
-          "outExtension": {
-            ".js": ".js"
-          }
-        }
+        "outputFileName": "index.js"
       },
       "configurations": {
         "development": {},
-        "production": {
-          "esbuildOptions": {
-            "sourcemap": false,
-            "outExtension": {
-              ".js": ".js"
-            }
-          }
-        }
+        "production": {}
       }
     },
     "serve": {
@@ -71,6 +60,50 @@
           "codeCoverage": true
         }
       }
+    },
+    "clean": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["rm -rf dist/apps/mongol-api-rest", "rm -rf .vercel"]
+      }
+    },
+    "preview": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "npx nx build mongol-api-rest",
+          "cp apps/mongol-api-rest/vercel.json dist/apps/mongol-api-rest",
+          "npx dotenv -v VERCEL_ORG_ID=o9MY67XW3sHiB6lhFI2pyFpD -v VERCEL_PROJECT_ID=prj_BZ1bQCwZDNovIgQTMCKXhAXA3nwE -- vercel pull --yes --environment=preview",
+          "mv .vercel dist/apps/mongol-api-rest",
+          "cd dist/apps/mongol-api-rest; npx dotenv -v VERCEL_ORG_ID=o9MY67XW3sHiB6lhFI2pyFpD -v VERCEL_PROJECT_ID=prj_BZ1bQCwZDNovIgQTMCKXhAXA3nwE -- vercel"
+        ],
+        "parallel": false
+      },
+      "dependsOn": [
+        {
+          "target": "clean",
+          "params": "forward"
+        }
+      ]
+    },
+    "deploy-prod": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "npx nx build mongol-api-rest",
+          "cp apps/mongol-api-rest/vercel.json dist/apps/mongol-api-rest",
+          "npx dotenv -v VERCEL_ORG_ID=o9MY67XW3sHiB6lhFI2pyFpD -v VERCEL_PROJECT_ID=prj_BZ1bQCwZDNovIgQTMCKXhAXA3nwE -- vercel pull --yes --environment=production",
+          "mv .vercel dist/apps/mongol-api-rest",
+          "cd dist/apps/mongol-api-rest; npx dotenv -v VERCEL_ORG_ID=o9MY67XW3sHiB6lhFI2pyFpD -v VERCEL_PROJECT_ID=prj_BZ1bQCwZDNovIgQTMCKXhAXA3nwE -- vercel --prod"
+        ],
+        "parallel": false
+      },
+      "dependsOn": [
+        {
+          "target": "clean",
+          "params": "forward"
+        }
+      ]
     }
   },
   "tags": []
