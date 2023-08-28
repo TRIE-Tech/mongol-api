@@ -1,0 +1,122 @@
+[
+  {
+    "id": "1",
+    "name": "Gobi Desert",
+    "description": "The Gobi Desert is a vast and iconic desert region in Mongolia known for its unique landscapes, sand dunes, and diverse wildlife.",
+    "address": {
+      "street": "",
+      "city": "",
+      "country": "Mongolia",
+      "postalCode": ""
+    },
+    "images": ["image_url_gobi_1", "image_url_gobi_2"]
+  },
+  {
+    "id": "2",
+    "name": "Erdene Zuu Monastery",
+    "description": "Erdene Zuu is one of the oldest and most important monasteries in Mongolia, located near Kharkhorin. It features beautiful temples and stupas.",
+    "address": {
+      "street": "",
+      "city": "Kharkhorin",
+      "country": "Mongolia",
+      "postalCode": ""
+    },
+    "images": ["image_url_erdene_zuu_1", "image_url_erdene_zuu_2"]
+  },
+  {
+    "id": "3",
+    "name": "Lake Khövsgöl",
+    "description": "Lake Khövsgöl is a stunning freshwater lake surrounded by mountains and forests. It's one of the largest and deepest lakes in Mongolia.",
+    "address": {
+      "street": "",
+      "city": "",
+      "country": "Mongolia",
+      "postalCode": ""
+    },
+    "images": ["image_url_khovsgol_1", "image_url_khovsgol_2"]
+  },
+  {
+    "id": "4",
+    "name": "Genghis Khan Statue Complex",
+    "description": "The Genghis Khan Statue Complex features a massive statue of Genghis Khan on horseback and an informative museum about his life and achievements.",
+    "address": {
+      "street": "",
+      "city": "Tsonjin Boldog",
+      "country": "Mongolia",
+      "postalCode": ""
+    },
+    "images": ["image_url_genghis_khan_1", "image_url_genghis_khan_2"]
+  },
+  {
+    "id": "5",
+    "name": "Orkhon Valley",
+    "description": "The Orkhon Valley is a UNESCO World Heritage Site known for its historical and cultural significance, including ancient ruins and petroglyphs.",
+    "address": {
+      "street": "",
+      "city": "",
+      "country": "Mongolia",
+      "postalCode": ""
+    },
+    "images": ["image_url_orkhon_valley_1", "image_url_orkhon_valley_2"]
+  },
+  {
+    "id": "6",
+    "name": "Altai Tavan Bogd National Park",
+    "description": "Altai Tavan Bogd National Park is home to stunning mountain landscapes, glaciers, and diverse flora and fauna.",
+    "address": {
+      "street": "",
+      "city": "",
+      "country": "Mongolia",
+      "postalCode": ""
+    },
+    "images": ["image_url_altai_tavan_bogd_1", "image_url_altai_tavan_bogd_2"]
+  },
+  {
+    "id": "7",
+    "name": "Karakorum (Kharkhorin)",
+    "description": "Karakorum was the ancient capital of the Mongol Empire. Visitors can explore historical sites and learn about Mongolian history.",
+    "address": {
+      "street": "",
+      "city": "Kharkhorin",
+      "country": "Mongolia",
+      "postalCode": ""
+    },
+    "images": ["image_url_karakorum_1", "image_url_karakorum_2"]
+  },
+  {
+    "id": "8",
+    "name": "Yolyn Am (Eagle Valley)",
+    "description": "Yolyn Am is a narrow gorge located in the Gurvan Saikhan Mountains. It's known for its ice formations and unique wildlife.",
+    "address": {
+      "street": "",
+      "city": "",
+      "country": "Mongolia",
+      "postalCode": ""
+    },
+    "images": ["image_url_yolyn_am_1", "image_url_yolyn_am_2"]
+  },
+  {
+    "id": "9",
+    "name": "Terelj National Park",
+    "description": "Terelj National Park offers beautiful landscapes, including rock formations, forests, and the famous Turtle Rock.",
+    "address": {
+      "street": "",
+      "city": "",
+      "country": "Mongolia",
+      "postalCode": ""
+    },
+    "images": ["image_url_terelj_1", "image_url_terelj_2"]
+  },
+  {
+    "id": "10",
+    "name": "Amarbayasgalant Monastery",
+    "description": "Amarbayasgalant Monastery is a stunning Buddhist monastery with impressive architecture and intricate artwork.",
+    "address": {
+      "street": "",
+      "city": "Selenge Province",
+      "country": "Mongolia",
+      "postalCode": ""
+    },
+    "images": ["image_url_amarbayasgalant_1", "image_url_amarbayasgalant_2"]
+  }
+]

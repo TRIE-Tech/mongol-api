@@ -1,0 +1,83 @@
+[
+  {
+    "id": "1",
+    "name": "Traditional Sword",
+    "description": "A historical Mongolian sword, often adorned with intricate designs on the hilt and scabbard.",
+    "timePeriod": "12th - 19th centuries",
+    "material": ["Steel", "Leather"],
+    "usage": "Weapon",
+    "images": ["image_url_sword_1", "image_url_sword_2"]
+  },
+  {
+    "id": "2",
+    "name": "Ger",
+    "description": "A traditional Mongolian round tent made from felt and wood, used by nomadic herders.",
+    "timePeriod": "13th - 21st centuries",
+    "material": ["Felt", "Wood"],
+    "usage": "Shelter",
+    "images": ["image_url_ger_1", "image_url_ger_2"]
+  },
+  {
+    "id": "3",
+    "name": "Horse Head Fiddle (Morin Khuur)",
+    "description": "A traditional Mongolian musical instrument resembling a horse's head, played with a bow.",
+    "timePeriod": "13th - 21st centuries",
+    "material": ["Wood", "Horsehair", "Strings"],
+    "usage": "Musical instrument",
+    "images": ["image_url_morin_khuur_1", "image_url_morin_khuur_2"]
+  },
+  {
+    "id": "4",
+    "name": "Traditional Bow",
+    "description": "A historical Mongolian bow, crafted from various materials and used for hunting and warfare.",
+    "timePeriod": "11th - 20th centuries",
+    "material": ["Wood", "Animal horn", "Sinew"],
+    "usage": "Weapon",
+    "images": ["image_url_bow_1", "image_url_bow_2"]
+  },
+  {
+    "id": "5",
+    "name": "Traditional Saddle",
+    "description": "A historical Mongolian saddle designed for horseback riding, often with ornate decorations.",
+    "timePeriod": "13th - 21st centuries",
+    "material": ["Leather", "Wood", "Metal"],
+    "usage": "Equestrian equipment",
+    "images": ["image_url_saddle_1", "image_url_saddle_2"]
+  },
+  {
+    "id": "6",
+    "name": "Traditional Stirrups",
+    "description": "Historical Mongolian stirrups designed to provide stability for riders while mounted on horses.",
+    "timePeriod": "13th - 21st centuries",
+    "material": ["Metal"],
+    "usage": "Equestrian equipment",
+    "images": ["image_url_stirrups_1", "image_url_stirrups_2"]
+  },
+  {
+    "id": "7",
+    "name": "Traditional Quiver",
+    "description": "A historical Mongolian quiver used to hold arrows during hunting and warfare.",
+    "timePeriod": "12th - 19th centuries",
+    "material": ["Leather", "Fur"],
+    "usage": "Archery equipment",
+    "images": ["image_url_quiver_1", "image_url_quiver_2"]
+  },
+  {
+    "id": "8",
+    "name": "Traditional Horse Harness",
+    "description": "Historical Mongolian horse harness used to control and guide horses during various tasks.",
+    "timePeriod": "12th - 21st centuries",
+    "material": ["Leather", "Metal"],
+    "usage": "Equestrian equipment",
+    "images": ["image_url_harness_1", "image_url_harness_2"]
+  },
+  {
+    "id": "9",
+    "name": "Traditional Ankle Boots",
+    "description": "Historical Mongolian leather boots designed for protection and comfort during nomadic life.",
+    "timePeriod": "13th - 21st centuries",
+    "material": ["Leather"],
+    "usage": "Footwear",
+    "images": ["image_url_boots_1", "image_url_boots_2"]
+  }
+]
