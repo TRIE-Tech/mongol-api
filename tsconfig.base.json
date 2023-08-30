@@ -15,7 +15,6 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@mongol-api": ["libs/mongol-api-data/src/index.ts"],
       "@mongol-api-data": ["libs/mongol-api-data/src/index.ts"]
     }
   },
