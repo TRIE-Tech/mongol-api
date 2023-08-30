@@ -5,7 +5,7 @@ import ethnicGroupsRouter from '../src/router/ethnic-groups';
 import historicalToolsRouter from '../src/router/historical-tools';
 import instrumentsRouter from '../src/router/instruments';
 import touristAttractionsRouter from '../src/router/tourist-attractions';
-import provinceRouter from '../src/router/province';
+import provinceRouter from '../src/router/provinces';
 
 // Mocking the entire @mongol-api-data module
 jest.mock('@mongol-api-data', () => ({
