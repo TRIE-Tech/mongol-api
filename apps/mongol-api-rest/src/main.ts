@@ -6,7 +6,7 @@ import ethnicGroupsRouter from './router/ethnic-groups';
 import historicalToolsRouter from './router/historical-tools';
 import instrumentsRouter from './router/instruments';
 import touristAttractionsRouter from './router/tourist-attractions';
-import provinceRouter from './router/province';
+import provincesRouter from './router/provinces';
 
 const host = process.env.HOST ?? 'localhost';
 const port = process.env.PORT ? Number(process.env.PORT) : 3000;
@@ -25,7 +25,7 @@ app.use('/ethnicGroups', ethnicGroupsRouter);
 app.use('/historicalTools', historicalToolsRouter);
 app.use('/instruments', instrumentsRouter);
 app.use('/touristAttractions', touristAttractionsRouter);
-app.use('/province', provinceRouter);
+app.use('/provinces', provincesRouter);
 
 app.get('/', (req, res) => {
   res.send({ message: 'Hello from Mongol API REST' });

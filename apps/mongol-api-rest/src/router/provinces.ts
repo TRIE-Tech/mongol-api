@@ -1,14 +1,14 @@
 import { Router } from 'express';
 import { provincesData } from '@mongol-api-data';
 
-const provinceRouter = Router();
+const provincesRouter = Router();
 
-provinceRouter.get('/', (req, res) => {
+provincesRouter.get('/', (req, res) => {
   try {
-    res.status(200).json({ province: provincesData() });
+    res.status(200).json({ provinces: provincesData() });
   } catch (err) {
     res.status(500).send({ message: 'Internal error' });
   }
 });
 
-export default provinceRouter;
+export default provincesRouter;
