@@ -1,0 +1,52 @@
+name: Mongol Api Web PR Action workflow
+on:
+  push:
+    branches-ignore:
+      - main
+    paths:
+      - 'apps/mongol-api-web/**'
+      - '!libs/**'
+      - '!shared/**'
+jobs:
+  Mongol-Api-Web-Pull-Request-Action:
+    runs-on: ubuntu-latest
+    env:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+      - name: Cache node modules
+        id: cache-nodemodules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: |
+            ~/.npm
+            node_modules
+            */*/node_modules
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+      - name: Install Dependencies
+        if: steps.cache-nodemodules.outputs.cache-hit != 'true'
+        run: yarn install --frozen-lockfile
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+      - name: Deploy to Vercel
+        id: deployment
+        run: |
+          export VERCEL_TOKEN=${{ env.VERCEL_TOKEN }} 
+          output_vercel=$(yarn nx preview mongol-api-web)
+          echo "Output of 'yarn nx preview': $output_vercel" 
+          preview_link=$(echo "$output_vercel" | grep -Eo 'https://[^ >]+\.vercel\.app' | tail -1)
+          echo "Preview Link: $preview_link" 
+          echo "ACTION_OUTPUT=${preview_link}" >> $GITHUB_ENV
+      - name: Add the preview report to pull request
+        uses: mshick/add-pr-comment@v2
+        with:
+          message: 'Preview link for Mongol-Api-Web: ${{ env.ACTION_OUTPUT }}'
