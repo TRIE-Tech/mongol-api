@@ -4,6 +4,7 @@
     "jsx": "preserve",
     "allowJs": true,
     "esModuleInterop": true,
+    "baseUrl": ".",
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
@@ -16,7 +17,12 @@
         "name": "next"
       }
     ],
-    "types": ["jest", "node"]
+    "types": ["jest", "node"],
+    "paths": {
+      "@components": ["./src/components"],
+      "@theme": ["./src/theme/theme.tsx"],
+      "@features": ["./src/features"]
+    }
   },
   "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "next-env.d.ts"],
   "exclude": [
