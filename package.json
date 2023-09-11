@@ -29,6 +29,7 @@
     "@graphql-codegen/typescript-react-apollo": "^3.3.7",
     "@graphql-codegen/typescript-resolvers": "^4.0.1",
     "@mui/material": "^5.14.8",
+    "@mui/styles": "^5.14.7",
     "@nx/next": "^16.7.4",
     "apollo-graphql": "^0.9.7",
     "apollo-server-cloud-functions": "^3.12.0",
