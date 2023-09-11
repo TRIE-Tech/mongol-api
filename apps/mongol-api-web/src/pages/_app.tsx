@@ -1,16 +1,19 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import '../styles/globals.css';
+import Theme from '../components/theme';
 
 const CustomApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
-      <Head>
-        <title>Welcome to mongol-api-web!</title>
-      </Head>
-      <main className="app">
-        <Component {...pageProps} />
-      </main>
+      <Theme>
+        <Head>
+          <title>Welcome to mongol-api-web!</title>
+        </Head>
+        <main className="app">
+          <Component {...pageProps} />
+        </main>
+      </Theme>
     </>
   );
 };
