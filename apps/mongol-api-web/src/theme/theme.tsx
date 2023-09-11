@@ -29,6 +29,14 @@ const theme = createTheme({
       400: '#0043A8',
       500: '#0B253C',
     },
+    secondary: {
+      100: '#F7F9FC',
+      200: '#D0D7E2',
+      300: '#7B8698',
+      400: '#374253',
+      500: '#0F1825',
+      main: '#0F1825',
+    },
     common: {
       black: '#000',
       white: '#fff',
@@ -45,6 +53,30 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: 'Helvetica Neue, Helvetica, Arial, sans-serif',
+    h1: {
+      fontSize: '54px',
+      fontStyle: 'normal',
+      fontWeight: '700',
+      lineHeight: '65.93px',
+    },
+    subtitle2: {
+      fontSize: '32px',
+      fontStyle: 'normal',
+      fontWeight: '400',
+      lineHeight: '38.18px',
+    },
+    subtitle1: {
+      fontSize: '24px',
+      fontStyle: 'normal',
+      fontWeight: '400',
+      lineHeight: '28.63px',
+    },
+    body1: {
+      fontSize: '24px',
+      fontStyle: 'normal',
+      fontWeight: '300',
+      lineHeight: '29.02px',
+    },
   },
 });
 
