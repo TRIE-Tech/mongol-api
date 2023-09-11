@@ -1,10 +1,13 @@
-import { Button, Footer, Header } from '@components';
+import { Header, Footer } from '@components';
+import { Example, Intro, Resources } from '@features';
 
 const Index = () => {
   return (
     <>
       <Header />
-      <Button />
+      <Intro />
+      <Example />
+      <Resources />
       <Footer />
     </>
   );
