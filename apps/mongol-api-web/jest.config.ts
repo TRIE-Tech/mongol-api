@@ -7,5 +7,13 @@ export default {
     '^.+\\.[tj]sx?$': ['babel-jest', { presets: ['@nx/next/babel'] }],
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
+  collectCoverageFrom: [
+    '**/*.{ts,tsx}',
+    '!src/pages/*.{ts,tsx}',
+    '!src/theme/*.{ts,tsx}',
+    '!src/styles/*.{ts,tsx}',
+    '!src/icons/*.{ts,tsx}',
+    '!src/features/**/*.{ts,tsx}',
+  ],
   coverageDirectory: '../../coverage/apps/mongol-api-web',
 };
