@@ -1,3 +1,9 @@
+import { Box } from '@mui/material';
+
 export const Header = () => {
-  return <div>This is header</div>;
+  return (
+    <Box height="77px" bgcolor="white">
+      hello from header
+    </Box>
+  );
 };
