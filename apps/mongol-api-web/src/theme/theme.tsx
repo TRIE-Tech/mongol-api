@@ -78,6 +78,35 @@ const theme = createTheme({
       lineHeight: '29.02px',
     },
   },
+  components: {
+    MuiButtonBase: {
+      defaultProps: {
+        disableRipple: true,
+        disableTouchRipple: true,
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          color: '#fff',
+          borderRadius: '20px',
+          backgroundColor: '#00C0CC',
+          padding: '24px 48px',
+          fontSize: '32px',
+          fontWeight: 500,
+          lineHeight: 'normal',
+          textTransform: 'none',
+          '&:hover': {
+            backgroundColor: '#002762',
+          },
+        },
+        sizeSmall: {
+          padding: '10px 24px',
+          fontSize: '24px',
+        },
+      },
+    },
+  },
 });
 
 const Theme: FC<PropsWithChildren> = ({ children }) => {

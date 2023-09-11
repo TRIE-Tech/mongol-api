@@ -1,5 +1,5 @@
-import { Header, Footer } from '@components';
 import { Example, Intro, Resources } from '@features';
+import { Footer, Header } from '@components';
 
 const Index = () => {
   return (
