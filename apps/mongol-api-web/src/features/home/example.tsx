@@ -1,11 +1,5 @@
-import {
-  Box,
-  Button,
-  Container,
-  Stack,
-  Typography,
-  useTheme,
-} from '@mui/material';
+import { Button } from '@components';
+import { Box, Container, Stack, Typography, useTheme } from '@mui/material';
 import { useState } from 'react';
 
 export const Example = () => {
@@ -40,16 +34,8 @@ export const Example = () => {
             borderRadius="20px"
             bgcolor={palette.primary[500]}
           ></Box>
-          <Stack alignItems="flex-start">
-            <Button
-              variant="contained"
-              onClick={handleTryButton}
-              sx={{
-                width: '228px',
-                height: '60px',
-                backgroundColor: '#00C0CC',
-              }}
-            >
+          <Stack alignItems="flex-start" style={{ width: '228px' }}>
+            <Button onClick={handleTryButton} size="small">
               Try Here!
             </Button>
           </Stack>

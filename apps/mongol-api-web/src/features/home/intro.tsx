@@ -1,4 +1,5 @@
-import { Box, Button, Container, Stack, Typography } from '@mui/material';
+import { Button } from '@components';
+import { Box, Container, Stack, Typography } from '@mui/material';
 import Image from 'next/image';
 
 export const Intro = () => {
@@ -23,16 +24,9 @@ export const Intro = () => {
               Senectus nunc risus sed nunc ultricies placerat proin. Ultricies
               luctus vel tortor eu elementum vulputate cursus nunc.
             </Typography>
-            <Button
-              variant="contained"
-              sx={{
-                width: '265px',
-                height: '75px',
-                backgroundColor: '#00C0CC',
-              }}
-            >
-              hello
-            </Button>
+            <Box sx={{ width: '265px' }}>
+              <Button>Explore</Button>
+            </Box>
           </Stack>
           <Stack
             width="100%"
