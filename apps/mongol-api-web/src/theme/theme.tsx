@@ -1,4 +1,3 @@
-/* eslint-disable unicorn/filename-case */
 import { createTheme, CssBaseline, ThemeProvider } from '@mui/material';
 import { FC, PropsWithChildren } from 'react';
 

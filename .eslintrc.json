@@ -8,12 +8,6 @@
       "files": ["*.jsx", "*.tsx"], // for JSX component
       "rules": {
         "unicorn/prefer-module": "off",
-        "unicorn/filename-case": [
-          "error",
-          {
-            "case": "pascalCase"
-          }
-        ],
         "react/function-component-definition": [
           "error",
           {
