@@ -1,6 +1,8 @@
 import { Button } from '@components';
 import { Box, Container, Stack, Typography, useTheme } from '@mui/material';
 import { useState } from 'react';
+import { CodeSnippet } from 'src/components/code-snippet';
+import { ClothesDocsData } from '../../../../../libs/mongol-api-data/src/lib/demo';
 
 export const Example = () => {
   const { palette } = useTheme();
@@ -28,23 +30,19 @@ export const Example = () => {
           </Typography>
         </Stack>
         <Stack spacing={6} pt={14} pb={open ? 26 : 39}>
-          <Box
-            width="100%"
-            height="191px"
-            borderRadius="20px"
-            bgcolor={palette.primary[500]}
-          ></Box>
+          <CodeSnippet value={ClothesDocsData.rest.query} />
+
           <Stack alignItems="flex-start" style={{ width: '228px' }}>
             <Button onClick={handleTryButton} size="small">
               Try Here!
             </Button>
           </Stack>
-          <Box
-            width="100%"
-            height={open ? '606px' : '188px'}
-            borderRadius="20px"
-            bgcolor={palette.primary[500]}
-          ></Box>
+
+          {open ? (
+            <CodeSnippet value={ClothesDocsData.rest.result} />
+          ) : (
+            <CodeSnippet value={'Waiting to fetch!!!'} />
+          )}
         </Stack>
       </Container>
     </Box>
