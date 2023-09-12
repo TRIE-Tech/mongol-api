@@ -3,9 +3,9 @@ import { Footer, Header } from '@components';
 const Index = () => {
   return (
     <>
-      <Header />
+      <Header colorMode="light" />
       hello from docs
-      <Footer />
+      <Footer colorMode="light" />
     </>
   );
 };
