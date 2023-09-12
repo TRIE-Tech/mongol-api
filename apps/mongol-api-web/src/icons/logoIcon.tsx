@@ -2,6 +2,7 @@ import { BaseIconProps } from './types';
 
 export const LogoIcon = (props: BaseIconProps) => {
   const { width, height, color } = props;
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -14,11 +15,11 @@ export const LogoIcon = (props: BaseIconProps) => {
         width={44}
         height={39.759}
         y={0.621}
-        fill={'#F7F9FC' || color}
+        fill={color || '#F7F9FC'}
         rx={5}
       />
       <path
-        stroke="#000"
+        stroke={color === 'black' ? '#fff' : '#000'}
         strokeLinecap="round"
         strokeWidth={2}
         d="m14.673 13.344 8.31 8.31-8.31 8.312M26.506 29.775H37.11"
