@@ -1,9 +1,31 @@
-import { Box } from '@mui/material';
+import { Box, Container, Stack, Typography, useTheme } from '@mui/material';
 
-export const Footer = () => {
+export interface FooterProps {
+  colorMode?: 'dark' | 'light';
+}
+
+export const Footer = ({ colorMode }: FooterProps) => {
+  const { palette } = useTheme();
+
   return (
-    <Box height="83px" bgcolor="#0B253C" color={'white'}>
-      hello from Footer
+    <Box
+      height="83px"
+      bgcolor={colorMode === 'dark' ? palette.primary[500] : 'common.white'}
+      color={colorMode === 'dark' ? 'common.white' : 'common.black'}
+    >
+      <Container disableGutters maxWidth="lg">
+        <Stack
+          width="100%"
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+          height="77px"
+        >
+          <Typography variant="subtitle1">
+            ©2023. All Right Reserved.
+          </Typography>
+        </Stack>
+      </Container>
     </Box>
   );
 };
