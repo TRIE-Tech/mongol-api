@@ -1,3 +1,3 @@
-export * from './intro';
-export * from './example';
-export * from './resources';
+export * from './Intro';
+export * from './Example';
+export * from './Resources';

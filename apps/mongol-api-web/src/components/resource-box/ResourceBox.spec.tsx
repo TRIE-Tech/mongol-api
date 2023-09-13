@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { ResourcesBox } from './Resource-Box';
+import { ResourcesBox } from './ResourceBox';
 import { ClothesIcon } from '@icons';
 
 describe('Resource Box', () => {
