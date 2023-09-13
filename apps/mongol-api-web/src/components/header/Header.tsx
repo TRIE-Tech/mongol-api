@@ -50,7 +50,11 @@ const HeaderLinks = ({ colorMode }: HeaderProps) => (
         Docs
       </Typography>
     </Link>
-    <Link sx={{ cursor: 'pointer', textDecoration: 'none' }} href="/">
+    <Link
+      sx={{ cursor: 'pointer', textDecoration: 'none' }}
+      target="_blank"
+      href="https://github.com/DuurenbayarUlz/mongol-api"
+    >
       <Typography
         variant="subtitle1"
         color={colorMode === 'dark' ? 'common.white' : 'common.black'}
