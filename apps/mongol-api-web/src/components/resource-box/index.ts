@@ -1,1 +1,1 @@
-export * from './Resource-Box';
+export * from './ResourceBox';
