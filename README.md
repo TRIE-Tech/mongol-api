@@ -2,13 +2,26 @@
 
 Welcome to the documentation for the Mongol-API service, providing crucial information about Mongolia. This API allows you to retrieve various aspects of Mongolia's culture, geography, history, and more.
 
-## Author
+## Team
 
-`Duurenbayar Ulziiduuren ` and ` Elbeg Amarbayasgalan`
+### Developers
 
-## Base URL
+- [Duurenbayar Ulziiduuren](https://github.com/DuurenbayarUlz)
+- [Elbeg Amarbayasgalan](https://github.com/amar9elbeg)
+- [Anujin Buyannemekh](https://github.com/Anujinnb)
 
-https://mongol-api.com
+### Designers
+
+- [Munkhkhuleg Tserenpurev]()
+
+## Endpoints
+
+- **REST Endpoint:** [https://mongol-api-rest.vercel.app](https://mongol-api-rest.vercel.app)
+- **GraphQL Endpoint:** [https://mongol-api-graphql.vercel.app/api/graphql](https://mongol-api-graphql.vercel.app/api/graphql)
+
+## Website
+
+Visit the [Mongol-API Website](https://mongol-api.vercel.app/) for more information.
 
 ## Types
 
