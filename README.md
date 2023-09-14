@@ -2,26 +2,26 @@
 
 Welcome to the documentation for the Mongol-API service, providing crucial information about Mongolia. This API allows you to retrieve various aspects of Mongolia's culture, geography, history, and more.
 
-## Team
+## Developers and Designers
 
 ### Developers
 
-- [Duurenbayar Ulziiduuren](https://github.com/DuurenbayarUlz)
-- [Elbeg Amarbayasgalan](https://github.com/amar9elbeg)
-- [Anujin Buyannemekh](https://github.com/Anujinnb)
+- <a href="https://github.com/DuurenbayarUlz" target="_blank">Duurenbayar Ulziiduuren</a>
+- <a href="https://github.com/amar9elbeg" target="_blank">Elbeg Amarbayasgalan</a>
+- <a href="https://github.com/Anujinnb" target="_blank">Anujin Buyannemekh</a>
 
 ### Designers
 
-- [Munkhkhuleg Tserenpurev]()
+- <a href="#" target="_blank">Munkhkhuleg Tserenpurev</a> (Replace '#' with the designer's GitHub profile link)
 
 ## Endpoints
 
-- **REST Endpoint:** [https://mongol-api-rest.vercel.app](https://mongol-api-rest.vercel.app)
-- **GraphQL Endpoint:** [https://mongol-api-graphql.vercel.app/api/graphql](https://mongol-api-graphql.vercel.app/api/graphql)
+- **REST Endpoint:** <a href="https://mongol-api-rest.vercel.app" target="_blank">https://mongol-api-rest.vercel.app</a>
+- **GraphQL Endpoint:** <a href="https://mongol-api-graphql.vercel.app/api/graphql" target="_blank">https://mongol-api-graphql.vercel.app/api/graphql</a>
 
 ## Website
 
-Visit the [Mongol-API Website](https://mongol-api.vercel.app/) for more information.
+Visit the <a href="https://mongol-api.vercel.app/" target="_blank">Mongol-API Website</a> for more information.
 
 ## Types
 
