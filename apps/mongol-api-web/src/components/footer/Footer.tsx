@@ -22,7 +22,7 @@ export const Footer = ({ colorMode }: FooterProps) => {
           height="77px"
         >
           <Typography variant="subtitle1">
-            ©2023. All Right Reserved.
+            ©{new Date().getFullYear()} All Right Reserved.
           </Typography>
         </Stack>
       </Container>
