@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export const Intro = () => {
   return (
-    <Box bgcolor="primary.500" width="100vw" minHeight="calc(100vh - 77px)">
+    <Box bgcolor="primary.500" width="100vw" height="100%">
       <Container disableGutters maxWidth="lg">
         <Stack direction="row" justifyContent="center">
           <Stack
@@ -13,9 +13,9 @@ export const Intro = () => {
             flexWrap="wrap"
             justifyContent="center"
             alignItems="center"
-            minHeight="calc(100vh - 77px)"
+            minHeight="100%"
           >
-            <Stack direction="column" maxWidth="602px">
+            <Stack direction="column" maxWidth="602px" py="168px">
               <Typography variant="h1" color="#F7F9FC">
                 Welcome to MongolAPI
               </Typography>
