@@ -4,11 +4,21 @@ import Image from 'next/image';
 
 export const Intro = () => {
   return (
-    <Box bgcolor="primary.500" width="100vw" minHeight="calc(100vh - 77px)">
+    <Box bgcolor="primary.500" width="100vw" minHeight="calc(100vh - 60px)">
       <Container disableGutters sx={{ maxWidth: '1048px' }} maxWidth={false}>
-        <Stack minHeight="calc(100vh - 77px)" justifyContent="center">
-          <Stack direction="row">
-            <Stack direction="column" pt={25} pb={15} width="100%" mr={4}>
+        <Stack
+          minHeight="calc(100vh - 60px)"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Stack direction="row" height="526px">
+            <Stack
+              direction="column"
+              width="100%"
+              height="100%"
+              pt={13}
+              justifyContent="center"
+            >
               <Typography variant="h2" color="#F7F9FC" pb={8}>
                 Welcome to MongolAPI
               </Typography>
@@ -24,22 +34,12 @@ export const Intro = () => {
                 Senectus nunc risus sed nunc ultricies placerat proin. Ultricies
                 luctus vel tortor eu elementum vulputate cursus
               </Typography>
-              <Box width="176px" height="54px">
+              <Box width="176px">
                 <Button>Explore</Button>
               </Box>
             </Stack>
-            <Stack
-              width="100%"
-              maxWidth="460px"
-              height="490px"
-              position={'relative'}
-            >
-              <Image
-                style={{ marginBottom: '80px' }}
-                fill
-                src={`/images/home-intro-image.png`}
-                alt="picture"
-              />
+            <Stack width="100%" maxWidth="495px" position="relative">
+              <Image fill src={`/images/home-intro-image.png`} alt="picture" />
             </Stack>
           </Stack>
         </Stack>

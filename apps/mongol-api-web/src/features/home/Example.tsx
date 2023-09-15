@@ -11,12 +11,13 @@ export const Example = () => {
     setOpen(!open);
   };
   return (
-    <Box bgcolor="common.white" width="100vw">
+    <Box bgcolor="common.white" width="100%">
       <Container disableGutters sx={{ maxWidth: '1048px' }} maxWidth={false}>
         <Stack
           direction="column"
-          py="100px"
-          minHeight="100vh"
+          pt="100px"
+          pb={open ? '50px' : '100px'}
+          minHeight="100%"
           alignItems="center"
           maxWidth="1048px"
         >
@@ -30,7 +31,7 @@ export const Example = () => {
           <Stack minWidth="100%" spacing={6}>
             <CodeSnippet value={ClothesDocsData.rest.query} maxWidth="1048px" />
             <Stack alignItems="flex-start" style={{ width: '228px' }}>
-              <Button onClick={handleTryButton} size="small">
+              <Button onClick={handleTryButton}>
                 {open ? 'You Got It!' : 'Try Here!'}
               </Button>
             </Stack>
