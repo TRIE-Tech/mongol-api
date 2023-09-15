@@ -9,7 +9,6 @@ export const Footer = ({ colorMode }: FooterProps) => {
 
   return (
     <Box
-      height="83px"
       bgcolor={colorMode === 'dark' ? palette.primary[500] : 'common.white'}
       color={colorMode === 'dark' ? 'common.white' : 'common.black'}
     >
@@ -19,9 +18,15 @@ export const Footer = ({ colorMode }: FooterProps) => {
           direction="row"
           justifyContent="center"
           alignItems="center"
-          height="77px"
+          height="54px"
         >
-          <Typography variant="subtitle1">
+          <Typography
+            variant="subtitle1"
+            color={palette.secondary[100]}
+            fontWeight="400"
+            fontSize="16px"
+            lineHeight="19.09px"
+          >
             ©{new Date().getFullYear()} All Right Reserved.
           </Typography>
         </Stack>

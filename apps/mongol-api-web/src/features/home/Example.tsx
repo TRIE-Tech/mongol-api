@@ -11,38 +11,38 @@ export const Example = () => {
     setOpen(!open);
   };
   return (
-    <Box bgcolor="common.white" width="100vw" minHeight="100%">
-      <Container disableGutters maxWidth="lg">
+    <Box bgcolor="common.white" width="100vw">
+      <Container disableGutters sx={{ maxWidth: '1048px' }} maxWidth={false}>
         <Stack
-          pt={39}
-          pb={14}
-          spacing={9}
           direction="column"
-          justifyContent="center"
+          py="100px"
+          minHeight="100vh"
           alignItems="center"
+          maxWidth="1048px"
         >
-          <Typography color={palette.primary[500]} variant="h1">
+          <Typography color={palette.primary[500]} variant="h2" pb={8}>
             Wanna Try MongolAPI?
           </Typography>
-          <Typography color={palette.primary[500]} variant="subtitle1">
+          <Typography color={palette.primary[500]} variant="subtitle1" pb={9}>
             Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet
             consectetur.
           </Typography>
-        </Stack>
-        <Stack spacing={6} pt={14} pb={open ? 26 : 39}>
-          <CodeSnippet value={ClothesDocsData.rest.query} />
-
-          <Stack alignItems="flex-start" style={{ width: '228px' }}>
-            <Button onClick={handleTryButton} size="small">
-              Try Here!
-            </Button>
+          <Stack minWidth="100%" spacing={6}>
+            <CodeSnippet value={ClothesDocsData.rest.query} maxWidth="1048px" />
+            <Stack alignItems="flex-start" style={{ width: '228px' }}>
+              <Button onClick={handleTryButton} size="small">
+                {open ? 'You Got It!' : 'Try Here!'}
+              </Button>
+            </Stack>
+            {open ? (
+              <CodeSnippet
+                value={ClothesDocsData.rest.result}
+                maxWidth="1048px"
+              />
+            ) : (
+              <CodeSnippet value={'Waiting to fetch!!!'} maxWidth="1048px" />
+            )}
           </Stack>
-
-          {open ? (
-            <CodeSnippet value={ClothesDocsData.rest.result} />
-          ) : (
-            <CodeSnippet value={'Waiting to fetch!!!'} />
-          )}
         </Stack>
       </Container>
     </Box>
