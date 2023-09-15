@@ -3,3 +3,4 @@ export * from './GroupsIcon';
 export * from './InstrumentsIcon';
 export * from './ProvinceIcon';
 export * from './logoIcon';
+export * from './LeftVectorIcon';

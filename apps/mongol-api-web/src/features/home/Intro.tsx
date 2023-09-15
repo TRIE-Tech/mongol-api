@@ -4,44 +4,43 @@ import Image from 'next/image';
 
 export const Intro = () => {
   return (
-    <Box bgcolor="primary.500" width="100vw" height="100%">
-      <Container disableGutters maxWidth="lg">
-        <Stack direction="row" justifyContent="center">
-          <Stack
-            direction="row"
-            spacing={6}
-            flexWrap="wrap"
-            justifyContent="center"
-            alignItems="center"
-            minHeight="100%"
-          >
-            <Stack direction="column" maxWidth="602px" py="168px">
-              <Typography variant="h1" color="#F7F9FC">
+    <Box bgcolor="primary.500" width="100vw" minHeight="calc(100vh - 77px)">
+      <Container disableGutters sx={{ maxWidth: '1048px' }} maxWidth={false}>
+        <Stack minHeight="calc(100vh - 77px)" justifyContent="center">
+          <Stack direction="row">
+            <Stack direction="column" pt={25} pb={15} width="100%" mr={4}>
+              <Typography variant="h2" color="#F7F9FC" pb={8}>
                 Welcome to MongolAPI
               </Typography>
-              <Typography variant="body1" color="#F7F9FC" pt={12} pb={16}>
+              <Typography
+                fontWeight="300"
+                fontSize="24px"
+                lineHeight="29.02px"
+                color="#F7F9FC"
+                pb={8}
+              >
                 Lorem ipsum dolor sit amet consectetur. Congue quam bibendum
                 venenatis consectetur interdum pellentesque amet purus id.
                 Senectus nunc risus sed nunc ultricies placerat proin. Ultricies
                 luctus vel tortor eu elementum vulputate cursus
               </Typography>
-              <Box sx={{ width: '265px' }}>
+              <Box width="176px" height="54px">
                 <Button>Explore</Button>
               </Box>
             </Stack>
-          </Stack>
-          <Stack
-            width="100%"
-            maxWidth="596px"
-            height="566px"
-            position={'relative'}
-          >
-            <Image
-              style={{ marginBottom: '80px' }}
-              fill
-              src={`/images/home-intro-image.png`}
-              alt="picture"
-            />
+            <Stack
+              width="100%"
+              maxWidth="460px"
+              height="490px"
+              position={'relative'}
+            >
+              <Image
+                style={{ marginBottom: '80px' }}
+                fill
+                src={`/images/home-intro-image.png`}
+                alt="picture"
+              />
+            </Stack>
           </Stack>
         </Stack>
       </Container>
