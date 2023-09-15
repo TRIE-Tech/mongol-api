@@ -5,14 +5,14 @@ export const ClothesIcon = (props: BaseIconProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={60 || width}
-      height={60 || height}
+      width={56 || width}
+      height={40 || height}
       fill="none"
       {...props}
     >
       <path
         fill={'#D0D7E2' || color}
-        d="M21 0h-3L0 9v18l12-3v36h36V24l12 3V9L42 0h-3a9 9 0 1 1-18 0Z"
+        d="M19.6 0h-2.8L0 6v12l11.2-2v24h33.6V16L56 18V6L39.2 0h-2.8c0 1.591-.885 3.117-2.46 4.243C32.364 5.368 30.228 6 28 6s-4.364-.632-5.94-1.757C20.485 3.117 19.6 1.59 19.6 0Z"
       />
     </svg>
   );

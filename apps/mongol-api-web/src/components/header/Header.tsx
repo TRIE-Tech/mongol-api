@@ -70,7 +70,7 @@ export const Header = ({ colorMode }: HeaderProps) => {
 
   return (
     <Box bgcolor={colorMode === 'dark' ? palette.primary[500] : 'common.white'}>
-      <Container disableGutters maxWidth="lg">
+      <Container disableGutters sx={{ maxWidth: '1048px' }} maxWidth={false}>
         <Stack
           width="100%"
           direction="row"

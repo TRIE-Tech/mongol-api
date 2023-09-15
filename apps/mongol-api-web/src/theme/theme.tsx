@@ -60,11 +60,17 @@ const theme = createTheme({
       fontWeight: 700,
       lineHeight: '65.93px',
     },
-    subtitle2: {
-      fontSize: '32px',
+    h2: {
+      fontSize: '48px',
       fontStyle: 'normal',
-      fontWeight: 400,
-      lineHeight: '38.18px',
+      fontWeight: 700,
+      lineHeight: '58.61px',
+    },
+    h3: {
+      fontSize: '40px',
+      fontStyle: 'normal',
+      fontWeight: 700,
+      lineHeight: '48.84px',
     },
     subtitle1: {
       fontSize: '24px',

@@ -1,4 +1,5 @@
-import { Box, Link, Stack, Typography } from '@mui/material';
+import { LeftVectorIcon } from '@icons';
+import { Box, Link, Stack, Typography, useTheme } from '@mui/material';
 import React from 'react';
 
 type ResourcesBoxType = {
@@ -9,22 +10,34 @@ type ResourcesBoxType = {
 };
 
 export const ResourcesBox = (props: ResourcesBoxType) => {
+  const { palette } = useTheme();
   const { icon, title, description, href } = props;
   return (
-    <Stack px={12} py={6} bgcolor="#00C0CC" borderRadius="20px">
-      <Stack direction="row" spacing={6} pb={6}>
-        <Box p={3}>{icon}</Box>
+    <Stack p={2} bgcolor="#00C0CC" borderRadius="20px" height="100%">
+      <Stack direction="row" spacing={4} pb={4}>
+        <Box p={2}>{icon}</Box>
         <Box display="flex" alignItems="center">
-          <Typography variant="subtitle2" color="secondary.500">
+          <Typography
+            fontWeight="500"
+            fontSize="24px"
+            lineHeight="29.3px"
+            color={palette.secondary[500]}
+          >
             {title}
           </Typography>
         </Box>
       </Stack>
       <Stack>
-        <Typography variant="body1" color="secondary.500">
+        <Typography
+          fontSize="16px"
+          fontWeight="400"
+          lineHeight="19.09px"
+          color={palette.secondary[500]}
+          pb={4}
+        >
           {description}
         </Typography>
-        <Stack alignItems="flex-end">
+        <Stack alignItems="flex-end" justifyContent="center" py={2} px={4}>
           <Link sx={{ cursor: 'pointer' }} href={href}>
             <Typography
               fontWeight="300"
@@ -33,6 +46,9 @@ export const ResourcesBox = (props: ResourcesBoxType) => {
               fontSize="16px"
             >
               Learn more
+              <Box component="span" pl={3}>
+                <LeftVectorIcon />
+              </Box>
             </Typography>
           </Link>
         </Stack>
