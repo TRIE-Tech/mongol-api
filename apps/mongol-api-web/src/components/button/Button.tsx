@@ -1,39 +1,36 @@
+import { Typography } from '@mui/material';
 import MuiButton from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 
-export type ButtonSize = 'small' | 'medium';
 export interface BaseButtonProps {
   children: React.ReactNode;
-  size?: ButtonSize;
+
   fullWidth?: boolean;
   onClick?: () => void;
 }
 
-const StyledButton = styled(MuiButton)<BaseButtonProps>(({ theme, size }) => {
+const StyledButton = styled(MuiButton)<BaseButtonProps>(({ theme }) => {
   return {
-    borderRadius: theme.spacing(4),
+    borderRadius: theme.spacing(5),
     padding: `${theme.spacing(6)} ${theme.spacing(12)}`,
-    fontSize: theme.spacing(8),
-    fontWeight: 500,
-    lineHeight: 'normal',
     textTransform: 'none',
+    display: 'flex',
+    alignItems: 'center',
     color: '#fff',
     backgroundColor: '#00C0CC',
+    height: '54px',
     '&:hover': {
       backgroundColor: '#002762',
     },
-
-    ...(size === 'small' && {
-      padding: `${theme.spacing(3)} ${theme.spacing(6)}`,
-      fontSize: theme.spacing(6),
-    }),
   };
 });
 
 export const Button = ({ children, ...rest }: BaseButtonProps) => {
   return (
     <StyledButton disableRipple fullWidth {...rest}>
-      {children}
+      <Typography fontSize="24px" fontWeight="500" lineHeight="29.3px">
+        {children}
+      </Typography>
     </StyledButton>
   );
 };

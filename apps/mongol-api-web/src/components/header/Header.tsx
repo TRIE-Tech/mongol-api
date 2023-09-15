@@ -36,7 +36,9 @@ const HeaderLinks = ({ colorMode }: HeaderProps) => (
   <Stack direction={'row'} spacing={24}>
     <Link sx={{ cursor: 'pointer', textDecoration: 'none' }} href="/">
       <Typography
-        variant="subtitle1"
+        fontSize="16px"
+        fontWeight="400"
+        lineHeight="19.09px"
         color={colorMode === 'dark' ? 'common.white' : 'common.black'}
       >
         Home
@@ -44,7 +46,9 @@ const HeaderLinks = ({ colorMode }: HeaderProps) => (
     </Link>
     <Link sx={{ cursor: 'pointer', textDecoration: 'none' }} href="/docs">
       <Typography
-        variant="subtitle1"
+        fontSize="16px"
+        fontWeight="400"
+        lineHeight="19.09px"
         color={colorMode === 'dark' ? 'common.white' : 'common.black'}
       >
         Docs
@@ -56,7 +60,9 @@ const HeaderLinks = ({ colorMode }: HeaderProps) => (
       href="https://github.com/DuurenbayarUlz/mongol-api"
     >
       <Typography
-        variant="subtitle1"
+        fontSize="16px"
+        fontWeight="400"
+        lineHeight="19.09px"
         color={colorMode === 'dark' ? 'common.white' : 'common.black'}
       >
         GitHub
@@ -76,7 +82,7 @@ export const Header = ({ colorMode }: HeaderProps) => {
           direction="row"
           justifyContent="space-between"
           alignItems="center"
-          height="77px"
+          height="60px"
         >
           <LogoAndTitle colorMode={colorMode} />
           <HeaderLinks colorMode={colorMode} />
