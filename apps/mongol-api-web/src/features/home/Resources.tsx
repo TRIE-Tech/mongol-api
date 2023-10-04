@@ -36,14 +36,14 @@ const resourcesData = [
 export const Resources = () => {
   const { palette } = useTheme();
   return (
-    <Box bgcolor="primary.500" width="100vw" minHeight="calc(100vh - 54px)">
-      <Container disableGutters sx={{ maxWidth: '1048px' }} maxWidth={false}>
-        <Stack minHeight="calc(100vh - 54px)" justifyContent="center">
-          <Stack alignItems="center" spacing={6} pb={12}>
-            <Typography color={palette.primary[100]} variant="h2">
-              Resources
+    <Box bgcolor="#FAF8FB">
+      <Container disableGutters sx={{ maxWidth: '1200px' }} maxWidth={false}>
+        <Stack justifyContent="center" py="108px">
+          <Stack alignItems="center">
+            <Typography color={palette.blue[200]} variant="h2">
+              Resources & Examples
             </Typography>
-            <Typography color={palette.primary[100]} variant="subtitle1">
+            <Typography color={palette.blue[200]} variant="subtitle1" py={8}>
               Lorem ipsum dolor sit amet consectetur.
             </Typography>
           </Stack>
