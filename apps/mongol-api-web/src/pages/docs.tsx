@@ -10,7 +10,7 @@ const Index = () => {
 
   return (
     <>
-      <Header colorMode="light" />
+      <Header backgroundColor="white" />
       <Container disableGutters maxWidth="lg">
         <TabContext value={tabValue}>
           <Stack direction="row">
@@ -29,7 +29,7 @@ const Index = () => {
           </Stack>
         </TabContext>
       </Container>
-      <Footer colorMode="light" />
+      <Footer backgroundColor="white" />
     </>
   );
 };
