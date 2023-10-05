@@ -1,35 +1,29 @@
 import { ResourcesBox } from '@components';
-import { ClothesIcon, GroupsIcon, InstrumentsIcon, ProvinceIcon } from '@icons';
 import { Box, Container, Stack, Typography, useTheme } from '@mui/material';
 
-const resourcesData = [
+const ClothesRestQuery = `fetch('https://mongol-api.vercel.app/api/clothes')
+.then(res => res.json())
+.then(json => console.log(json))`;
+
+const TouristRestQuery = `fetch('https://mongol-api.vercel.app/api/tourist')
+  .then(res => res.json())
+  .then(json => console.log(json))`;
+
+const ResourceData = [
   {
-    icon: <ClothesIcon />,
-    title: 'Clothes',
-    description:
-      'Lorem ipsum dolor sit amet consectetur. Venenatis lobortis turpis.',
-    href: '',
+    title: 'Traditional Clothes API',
+    href: '/traditional-clothes.png',
+    codeSnippet: ClothesRestQuery,
   },
   {
-    icon: <ProvinceIcon />,
-    title: 'Provinces',
-    description:
-      'Lorem ipsum dolor sit amet consectetur. Venenatis lobortis turpis.',
-    href: '',
+    title: 'Tourist Attractions API',
+    href: '/tourist-attractions.png',
+    codeSnippet: TouristRestQuery,
   },
   {
-    icon: <InstrumentsIcon />,
-    title: 'Instruments',
-    description:
-      'Lorem ipsum dolor sit amet consectetur. Venenatis lobortis turpis.',
-    href: '',
-  },
-  {
-    icon: <GroupsIcon />,
-    title: 'Ethnic Groups',
-    description:
-      'Lorem ipsum dolor sit amet consectetur. Venenatis lobortis turpis.',
-    href: '',
+    title: 'Mal Aj Ahui API',
+    href: '/tourist-attractions.png',
+    codeSnippet: TouristRestQuery,
   },
 ];
 
@@ -38,7 +32,7 @@ export const Resources = () => {
   return (
     <Box bgcolor="#FAF8FB">
       <Container disableGutters sx={{ maxWidth: '1200px' }} maxWidth={false}>
-        <Stack justifyContent="center" py="108px">
+        <Stack justifyContent="center" py="60px">
           <Stack alignItems="center">
             <Typography color={palette.blue[200]} variant="h2">
               Resources & Examples
@@ -47,39 +41,26 @@ export const Resources = () => {
               Lorem ipsum dolor sit amet consectetur.
             </Typography>
           </Stack>
-          <Stack width="100%" justifyContent="center" alignItems="center">
-            <Stack maxWidth="680px" spacing={11}>
-              <Stack direction="row" spacing={22}>
-                {resourcesData
-                  .slice(0, 2)
-                  .map(({ icon, title, description, href }, index) => {
-                    return (
-                      <ResourcesBox
-                        key={index}
-                        icon={icon}
-                        title={title}
-                        description={description}
-                        href={href}
-                      />
-                    );
-                  })}
-              </Stack>
-              <Stack direction="row" spacing={22}>
-                {resourcesData
-                  .slice(2, 4)
-                  .map(({ icon, title, description, href }, index) => {
-                    return (
-                      <ResourcesBox
-                        key={index}
-                        icon={icon}
-                        title={title}
-                        description={description}
-                        href={href}
-                      />
-                    );
-                  })}
-              </Stack>
-            </Stack>
+
+          <Stack
+            direction="row"
+            spacing={15}
+            sx={{
+              overflowX: 'scroll',
+              overflowY: 'hidden',
+              '&::-webkit-scrollbar': {
+                display: 'none',
+              },
+            }}
+          >
+            {ResourceData.map((item, index) => (
+              <ResourcesBox
+                key={index}
+                title={item.title}
+                href={item.href}
+                codeSnippet={item.codeSnippet}
+              />
+            ))}
           </Stack>
         </Stack>
       </Container>

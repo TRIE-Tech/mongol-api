@@ -5,7 +5,7 @@ export const Intro = () => {
   const { palette } = useTheme();
 
   return (
-    <Box bgcolor="#FAF8FB" py="200px">
+    <Box bgcolor="#FAF8FB" py="228px">
       <Container disableGutters sx={{ maxWidth: '1200px' }} maxWidth={false}>
         <Stack direction="row">
           <Stack

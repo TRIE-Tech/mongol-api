@@ -1,58 +1,73 @@
-import { LeftVectorIcon } from '@icons';
-import { Box, Link, Stack, Typography, useTheme } from '@mui/material';
-import React from 'react';
+import { Box, Stack, Typography, useTheme } from '@mui/material';
+import Image from 'next/image';
+import { useState } from 'react';
+import ReactCardFlip from 'react-card-flip';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 type ResourcesBoxType = {
-  icon: React.ReactNode;
   title: string;
-  description: string;
   href: string;
+  codeSnippet: string;
 };
 
 export const ResourcesBox = (props: ResourcesBoxType) => {
-  const { palette } = useTheme();
-  const { icon, title, description, href } = props;
+  const { spacing, palette } = useTheme();
+  const [isflipped, setIsFlipped] = useState(false);
+  const { title, href, codeSnippet } = props;
+
   return (
-    <Stack p={2} bgcolor="#00C0CC" borderRadius="20px" height="100%">
-      <Stack direction="row" spacing={4} pb={4}>
-        <Box p={2}>{icon}</Box>
-        <Box display="flex" alignItems="center">
-          <Typography
-            fontWeight="500"
-            fontSize="24px"
-            lineHeight="29.3px"
-            color={palette.secondary[500]}
-          >
-            {title}
-          </Typography>
-        </Box>
-      </Stack>
-      <Stack>
-        <Typography
-          fontSize="16px"
-          fontWeight="400"
-          lineHeight="19.09px"
-          color={palette.secondary[500]}
-          pb={4}
+    <Box sx={{ cursor: 'pointer' }}>
+      <ReactCardFlip isFlipped={isflipped} flipDirection="horizontal">
+        <Stack
+          alignItems="center"
+          justifyContent="center"
+          onClick={() => setIsFlipped(!isflipped)}
         >
-          {description}
-        </Typography>
-        <Stack alignItems="flex-end" justifyContent="center" py={2} px={4}>
-          <Link sx={{ cursor: 'pointer' }} href={href}>
-            <Typography
-              fontWeight="300"
-              fontStyle="italic"
-              lineHeight="19.07px"
-              fontSize="16px"
-            >
-              Learn more
-              <Box component="span" pl={3}>
-                <LeftVectorIcon />
-              </Box>
-            </Typography>
-          </Link>
+          <Stack
+            bgcolor={palette.blue[100]}
+            borderRadius={spacing(2)}
+            height="495px"
+            width="468px"
+            position="relative"
+            overflow="hidden"
+          >
+            <Image src={href} alt="" fill />
+          </Stack>
+          <Box pt={spacing(8)}>
+            <Typography variant="subtitle1">{title}</Typography>
+          </Box>
         </Stack>
-      </Stack>
-    </Stack>
+
+        <Stack alignItems="center" onClick={() => setIsFlipped(!isflipped)}>
+          <Stack
+            bgcolor={palette.blue[200]}
+            borderRadius={spacing(2)}
+            height="495px"
+            width="468px"
+            position="relative"
+            overflow="hidden"
+            padding={spacing(8)}
+          >
+            <Typography color="white">{title}</Typography>
+            <SyntaxHighlighter
+              language="jsx"
+              style={vscDarkPlus}
+              customStyle={{
+                marginTop: '20px',
+                padding: '0px',
+                backgroundColor: palette.blue[200],
+                height: '100%',
+              }}
+            >
+              {codeSnippet}
+            </SyntaxHighlighter>
+          </Stack>
+          <Box pt={spacing(8)}>
+            <Typography variant="subtitle1">Rest API</Typography>
+          </Box>
+        </Stack>
+      </ReactCardFlip>
+    </Box>
   );
 };

@@ -45,8 +45,8 @@ export const CodeSnippet = ({
         showLineNumbers={true}
         customStyle={{
           padding: '20px',
-          borderRadius: '20px',
-          backgroundColor: theme.palette.primary[500],
+          borderRadius: '8px',
+          backgroundColor: theme.palette.blue[200],
           height: '100%',
         }}
       >
