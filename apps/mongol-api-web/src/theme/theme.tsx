@@ -2,6 +2,13 @@ import { createTheme, CssBaseline, ThemeProvider } from '@mui/material';
 import { FC, PropsWithChildren } from 'react';
 
 declare module '@mui/material/styles' {
+  interface Palette {
+    blue: Palette['warning'];
+  }
+
+  interface PaletteOptions {
+    blue?: PaletteOptions['warning'];
+  }
   interface PaletteColor {
     100?: string;
     200?: string;
@@ -37,6 +44,10 @@ const theme = createTheme({
       500: '#0F1825',
       main: '#0F1825',
     },
+    blue: {
+      100: '#345EED',
+      200: '#002762',
+    },
 
     common: {
       black: '#000',
@@ -53,7 +64,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'Helvetica Neue, Helvetica, Arial, sans-serif',
+    fontFamily: 'Nunito',
     h1: {
       fontSize: '54px',
       fontStyle: 'normal',
@@ -78,11 +89,23 @@ const theme = createTheme({
       fontWeight: 400,
       lineHeight: '28.63px',
     },
+    subtitle2: {
+      fontSize: '18px',
+      fontStyle: 'normal',
+      fontWeight: 400,
+      lineHeight: 'normal',
+    },
     body1: {
       fontSize: '24px',
       fontStyle: 'normal',
       fontWeight: 300,
       lineHeight: '29.02px',
+    },
+    body2: {
+      fontSize: '20px',
+      fontStyle: 'normal',
+      fontWeight: 700,
+      lineHeight: 'normal',
     },
   },
 });

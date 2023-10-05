@@ -4,11 +4,11 @@ import { Footer, Header } from '@components';
 const Index = () => {
   return (
     <>
-      <Header colorMode="dark" />
+      <Header backgroundColor="#FAF8FB" />
       <Intro />
       <Example />
       <Resources />
-      <Footer colorMode="dark" />
+      <Footer backgroundColor="#FAF8FB" />
     </>
   );
 };
