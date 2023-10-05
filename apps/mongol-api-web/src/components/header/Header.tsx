@@ -45,7 +45,7 @@ const HeaderLinks = () => {
       <Link
         sx={{ cursor: 'pointer', textDecoration: 'none' }}
         target="_blank"
-        href="https://github.com/DuurenbayarUlz/mongol-api"
+        href="https://github.com/trie-tech/mongol-api"
       >
         <Typography variant="subtitle2" color={palette.blue[200]}>
           GitHub
@@ -57,7 +57,7 @@ const HeaderLinks = () => {
 
 export const Header = ({ backgroundColor }: HeaderProps) => {
   return (
-    <Box bgcolor={backgroundColor} py="24px">
+    <Box bgcolor={backgroundColor}>
       <Container disableGutters sx={{ maxWidth: '1200px' }} maxWidth={false}>
         <Stack
           width="100%"
