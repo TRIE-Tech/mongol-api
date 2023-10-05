@@ -78,7 +78,7 @@ const theme = createTheme({
       lineHeight: '58.61px',
     },
     h3: {
-      fontSize: '40px',
+      fontSize: '32px',
       fontStyle: 'normal',
       fontWeight: 700,
       lineHeight: '48.84px',

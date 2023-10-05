@@ -4,26 +4,28 @@ import {
   Tabs as MuiTabs,
   Typography,
   styled,
-  useTheme,
 } from '@mui/material';
 import { Dispatch, SetStateAction } from 'react';
 import { TABS_DATA } from './shared';
 
 export const StyledTab = styled(MuiTab)(({ theme }) => ({
-  color: theme.palette.secondary[500],
-  backgroundColor: theme.palette.common.white,
+  color: '#000000',
   padding: `${theme.spacing(4)} ${theme.spacing(12)}`,
-  width: '310px',
+  width: '272px',
   borderRadius: '5px',
   alignItems: 'flex-start',
   textTransform: 'none',
-  fontSize: '24px',
+  fontSize: '14px',
   fontStyle: 'normal',
   fontWeight: 400,
-  lineHeight: '28.63px',
+  lineHeight: 'normal',
   '&.Mui-selected': {
-    color: theme.palette.secondary[100],
-    backgroundColor: theme.palette.primary[500],
+    color: '#3446C8',
+    backgroundColor: '#EFF5FF',
+    fontWeight: 700,
+  },
+  '&:hover': {
+    backgroundColor: '#EFF5FF',
   },
 }));
 
@@ -34,7 +36,6 @@ type TabsType = {
 
 export const DocsTabs = (props: TabsType) => {
   const { value, setValue } = props;
-  const { palette } = useTheme();
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     event.preventDefault();
@@ -51,18 +52,22 @@ export const DocsTabs = (props: TabsType) => {
       onChange={handleChange}
       sx={{
         borderRight: 1,
-        borderColor: palette.secondary[300],
-        paddingRight: '16px',
-        paddingTop: '8px',
+        borderColor: '#D4D4D4',
+        paddingX: '24px',
       }}
     >
+      <Box px={12} py={4}>
+        <Typography fontSize="12px" fontWeight="700" color="#D4D4D4">
+          Home
+        </Typography>
+      </Box>
       {TABS_DATA.slice(0, 1).map(({ label, value }, index) => {
         return <StyledTab key={index} label={label} value={value} />;
       })}
 
-      <Box display="flex" justifyContent="center" px={6}>
-        <Typography variant="h1" fontSize="36px">
-          Requests
+      <Box px={12} py={4}>
+        <Typography fontSize="12px" fontWeight="700" color="#D4D4D4">
+          API Reference
         </Typography>
       </Box>
       {TABS_DATA.slice(1).map(({ label, value }, index) => {

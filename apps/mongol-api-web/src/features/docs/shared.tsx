@@ -2,7 +2,7 @@ import { HomePanel } from './panels';
 
 export const TABS_DATA = [
   {
-    label: 'Home',
+    label: 'Welcome!',
     value: 'home',
     panel: <HomePanel />,
   },
