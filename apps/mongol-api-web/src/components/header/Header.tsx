@@ -9,74 +9,56 @@ import {
 } from '@mui/material';
 
 export interface HeaderProps {
-  colorMode?: 'dark' | 'light';
+  backgroundColor: string;
 }
 
-const LogoAndTitle = ({ colorMode }: HeaderProps) => {
+const LogoAndTitle = () => {
   const { spacing } = useTheme();
 
   return (
     <Link sx={{ cursor: 'pointer', textDecoration: 'none' }} href="/">
       <Box sx={{ display: 'flex', alignItems: 'center' }}>
-        <LogoIcon color={colorMode === 'dark' ? 'white' : 'black'} />
+        <LogoIcon />
         <Box sx={{ marginLeft: spacing(5) }}>
-          <Typography
-            variant="subtitle1"
-            color={colorMode === 'dark' ? 'common.white' : 'common.black'}
-          >
-            mongol-api
-          </Typography>
+          <Typography variant="body2">mongol-api</Typography>
         </Box>
       </Box>
     </Link>
   );
 };
 
-const HeaderLinks = ({ colorMode }: HeaderProps) => (
-  <Stack direction={'row'} spacing={24}>
-    <Link sx={{ cursor: 'pointer', textDecoration: 'none' }} href="/">
-      <Typography
-        fontSize="16px"
-        fontWeight="400"
-        lineHeight="19.09px"
-        color={colorMode === 'dark' ? 'common.white' : 'common.black'}
-      >
-        Home
-      </Typography>
-    </Link>
-    <Link sx={{ cursor: 'pointer', textDecoration: 'none' }} href="/docs">
-      <Typography
-        fontSize="16px"
-        fontWeight="400"
-        lineHeight="19.09px"
-        color={colorMode === 'dark' ? 'common.white' : 'common.black'}
-      >
-        Docs
-      </Typography>
-    </Link>
-    <Link
-      sx={{ cursor: 'pointer', textDecoration: 'none' }}
-      target="_blank"
-      href="https://github.com/DuurenbayarUlz/mongol-api"
-    >
-      <Typography
-        fontSize="16px"
-        fontWeight="400"
-        lineHeight="19.09px"
-        color={colorMode === 'dark' ? 'common.white' : 'common.black'}
-      >
-        GitHub
-      </Typography>
-    </Link>
-  </Stack>
-);
-
-export const Header = ({ colorMode }: HeaderProps) => {
+const HeaderLinks = () => {
   const { palette } = useTheme();
 
   return (
-    <Box bgcolor={colorMode === 'dark' ? palette.primary[500] : 'common.white'}>
-      <Container disableGutters sx={{ maxWidth: '1048px' }} maxWidth={false}>
+    <Stack direction={'row'} spacing={24}>
+      <Link sx={{ cursor: 'pointer', textDecoration: 'none' }} href="/">
+        <Typography variant="subtitle2" color={palette.blue[200]}>
+          Home
+        </Typography>
+      </Link>
+      <Link sx={{ cursor: 'pointer', textDecoration: 'none' }} href="/docs">
+        <Typography variant="subtitle2" color={palette.blue[200]}>
+          Docs
+        </Typography>
+      </Link>
+      <Link
+        sx={{ cursor: 'pointer', textDecoration: 'none' }}
+        target="_blank"
+        href="https://github.com/trie-tech/mongol-api"
+      >
+        <Typography variant="subtitle2" color={palette.blue[200]}>
+          GitHub
+        </Typography>
+      </Link>
+    </Stack>
+  );
+};
+
+export const Header = ({ backgroundColor }: HeaderProps) => {
+  return (
+    <Box bgcolor={backgroundColor}>
+      <Container disableGutters sx={{ maxWidth: '1200px' }} maxWidth={false}>
         <Stack
           width="100%"
           direction="row"
@@ -84,8 +66,8 @@ export const Header = ({ colorMode }: HeaderProps) => {
           alignItems="center"
           height="60px"
         >
-          <LogoAndTitle colorMode={colorMode} />
-          <HeaderLinks colorMode={colorMode} />
+          <LogoAndTitle />
+          <HeaderLinks />
         </Stack>
       </Container>
     </Box>

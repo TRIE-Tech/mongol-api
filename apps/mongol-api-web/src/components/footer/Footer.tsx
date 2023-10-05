@@ -1,17 +1,14 @@
 import { Box, Container, Stack, Typography, useTheme } from '@mui/material';
 
 export interface FooterProps {
-  colorMode?: 'dark' | 'light';
+  backgroundColor: string;
 }
 
-export const Footer = ({ colorMode }: FooterProps) => {
+export const Footer = ({ backgroundColor }: FooterProps) => {
   const { palette } = useTheme();
 
   return (
-    <Box
-      bgcolor={colorMode === 'dark' ? palette.primary[500] : 'common.white'}
-      color={colorMode === 'dark' ? 'common.white' : 'common.black'}
-    >
+    <Box bgcolor={backgroundColor} color={palette.blue[200]}>
       <Container disableGutters maxWidth="lg">
         <Stack
           width="100%"
@@ -22,7 +19,6 @@ export const Footer = ({ colorMode }: FooterProps) => {
         >
           <Typography
             variant="subtitle1"
-            color={palette.secondary[100]}
             fontWeight="400"
             fontSize="16px"
             lineHeight="19.09px"
