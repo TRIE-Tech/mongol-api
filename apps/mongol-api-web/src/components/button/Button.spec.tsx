@@ -5,12 +5,12 @@ import { Button } from './Button';
 
 describe('Button', () => {
   it('1. Should render successfully', () => {
-    const { baseElement } = render(<Button> hello</Button>);
+    const { baseElement } = render(<Button>hello</Button>);
     expect(baseElement).toBeTruthy();
   });
 
   it('2. Should render with props', () => {
-    const { baseElement } = render(<Button size="small">Small Button</Button>);
+    const { baseElement } = render(<Button>Small Button</Button>);
     expect(baseElement).toBeTruthy();
   });
 });

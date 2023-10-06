@@ -1,39 +1,40 @@
 import { HomePanel } from './panels';
+import { ProvincePanel } from './panels/ProvincePanel';
 
 export const TABS_DATA = [
   {
-    label: 'Home',
+    label: 'Welcome!',
     value: 'home',
     panel: <HomePanel />,
   },
   {
     label: 'Provinces',
     value: 'provinces',
-    panel: <HomePanel />,
+    panel: <ProvincePanel />,
   },
   {
     label: 'Clothes',
     value: 'clothes',
-    panel: <HomePanel />,
+    panel: <ProvincePanel />,
   },
   {
     label: 'Instruments',
     value: 'instruments',
-    panel: <HomePanel />,
+    panel: <ProvincePanel />,
   },
   {
     label: 'Ethnic Groups',
     value: 'ethnicGroups',
-    panel: <HomePanel />,
+    panel: <ProvincePanel />,
   },
   {
     label: 'Tourist Attractions',
     value: 'touristAttractions',
-    panel: <HomePanel />,
+    panel: <ProvincePanel />,
   },
   {
     label: 'Historical Tools',
     value: 'historicalTools',
-    panel: <HomePanel />,
+    panel: <ProvincePanel />,
   },
 ];

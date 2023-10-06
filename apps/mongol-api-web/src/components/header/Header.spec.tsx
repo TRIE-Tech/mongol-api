@@ -9,7 +9,7 @@ describe('Header', () => {
   });
 
   it('2. Should render with props', () => {
-    const { baseElement } = render(<Header colorMode="dark" />);
+    const { baseElement } = render(<Header backgroundColor="dark" />);
     expect(baseElement).toBeTruthy();
   });
 });
