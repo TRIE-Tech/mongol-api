@@ -1,5 +1,6 @@
 import { Button } from '@components';
 import { Box, Container, Stack, Typography, useTheme } from '@mui/material';
+import Link from 'next/link';
 
 export const Intro = () => {
   const { palette } = useTheme();
@@ -24,7 +25,9 @@ export const Intro = () => {
               luctus vel tortor eu elementum vulputate cursus
             </Typography>
             <Box width="176px">
-              <Button>Explore</Button>
+              <Link href="/docs">
+                <Button>Explore</Button>
+              </Link>
             </Box>
           </Stack>
         </Stack>

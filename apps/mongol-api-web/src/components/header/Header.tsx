@@ -9,7 +9,7 @@ import {
 } from '@mui/material';
 
 export interface HeaderProps {
-  backgroundColor: string;
+  backgroundColor?: string;
 }
 
 const LogoAndTitle = () => {

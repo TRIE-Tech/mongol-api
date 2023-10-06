@@ -10,7 +10,7 @@ describe('Footer', () => {
   });
 
   it('2. Should render with props', () => {
-    const { baseElement } = render(<Footer colorMode="dark" />);
+    const { baseElement } = render(<Footer backgroundColor="dark" />);
     expect(baseElement).toBeTruthy();
   });
 });

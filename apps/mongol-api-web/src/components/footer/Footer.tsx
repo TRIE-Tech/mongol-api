@@ -1,7 +1,7 @@
 import { Box, Container, Stack, Typography, useTheme } from '@mui/material';
 
 export interface FooterProps {
-  backgroundColor: string;
+  backgroundColor?: string;
 }
 
 export const Footer = ({ backgroundColor }: FooterProps) => {
@@ -15,7 +15,9 @@ export const Footer = ({ backgroundColor }: FooterProps) => {
           direction="row"
           justifyContent="center"
           alignItems="center"
-          height="54px"
+          height="60px"
+          py={8}
+          pt={16}
         >
           <Typography
             variant="subtitle1"
