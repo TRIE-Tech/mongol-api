@@ -31,7 +31,7 @@ export const Example = () => {
             <CodeSnippet value={ClothesDocsData.rest.query} maxWidth="1200px" />
             <Stack alignItems="flex-start" style={{ width: '180px' }}>
               <Button onClick={handleTryButton}>
-                {open ? 'Hooray 👏' : 'Try Here!'}
+                <Box component="span">{open ? 'Hooray 👏' : 'Try Here!'}</Box>
               </Button>
             </Stack>
             {open ? (
