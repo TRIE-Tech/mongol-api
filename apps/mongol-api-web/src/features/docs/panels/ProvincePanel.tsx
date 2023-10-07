@@ -1,55 +1,26 @@
-import {
-  IconButton,
-  Paper,
-  Stack,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  Typography,
-  useTheme,
-} from '@mui/material';
+import FileCopyIcon from '@mui/icons-material/FileCopy';
+import { Box, IconButton, Stack, Typography, useTheme } from '@mui/material';
+import { useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-import FileCopyIcon from '@mui/icons-material/FileCopy';
-
-const ClothesRestQuery = `fetch('https://mongol-api.vercel.app/api/clothes')
-.then(res => res.json())
-.then(json => console.log(json))`;
-
-const ClothesRestQueryResult = `{
-  "id": "1",
-  "name": "Deel",
-  "description": "The deel is a traditional Mongolian clothing item, usually made from silk, cotton, or wool. It has a distinctive design with a wide cut and high collar.",
-  "timePeriod": "13th - 21st centuries",
-  "materials": [
-    "Silk",
-    "Cotton",
-    "Wool"
-  ],
-  "images": [
-    "image_url_deel_1",
-    "image_url_deel_2"
-  ]
-}`;
-
-const clothesQueryParameters = {
-  name: 'The name of the province',
-  year: 'The year of the province',
-  materials: 'The materials of the province',
-  timePeriod: 'The time period of the province',
-  description: 'The description of the province',
-  images: 'The images of the province',
-};
+import { ClothesDocsData } from '../data/province';
+import { DocsTable } from 'src/components/table/Table';
 
 export const ProvincePanel = () => {
   const { palette, spacing } = useTheme();
+  const [apiType, setApiType] = useState('graphql');
+  const {
+    ClothesRestQuery,
+    ClothesRestQueryResult,
+    ClothesGraphQLQuery,
+    ClothesRestGraphQLResult,
+    ClothesQueryParameters,
+  } = ClothesDocsData;
 
   const copyToClipboard = async () => {
+    const value = apiType === 'rest' ? ClothesRestQuery : ClothesGraphQLQuery;
     try {
-      await navigator.clipboard.writeText('');
+      await navigator.clipboard.writeText(value);
     } catch (error) {
       console.error('Failed to copy to clipboard:', error);
     }
@@ -68,9 +39,33 @@ export const ProvincePanel = () => {
           borderBottom={`1px solid ${palette.common.white}`}
           p={5}
         >
-          <Typography color="white" variant="body2">
-            GraphQL / REST
-          </Typography>
+          <Box sx={{ display: 'flex' }}>
+            <Typography
+              variant="body2"
+              color="white"
+              onClick={() => setApiType('graphql')}
+              sx={{
+                textDecoration: apiType === 'graphql' ? 'underline' : 'none',
+                cursor: 'pointer',
+              }}
+            >
+              GraphQL
+            </Typography>
+            <Typography color="white" variant="body2" px={2}>
+              /
+            </Typography>
+            <Typography
+              variant="body2"
+              color="white"
+              onClick={() => setApiType('rest')}
+              sx={{
+                textDecoration: apiType === 'rest' ? 'underline' : 'none',
+                cursor: 'pointer',
+              }}
+            >
+              REST
+            </Typography>
+          </Box>
           <IconButton
             onClick={copyToClipboard}
             sx={{
@@ -93,7 +88,7 @@ export const ProvincePanel = () => {
             borderRadius: spacing(2),
           }}
         >
-          {ClothesRestQuery}
+          {apiType === 'rest' ? ClothesRestQuery : ClothesGraphQLQuery}
         </SyntaxHighlighter>
       </Stack>
       <Stack pt={6} borderRadius={spacing(2)} overflow="hidden">
@@ -107,7 +102,9 @@ export const ProvincePanel = () => {
             borderRadius: spacing(2),
           }}
         >
-          {ClothesRestQueryResult}
+          {apiType === 'rest'
+            ? ClothesRestQueryResult
+            : ClothesRestGraphQLResult}
         </SyntaxHighlighter>
       </Stack>
       <Stack pt={12}>
@@ -115,33 +112,7 @@ export const ProvincePanel = () => {
           Documentation
         </Typography>
 
-        <TableContainer component={Paper} sx={{ borderRadius: spacing(2) }}>
-          <Table>
-            <TableHead sx={{ backgroundColor: '#f6f6f6' }}>
-              <TableRow>
-                <TableCell>Query Parameters</TableCell>
-                <TableCell align="left">Description</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {Object.entries(clothesQueryParameters).map(
-                ([key, description]) => (
-                  <TableRow
-                    key={key}
-                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                  >
-                    <TableCell sx={{ color: '#3446C8' }}>
-                      <Typography variant="subtitle2">{key}</Typography>
-                    </TableCell>
-                    <TableCell align="left">
-                      <Typography fontSize={'16px'}>{description}</Typography>
-                    </TableCell>
-                  </TableRow>
-                )
-              )}
-            </TableBody>
-          </Table>
-        </TableContainer>
+        <DocsTable data={ClothesQueryParameters} />
       </Stack>
     </Stack>
   );
