@@ -17,24 +17,8 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 16
-      - name: Cache node modules
-        id: cache-nodemodules
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: |
-            ~/.npm
-            node_modules
-            */*/node_modules
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
-      - name: Install Dependencies
-        if: steps.cache-nodemodules.outputs.cache-hit != 'true'
-        run: yarn install --frozen-lockfile
+      - uses: oven-sh/setup-bun@v1
+      - run: bun install
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
       - name: Deploy to Vercel
