@@ -20,7 +20,6 @@ const Index = () => {
       >
         <Header backgroundColor="white" />
       </Stack>
-
       <Container disableGutters sx={{ maxWidth: '1200px' }} maxWidth={false}>
         <TabContext value={tabValue}>
           <Stack direction="row" pt={8}>
