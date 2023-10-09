@@ -1,0 +1,4 @@
+{
+  "plugins": [["babel-plugin-istanbul", {}, "e2e-babel-plugin"]],
+  "presets": [["@nx/next/babel"]]
+}

@@ -65,6 +65,63 @@
         }
       }
     },
+    "clean": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["rm -rf dist/apps/mongol-api-web", "rm -rf .vercel"]
+      }
+    },
+    "cypress-clean": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "rm -rf apps/mongol-api-web/.nyc_output",
+          "rm -rf apps/mongol-api-web/coverage",
+          "rm -rf apps/mongol-api-web/cypress/results"
+        ]
+      },
+      "dependsOn": [
+        {
+          "target": "cypress-clean"
+        }
+      ]
+    },
+    "cypress": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/mongol-api-web/cypress.config.ts",
+        "devServerTarget": "mongol-api-web:serve:development",
+        "baseUrl": "http://localhost:4200/",
+        "browser": "chrome",
+        "testingType": "e2e",
+        "reporter": "mochawesome",
+        "exit": true
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "mongol-api-web:serve:production"
+        }
+      },
+      "dependsOn": [
+        {
+          "target": "cypress-clean"
+        }
+      ]
+    },
+    "e2e": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["yarn nx cypress mongol-api-web"],
+        "parallel": true
+      }
+    },
+    "e2e:open": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["yarn nx cypress mongol-api-web --watch"],
+        "parallel": true
+      }
+    },
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
@@ -111,5 +168,5 @@
       ]
     }
   },
-  "tags": []
+  "tags": ["e2e:ready"]
 }

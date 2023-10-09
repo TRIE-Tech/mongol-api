@@ -10,6 +10,8 @@ export default {
   collectCoverageFrom: [
     '**/*.{ts,tsx}',
     '!src/pages/*.{ts,tsx}',
+    '!src/cypress/**/*.{ts,tsx}',
+    '!src/cypress/e2e/*.{ts,tsx}',
     '!src/theme/*.{ts,tsx}',
     '!src/styles/*.{ts,tsx}',
     '!src/icons/*.{ts,tsx}',

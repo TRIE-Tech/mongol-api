@@ -122,5 +122,5 @@
       ]
     }
   },
-  "tags": ["type:app"]
+  "tags": ["type:app", "unit-test:ready"]
 }

@@ -27,20 +27,29 @@ export const Example = () => {
             Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet
             consectetur.
           </Typography>
-          <Stack minWidth="100%" spacing={6}>
+          <Stack minWidth="100%" spacing={6} data-cy="Home-Example-Container">
             <CodeSnippet value={ClothesDocsData.rest.query} maxWidth="1200px" />
             <Stack alignItems="flex-start" style={{ width: '180px' }}>
-              <Button onClick={handleTryButton}>
-                <Box component="span">{open ? 'Hooray 👏' : 'Try Here!'}</Box>
+              <Button
+                onClick={handleTryButton}
+                data-cy="Home-Example-Try-Button"
+                sx={{ overflow: 'hidden', whiteSpace: 'nowrap' }}
+              >
+                {open ? 'Hooray 👏' : 'Try Here!'}
               </Button>
             </Stack>
             {open ? (
               <CodeSnippet
                 value={ClothesDocsData.rest.result}
                 maxWidth="1200px"
+                testId="Example-Code-Snippet"
               />
             ) : (
-              <CodeSnippet value={'Waiting to fetch!!!'} maxWidth="1200px" />
+              <CodeSnippet
+                testId="Loading-Code-Snippet"
+                value={'Waiting to fetch!!!'}
+                maxWidth="1200px"
+              />
             )}
           </Stack>
         </Stack>
