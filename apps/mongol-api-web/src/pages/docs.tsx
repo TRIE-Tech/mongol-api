@@ -9,7 +9,7 @@ const Index = () => {
   const [tabValue, setTabValue] = useState('home');
 
   return (
-    <Stack>
+    <Stack data-cy="Docs-Page-Container">
       <Stack
         sx={{
           position: 'sticky',

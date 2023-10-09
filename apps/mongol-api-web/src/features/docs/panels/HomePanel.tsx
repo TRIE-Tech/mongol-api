@@ -2,7 +2,7 @@ import { Alert, Stack, Typography } from '@mui/material';
 
 export const HomePanel = () => {
   return (
-    <Stack pl={20}>
+    <Stack pl={20} data-cy="Docs-Page-Home-Panel">
       <Stack>
         <Typography variant="h3" color="#002762">
           Introduction

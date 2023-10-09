@@ -3,13 +3,13 @@ import { Box, IconButton, useTheme } from '@mui/material';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
-export const CodeSnippet = ({
-  value,
-  maxWidth,
-}: {
+type CodeSnippetType = {
   value: string;
   maxWidth: string;
-}) => {
+  testId?: string;
+};
+
+export const CodeSnippet = ({ value, maxWidth, testId }: CodeSnippetType) => {
   const theme = useTheme();
 
   const copyToClipboard = async () => {
@@ -26,6 +26,7 @@ export const CodeSnippet = ({
         position: 'relative',
         maxWidth: maxWidth ? maxWidth : '100%',
       }}
+      data-cy={testId}
     >
       <IconButton
         onClick={copyToClipboard}

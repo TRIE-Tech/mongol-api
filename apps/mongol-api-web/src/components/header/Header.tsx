@@ -17,7 +17,7 @@ const LogoAndTitle = () => {
 
   return (
     <Link sx={{ cursor: 'pointer', textDecoration: 'none' }} href="/">
-      <Box sx={{ display: 'flex', alignItems: 'center' }}>
+      <Box sx={{ display: 'flex', alignItems: 'center' }} data-cy="Header-Logo">
         <LogoIcon />
         <Box sx={{ marginLeft: spacing(5) }}>
           <Typography variant="body2">mongol-api</Typography>
@@ -33,19 +33,28 @@ const HeaderLinks = () => {
   return (
     <Stack direction={'row'} spacing={24}>
       <Link sx={{ cursor: 'pointer', textDecoration: 'none' }} href="/">
-        <Typography variant="subtitle2" color={palette.blue[200]}>
+        <Typography
+          variant="subtitle2"
+          color={palette.blue[200]}
+          data-cy="Header-Home-Button"
+        >
           Home
         </Typography>
       </Link>
       <Link sx={{ cursor: 'pointer', textDecoration: 'none' }} href="/docs">
-        <Typography variant="subtitle2" color={palette.blue[200]}>
+        <Typography
+          variant="subtitle2"
+          color={palette.blue[200]}
+          data-cy="Header-Docs-Button"
+        >
           Docs
         </Typography>
       </Link>
       <Link
         sx={{ cursor: 'pointer', textDecoration: 'none' }}
         target="_blank"
-        href="https://github.com/trie-tech/mongol-api"
+        data-cy="Header-Github-Button"
+        href="https://github.com/TRIE-Tech/mongol-api"
       >
         <Typography variant="subtitle2" color={palette.blue[200]}>
           GitHub
