@@ -43,3 +43,10 @@ Thumbs.db
 .vercel
 .vscode
 .env
+
+#cypress
+**/cypress/results
+**/cypress/downloads
+# Code Coverage
+**/coverage/
+**/.nyc_output/
