@@ -1,8 +1,9 @@
 import { Typography } from '@mui/material';
 import MuiButton from '@mui/material/Button';
+import { ButtonProps as MuiButtonProps } from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 
-export interface BaseButtonProps {
+export interface BaseButtonProps extends MuiButtonProps {
   children: React.ReactNode;
   fullWidth?: boolean;
   onClick?: () => void;

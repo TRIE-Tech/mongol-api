@@ -26,7 +26,7 @@ export const ProvincePanel = () => {
     }
   };
   return (
-    <Stack pl={20}>
+    <Stack pl={20} data-cy="Docs-Page-Provinces-Tab">
       <Stack
         bgcolor={palette.blue[200]}
         borderRadius={spacing(2)}
@@ -68,6 +68,7 @@ export const ProvincePanel = () => {
           </Box>
           <IconButton
             onClick={copyToClipboard}
+            data-cy="Docs-Page-Provinces-Panel-Copy-Icon-Button"
             sx={{
               color: palette.common.white,
               padding: '0px',

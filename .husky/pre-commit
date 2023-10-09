@@ -54,6 +54,8 @@ for match in $matches; do
 
         if [[ $buildOutput == *"Successfully"* ]]; then
             echo "\n > ${GREEN}Successfully ran target build for project $match ${RESET}. \n"
+            bash "$SCRIPT_DIR/../tools/scripts/e2e.sh" "$match"
+            bash "$SCRIPT_DIR/../tools/scripts/jest.sh" "$match"
         else
             echo "\n >${RED}Build failed for project $match. Exiting script.${RESET} \n"
             exit 1

@@ -7,6 +7,7 @@ import {
 } from '@mui/material';
 import { Dispatch, SetStateAction } from 'react';
 import { TABS_DATA } from './shared';
+import { upperFirst } from 'lodash';
 
 export const StyledTab = styled(MuiTab)(({ theme }) => ({
   color: '#000000',
@@ -62,7 +63,14 @@ export const DocsTabs = (props: TabsType) => {
         </Typography>
       </Box>
       {TABS_DATA.slice(0, 1).map(({ label, value }, index) => {
-        return <StyledTab key={index} label={label} value={value} />;
+        return (
+          <StyledTab
+            key={index}
+            label={label}
+            value={value}
+            data-cy={`Docs-Tabs-${upperFirst(value)}`}
+          />
+        );
       })}
 
       <Box px={12} py={4}>
@@ -71,7 +79,14 @@ export const DocsTabs = (props: TabsType) => {
         </Typography>
       </Box>
       {TABS_DATA.slice(1).map(({ label, value }, index) => {
-        return <StyledTab key={index} label={label} value={value} />;
+        return (
+          <StyledTab
+            key={index}
+            label={label}
+            value={value}
+            data-cy={`Docs-Tabs-${upperFirst(value)}`}
+          />
+        );
       })}
     </MuiTabs>
   );
