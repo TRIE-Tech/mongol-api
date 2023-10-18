@@ -19,10 +19,9 @@ export const Intro = () => {
               Welcome to mongol-api
             </Typography>
             <Typography variant="subtitle2" color="#000" pb={8}>
-              Lorem ipsum dolor sit amet consectetur. Congue quam bibendum
-              venenatis consectetur interdum pellentesque amet purus id.
-              Senectus nunc risus sed nunc ultricies placerat proin. Ultricies
-              luctus vel tortor eu elementum vulputate cursus
+              We aim to share Mongolian culture with the world through our API.
+              This service provides a platform which users can request
+              information related to Mongolian culture, history, and language.
             </Typography>
             <Box width="176px">
               <Link href="/docs">
