@@ -22,7 +22,8 @@
       "@components": ["./src/components"],
       "@theme": ["./src/theme/theme.tsx"],
       "@features": ["./src/features"],
-      "@icons": ["./src/icons"]
+      "@icons": ["./src/icons"],
+      "react": ["./node_modules/@types/react"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "next-env.d.ts"],

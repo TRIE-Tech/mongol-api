@@ -38,7 +38,7 @@ export const Resources = () => {
               Resources & Examples
             </Typography>
             <Typography color={palette.blue[200]} variant="subtitle1" py={8}>
-              Lorem ipsum dolor sit amet consectetur.
+              Here are some resources and examples to help you get started.
             </Typography>
           </Stack>
 
