@@ -9,7 +9,9 @@
       "country": "Mongolia",
       "postalCode": ""
     },
-    "images": ["image_url_gobi_1", "image_url_gobi_2"]
+    "images": [
+      "https://image-service-kappa.vercel.app/images/tourist-attractions/gobi-desert.jpg"
+    ]
   },
   {
     "id": "2",
@@ -21,7 +23,9 @@
       "country": "Mongolia",
       "postalCode": ""
     },
-    "images": ["image_url_erdene_zuu_1", "image_url_erdene_zuu_2"]
+    "images": [
+      "https://image-service-kappa.vercel.app/images/tourist-attractions/erdenezuu.jpg"
+    ]
   },
   {
     "id": "3",
@@ -33,7 +37,9 @@
       "country": "Mongolia",
       "postalCode": ""
     },
-    "images": ["image_url_khovsgol_1", "image_url_khovsgol_2"]
+    "images": [
+      "https://image-service-kappa.vercel.app/images/tourist-attractions/khovsgol.jpg"
+    ]
   },
   {
     "id": "4",
@@ -45,7 +51,9 @@
       "country": "Mongolia",
       "postalCode": ""
     },
-    "images": ["image_url_genghis_khan_1", "image_url_genghis_khan_2"]
+    "images": [
+      "https://image-service-kappa.vercel.app/images/tourist-attractions/genghis-khan.jpg"
+    ]
   },
   {
     "id": "5",
@@ -57,7 +65,9 @@
       "country": "Mongolia",
       "postalCode": ""
     },
-    "images": ["image_url_orkhon_valley_1", "image_url_orkhon_valley_2"]
+    "images": [
+      "https://image-service-kappa.vercel.app/images/tourist-attractions/orkhon-valley.jpg"
+    ]
   },
   {
     "id": "6",
@@ -69,22 +79,12 @@
       "country": "Mongolia",
       "postalCode": ""
     },
-    "images": ["image_url_altai_tavan_bogd_1", "image_url_altai_tavan_bogd_2"]
+    "images": [
+      "https://image-service-kappa.vercel.app/images/tourist-attractions/altai-tavan-bogd.jpg"
+    ]
   },
   {
     "id": "7",
-    "name": "Karakorum (Kharkhorin)",
-    "description": "Karakorum was the ancient capital of the Mongol Empire. Visitors can explore historical sites and learn about Mongolian history.",
-    "address": {
-      "street": "",
-      "city": "Kharkhorin",
-      "country": "Mongolia",
-      "postalCode": ""
-    },
-    "images": ["image_url_karakorum_1", "image_url_karakorum_2"]
-  },
-  {
-    "id": "8",
     "name": "Yolyn Am (Eagle Valley)",
     "description": "Yolyn Am is a narrow gorge located in the Gurvan Saikhan Mountains. It's known for its ice formations and unique wildlife.",
     "address": {
@@ -93,10 +93,12 @@
       "country": "Mongolia",
       "postalCode": ""
     },
-    "images": ["image_url_yolyn_am_1", "image_url_yolyn_am_2"]
+    "images": [
+      "https://image-service-kappa.vercel.app/images/tourist-attractions/yolyn-am.jpg"
+    ]
   },
   {
-    "id": "9",
+    "id": "8",
     "name": "Terelj National Park",
     "description": "Terelj National Park offers beautiful landscapes, including rock formations, forests, and the famous Turtle Rock.",
     "address": {
@@ -105,18 +107,8 @@
       "country": "Mongolia",
       "postalCode": ""
     },
-    "images": ["image_url_terelj_1", "image_url_terelj_2"]
-  },
-  {
-    "id": "10",
-    "name": "Amarbayasgalant Monastery",
-    "description": "Amarbayasgalant Monastery is a stunning Buddhist monastery with impressive architecture and intricate artwork.",
-    "address": {
-      "street": "",
-      "city": "Selenge Province",
-      "country": "Mongolia",
-      "postalCode": ""
-    },
-    "images": ["image_url_amarbayasgalant_1", "image_url_amarbayasgalant_2"]
+    "images": [
+      "https://image-service-kappa.vercel.app/images/tourist-attractions/terelj.jpg"
+    ]
   }
 ]
