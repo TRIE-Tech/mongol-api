@@ -5,9 +5,7 @@
     "area": 4704,
     "population": 1473000,
     "capital": "Ulaanbaatar",
-    "soums": ["Bayanzürkh", "Sükhbaatar", "Chingeltei"],
-    "thumbnail": "thumbnail_url_1",
-    "images": ["image_url_1_1", "image_url_1_2"]
+    "soums": ["Bayanzürkh", "Sükhbaatar", "Chingeltei"]
   },
   {
     "id": "2",
@@ -15,9 +13,7 @@
     "area": 80000,
     "population": 72238,
     "capital": "Öndörkhaan",
-    "soums": ["Baruun-Urt", "Dadal", "Chinggis"],
-    "thumbnail": "thumbnail_url_2",
-    "images": ["image_url_2_1", "image_url_2_2"]
+    "soums": ["Baruun-Urt", "Dadal", "Chinggis"]
   },
   {
     "id": "3",
@@ -25,9 +21,7 @@
     "area": 45000,
     "population": 89332,
     "capital": "Ölgii",
-    "soums": ["Ulgii", "Altai", "Tsengel"],
-    "thumbnail": "thumbnail_url_3",
-    "images": ["image_url_3_1", "image_url_3_2"]
+    "soums": ["Ulgii", "Altai", "Tsengel"]
   },
   {
     "id": "4",
@@ -35,9 +29,7 @@
     "area": 116000,
     "population": 77527,
     "capital": "Bayankhongor",
-    "soums": ["Bayankhongor", "Bayantsagaan", "Jinst"],
-    "thumbnail": "thumbnail_url_4",
-    "images": ["image_url_4_1", "image_url_4_2"]
+    "soums": ["Bayankhongor", "Bayantsagaan", "Jinst"]
   },
   {
     "id": "5",
@@ -45,9 +37,7 @@
     "area": 48100,
     "population": 49294,
     "capital": "Bulgan",
-    "soums": ["Bulgan", "Bayangol", "Mogod"],
-    "thumbnail": "thumbnail_url_5",
-    "images": ["image_url_5_1", "image_url_5_2"]
+    "soums": ["Bulgan", "Bayangol", "Mogod"]
   },
   {
     "id": "6",
@@ -55,9 +45,7 @@
     "area": 12200,
     "population": 133126,
     "capital": "Darkhan",
-    "soums": ["Darkhan", "Erdenet", "Kharaa"],
-    "thumbnail": "thumbnail_url_6",
-    "images": ["image_url_6_1", "image_url_6_2"]
+    "soums": ["Darkhan", "Erdenet", "Kharaa"]
   },
   {
     "id": "7",
@@ -65,9 +53,7 @@
     "area": 123600,
     "population": 75487,
     "capital": "Choibalsan",
-    "soums": ["Khalkh Gol", "Chuluut", "Bayan-Uul"],
-    "thumbnail": "thumbnail_url_7",
-    "images": ["image_url_7_1", "image_url_7_2"]
+    "soums": ["Khalkh Gol", "Chuluut", "Bayan-Uul"]
   },
   {
     "id": "8",
@@ -75,9 +61,7 @@
     "area": 123800,
     "population": 71586,
     "capital": "Sainshand",
-    "soums": ["Sainshand", "Matad", "Dalanzadgad"],
-    "thumbnail": "thumbnail_url_8",
-    "images": ["image_url_8_1", "image_url_8_2"]
+    "soums": ["Sainshand", "Matad", "Dalanzadgad"]
   },
   {
     "id": "9",
@@ -85,9 +69,7 @@
     "area": 74300,
     "population": 51339,
     "capital": "Mandalgovi",
-    "soums": ["Mandalgovi", "Delgerkhaan", "Adaatsag"],
-    "thumbnail": "thumbnail_url_9",
-    "images": ["image_url_9_1", "image_url_9_2"]
+    "soums": ["Mandalgovi", "Delgerkhaan", "Adaatsag"]
   },
   {
     "id": "10",
@@ -95,9 +77,7 @@
     "area": 55200,
     "population": 56976,
     "capital": "Altai",
-    "soums": ["Altai", "Tsetsen-Uul", "Chandmani"],
-    "thumbnail": "thumbnail_url_10",
-    "images": ["image_url_10_1", "image_url_10_2"]
+    "soums": ["Altai", "Tsetsen-Uul", "Chandmani"]
   },
   {
     "id": "11",
@@ -105,9 +85,7 @@
     "area": 152000,
     "population": 16015,
     "capital": "Sainshand",
-    "soums": ["Sainshand", "Mandal-Ovoo", "Darvi"],
-    "thumbnail": "thumbnail_url_11",
-    "images": ["image_url_11_1", "image_url_11_2"]
+    "soums": ["Sainshand", "Mandal-Ovoo", "Darvi"]
   },
   {
     "id": "12",
@@ -115,9 +93,7 @@
     "area": 76300,
     "population": 92030,
     "capital": "Khovd",
-    "soums": ["Khovd", "Ölgiy", "Buyant"],
-    "thumbnail": "thumbnail_url_12",
-    "images": ["image_url_12_1", "image_url_12_2"]
+    "soums": ["Khovd", "Ölgiy", "Buyant"]
   },
   {
     "id": "13",
@@ -125,9 +101,7 @@
     "area": 100600,
     "population": 127402,
     "capital": "Mörön",
-    "soums": ["Mörön", "Renchinlkhümbe", "Tosontsengel"],
-    "thumbnail": "thumbnail_url_13",
-    "images": ["image_url_13_1", "image_url_13_2"]
+    "soums": ["Mörön", "Renchinlkhümbe", "Tosontsengel"]
   },
   {
     "id": "14",
@@ -135,9 +109,7 @@
     "area": 84000,
     "population": 84029,
     "capital": "Erdenet",
-    "soums": ["Erdenet", "Bulgan", "Bayangol"],
-    "thumbnail": "thumbnail_url_14",
-    "images": ["image_url_14_1", "image_url_14_2"]
+    "soums": ["Erdenet", "Bulgan", "Bayangol"]
   },
   {
     "id": "15",
@@ -145,9 +117,7 @@
     "area": 82000,
     "population": 107580,
     "capital": "Arvaikheer",
-    "soums": ["Arvaikheer", "Jargalant", "Uyanga"],
-    "thumbnail": "thumbnail_url_15",
-    "images": ["image_url_15_1", "image_url_15_2"]
+    "soums": ["Arvaikheer", "Jargalant", "Uyanga"]
   },
   {
     "id": "16",
@@ -155,9 +125,7 @@
     "area": 41200,
     "population": 115038,
     "capital": "Sükhbaatar",
-    "soums": ["Sükhbaatar", "Chuluut", "Bayan-Uul"],
-    "thumbnail": "thumbnail_url_16",
-    "images": ["image_url_16_1", "image_url_16_2"]
+    "soums": ["Sükhbaatar", "Chuluut", "Bayan-Uul"]
   },
   {
     "id": "17",
@@ -165,9 +133,7 @@
     "area": 81000,
     "population": 47084,
     "capital": "Baruun-Urt",
-    "soums": ["Baruun-Urt", "Mörön", "Chuluut"],
-    "thumbnail": "thumbnail_url_17",
-    "images": ["image_url_17_1", "image_url_17_2"]
+    "soums": ["Baruun-Urt", "Mörön", "Chuluut"]
   },
   {
     "id": "18",
@@ -175,9 +141,7 @@
     "area": 74200,
     "population": 121457,
     "capital": "Zuunmod",
-    "soums": ["Zuunmod", "Bayandelger", "Batsumber"],
-    "thumbnail": "thumbnail_url_18",
-    "images": ["image_url_18_1", "image_url_18_2"]
+    "soums": ["Zuunmod", "Bayandelger", "Batsumber"]
   },
   {
     "id": "19",
@@ -185,9 +149,7 @@
     "area": 69900,
     "population": 69010,
     "capital": "Ulaangom",
-    "soums": ["Ulaangom", "Uvs", "Ulaangom"],
-    "thumbnail": "thumbnail_url_19",
-    "images": ["image_url_19_1", "image_url_19_2"]
+    "soums": ["Ulaangom", "Uvs", "Ulaangom"]
   },
   {
     "id": "20",
@@ -195,9 +157,7 @@
     "area": 82000,
     "population": 71071,
     "capital": "Uliastai",
-    "soums": ["Uliastai", "Zavkhan", "Bayankhongor"],
-    "thumbnail": "thumbnail_url_20",
-    "images": ["image_url_20_1", "image_url_20_2"]
+    "soums": ["Uliastai", "Zavkhan", "Bayankhongor"]
   },
   {
     "id": "21",
@@ -205,8 +165,6 @@
     "area": 165400,
     "population": 75871,
     "capital": "Dalanzadgad",
-    "soums": ["Dalanzadgad", "Khanbogd", "Gurvantes"],
-    "thumbnail": "thumbnail_url_21",
-    "images": ["image_url_21_1", "image_url_21_2"]
+    "soums": ["Dalanzadgad", "Khanbogd", "Gurvantes"]
   }
 ]
