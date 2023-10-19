@@ -3,70 +3,64 @@
     "id": "1",
     "name": "Morin Khuur",
     "description": "A traditional horsehead fiddle with two strings, representing a horse's head and body.",
-    "thumbnail": "thumbnail_url_1",
-    "images": ["image_url_1_1", "image_url_1_2"]
+    "images": [
+      "https://image-service-kappa.vercel.app/images/instruments/morin-khuur.jpg"
+    ]
   },
   {
     "id": "2",
     "name": "Yatga",
     "description": "A traditional zither-like instrument with strings that are plucked.",
-    "thumbnail": "thumbnail_url_2",
-    "images": ["image_url_2_1", "image_url_2_2"]
+    "images": [
+      "https://image-service-kappa.vercel.app/images/instruments/yatga.jpg"
+    ]
   },
   {
     "id": "3",
     "name": "Tovshuur",
     "description": "A two-stringed lute with a long neck, often played in traditional Mongolian music.",
-    "thumbnail": "thumbnail_url_3",
-    "images": ["image_url_3_1", "image_url_3_2"]
+    "images": [
+      "https://image-service-kappa.vercel.app/images/instruments/tovshuur.jpg"
+    ]
   },
   {
     "id": "4",
     "name": "Shanz",
     "description": "A long-necked, three-stringed lute with a trapezoidal soundbox.",
-    "thumbnail": "thumbnail_url_4",
-    "images": ["image_url_4_1", "image_url_4_2"]
+    "images": [
+      "https://image-service-kappa.vercel.app/images/instruments/shanz.jpg"
+    ]
   },
   {
     "id": "5",
     "name": "Byzaanchy",
     "description": "A wind instrument made from a sheep's rib bones, producing a haunting sound.",
-    "thumbnail": "thumbnail_url_5",
-    "images": ["image_url_5_1", "image_url_5_2"]
+    "images": [
+      "https://image-service-kappa.vercel.app/images/instruments/byzaanchy.jpg"
+    ]
   },
   {
     "id": "6",
     "name": "Limbe",
     "description": "A flute-like instrument made from bamboo, often used in Mongolian folk music.",
-    "thumbnail": "thumbnail_url_6",
-    "images": ["image_url_6_1", "image_url_6_2"]
+    "images": [
+      "https://image-service-kappa.vercel.app/images/instruments/limbe.jpg"
+    ]
   },
   {
     "id": "7",
-    "name": "Tumur Khuur",
-    "description": "A bowed musical instrument similar to the Morin Khuur, but with a wooden body.",
-    "thumbnail": "thumbnail_url_7",
-    "images": ["image_url_7_1", "image_url_7_2"]
+    "name": "Khuuchir",
+    "description": "A jew's harp-like instrument made from metal or bamboo, producing a twanging sound.",
+    "images": [
+      "https://image-service-kappa.vercel.app/images/instruments/khuuchir.jpg"
+    ]
   },
   {
     "id": "8",
-    "name": "Khuuchir",
-    "description": "A jew's harp-like instrument made from metal or bamboo, producing a twanging sound.",
-    "thumbnail": "thumbnail_url_8",
-    "images": ["image_url_8_1", "image_url_8_2"]
-  },
-  {
-    "id": "9",
-    "name": "Tungatgur",
-    "description": "A traditional overtone flute made from reed or wood, producing harmonic tones.",
-    "thumbnail": "thumbnail_url_9",
-    "images": ["image_url_9_1", "image_url_9_2"]
-  },
-  {
-    "id": "10",
-    "name": "Yoochin",
+    "name": "Yoochir",
     "description": "A hammered dulcimer with metal strings that are struck with mallets.",
-    "thumbnail": "thumbnail_url_10",
-    "images": ["image_url_10_1", "image_url_10_2"]
+    "images": [
+      "https://image-service-kappa.vercel.app/images/instruments/yoochir.jpg"
+    ]
   }
 ]

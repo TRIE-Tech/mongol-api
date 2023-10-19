@@ -6,7 +6,9 @@
     "timePeriod": "12th - 19th centuries",
     "material": ["Steel", "Leather"],
     "usage": "Weapon",
-    "images": ["image_url_sword_1", "image_url_sword_2"]
+    "images": [
+      "https://image-service-kappa.vercel.app/images/historical-tools/sword.jpg"
+    ]
   },
   {
     "id": "2",
@@ -15,7 +17,9 @@
     "timePeriod": "13th - 21st centuries",
     "material": ["Felt", "Wood"],
     "usage": "Shelter",
-    "images": ["image_url_ger_1", "image_url_ger_2"]
+    "images": [
+      "https://image-service-kappa.vercel.app/images/historical-tools/ger.jpg"
+    ]
   },
   {
     "id": "3",
@@ -24,7 +28,9 @@
     "timePeriod": "13th - 21st centuries",
     "material": ["Wood", "Horsehair", "Strings"],
     "usage": "Musical instrument",
-    "images": ["image_url_morin_khuur_1", "image_url_morin_khuur_2"]
+    "images": [
+      "https://image-service-kappa.vercel.app/images/historical-tools/morin-khuur.jpg"
+    ]
   },
   {
     "id": "4",
@@ -33,7 +39,9 @@
     "timePeriod": "11th - 20th centuries",
     "material": ["Wood", "Animal horn", "Sinew"],
     "usage": "Weapon",
-    "images": ["image_url_bow_1", "image_url_bow_2"]
+    "images": [
+      "https://image-service-kappa.vercel.app/images/historical-tools/bow.jpg"
+    ]
   },
   {
     "id": "5",
@@ -42,7 +50,9 @@
     "timePeriod": "13th - 21st centuries",
     "material": ["Leather", "Wood", "Metal"],
     "usage": "Equestrian equipment",
-    "images": ["image_url_saddle_1", "image_url_saddle_2"]
+    "images": [
+      "https://image-service-kappa.vercel.app/images/historical-tools/saddle.jpg"
+    ]
   },
   {
     "id": "6",
@@ -51,7 +61,9 @@
     "timePeriod": "13th - 21st centuries",
     "material": ["Metal"],
     "usage": "Equestrian equipment",
-    "images": ["image_url_stirrups_1", "image_url_stirrups_2"]
+    "images": [
+      "https://image-service-kappa.vercel.app/images/historical-tools/stirrup.jpg"
+    ]
   },
   {
     "id": "7",
@@ -60,7 +72,9 @@
     "timePeriod": "12th - 19th centuries",
     "material": ["Leather", "Fur"],
     "usage": "Archery equipment",
-    "images": ["image_url_quiver_1", "image_url_quiver_2"]
+    "images": [
+      "https://image-service-kappa.vercel.app/images/historical-tools/quiver.jpg"
+    ]
   },
   {
     "id": "8",
@@ -69,15 +83,8 @@
     "timePeriod": "12th - 21st centuries",
     "material": ["Leather", "Metal"],
     "usage": "Equestrian equipment",
-    "images": ["image_url_harness_1", "image_url_harness_2"]
-  },
-  {
-    "id": "9",
-    "name": "Traditional Ankle Boots",
-    "description": "Historical Mongolian leather boots designed for protection and comfort during nomadic life.",
-    "timePeriod": "13th - 21st centuries",
-    "material": ["Leather"],
-    "usage": "Footwear",
-    "images": ["image_url_boots_1", "image_url_boots_2"]
+    "images": [
+      "https://image-service-kappa.vercel.app/images/historical-tools/horse-harness.jpg"
+    ]
   }
 ]
