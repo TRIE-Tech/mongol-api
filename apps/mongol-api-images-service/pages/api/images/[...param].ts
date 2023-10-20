@@ -10,7 +10,39 @@ const imageExtensions: Record<string, string> = {
   '.gif': 'image/gif',
 };
 
-const Server = (req: NextApiRequest, res: NextApiResponse) => {
+const checkImageAccess = async (imagePath: string) => {
+  try {
+    await fs.promises.access(imagePath, fs.constants.R_OK);
+    return true;
+  } catch (error) {
+    return false;
+  }
+};
+
+const sendImageResponse = (
+  res: NextApiResponse,
+  imagePath: string,
+  contentType: string
+) => {
+  res.setHeader('Content-Type', contentType);
+  const stream = fs.createReadStream(imagePath);
+  stream.pipe(res);
+
+  // Optionally, you can listen for the 'close' event to clean up the stream when the response is closed.
+  res.on('close', () => {
+    stream.destroy();
+  });
+};
+
+const handleErrors = (res: NextApiResponse, error: any) => {
+  if (error.code === 'ENOENT') {
+    res.status(404).json({ error: 'Image not found' });
+  } else {
+    res.status(500).json({ error: 'Internal server error' });
+  }
+};
+
+const Server = async (req: NextApiRequest, res: NextApiResponse) => {
   const param = req.query.param as string[] | undefined;
 
   if (!param || param.length !== 2) {
@@ -22,23 +54,20 @@ const Server = (req: NextApiRequest, res: NextApiResponse) => {
   const baseDirectory = path.join(process.cwd(), 'public/images', folderName);
   const imagePath = path.join(baseDirectory, fileName);
 
-  fs.promises
-    .access(imagePath, fs.constants.R_OK)
-    .then(() => {
-      const ext = path.extname(fileName).toLowerCase();
-      const contentType = imageExtensions[ext];
+  const hasAccess = await checkImageAccess(imagePath);
 
-      if (!contentType) {
-        res.status(415).json({ error: 'Unsupported image format' });
-      } else {
-        res.setHeader('Content-Type', contentType);
+  if (hasAccess) {
+    const ext = path.extname(fileName).toLowerCase();
+    const contentType = imageExtensions[ext];
 
-        fs.createReadStream(imagePath).pipe(res);
-      }
-    })
-    .catch(() => {
-      res.status(404).json({ error: 'Image not found' });
-    });
+    if (!contentType) {
+      res.status(415).json({ error: 'Unsupported image format' });
+    } else {
+      sendImageResponse(res, imagePath, contentType);
+    }
+  } else {
+    handleErrors(res, { code: 'ENOENT' });
+  }
 };
 
 export default Server;
