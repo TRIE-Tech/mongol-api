@@ -50,4 +50,3 @@ Thumbs.db
 # Code Coverage
 **/coverage/
 **/.nyc_output/
-yarn.lock
