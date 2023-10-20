@@ -33,6 +33,7 @@
     "@mui/material": "^5.14.8",
     "@mui/styles": "^5.14.7",
     "@nx/next": "16.10.0",
+    "@types/mochawesome": "^6.2.3",
     "@types/react-syntax-highlighter": "^15.5.7",
     "apollo-graphql": "^0.9.7",
     "apollo-server-cloud-functions": "^3.12.0",

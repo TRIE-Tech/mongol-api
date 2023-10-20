@@ -1,7 +1,7 @@
 import FileCopyIcon from '@mui/icons-material/FileCopy';
 import { Box, IconButton, useTheme } from '@mui/material';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 
 type CodeSnippetType = {
   value: string;
