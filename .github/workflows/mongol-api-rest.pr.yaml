@@ -14,21 +14,20 @@ jobs:
       VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 16
       - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: 1.0.4
       - run: bun install
       - name: Install Vercel CLI
-        run: npm install --global vercel@latest
+        run: bun add --global vercel@latest
       - name: Run tests
-        run: yarn nx test mongol-api-rest
+        run: bunx nx test mongol-api-rest
       - name: Deploy to Vercel
         id: deployment
         run: |
           export VERCEL_TOKEN=${{ env.VERCEL_TOKEN }} 
-          output_vercel=$(yarn nx preview mongol-api-rest)
-          echo "Output of 'yarn nx preview': $output_vercel"  # Add this line
+          output_vercel=$(bunx nx preview mongol-api-rest)
+          echo "Output of 'bunx nx preview': $output_vercel"  # Add this line
           preview_link=$(echo "$output_vercel" | grep -Eo 'https://[^ >]+\.vercel\.app' | tail -1)
           echo "Preview Link: $preview_link"  # Add this line
           echo "ACTION_OUTPUT=${preview_link}" >> $GITHUB_ENV
