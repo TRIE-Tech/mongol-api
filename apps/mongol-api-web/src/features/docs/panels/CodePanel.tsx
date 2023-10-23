@@ -3,28 +3,39 @@ import { Box, IconButton, Stack, Typography, useTheme } from '@mui/material';
 import { useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-import { ClothesDocsData } from '../data/province';
 import { DocsTable } from 'src/components/table/Table';
 
-export const ProvincePanel = () => {
+type CodePanelTypes = {
+  restQuery: string;
+  restQueryResult: string;
+  graphQLQuery: string;
+  graphQLQueryResults: string;
+  queryParameters: Record<string, string>;
+};
+
+export const CodePanel = (props: CodePanelTypes) => {
+  const {
+    restQuery,
+    restQueryResult,
+    graphQLQuery,
+    graphQLQueryResults,
+    queryParameters,
+  } = props;
+
   const { palette, spacing } = useTheme();
   const [apiType, setApiType] = useState('graphql');
-  const {
-    ClothesRestQuery,
-    ClothesRestQueryResult,
-    ClothesGraphQLQuery,
-    ClothesRestGraphQLResult,
-    ClothesQueryParameters,
-  } = ClothesDocsData;
 
   const copyToClipboard = async () => {
-    const value = apiType === 'rest' ? ClothesRestQuery : ClothesGraphQLQuery;
+    const value = apiType === 'rest' ? restQuery : graphQLQuery;
     try {
       await navigator.clipboard.writeText(value);
     } catch (error) {
       console.error('Failed to copy to clipboard:', error);
     }
   };
+
+  console.log(restQueryResult);
+
   return (
     <Stack pl={20} data-cy="Docs-Page-Provinces-Tab">
       <Stack
@@ -44,6 +55,7 @@ export const ProvincePanel = () => {
               variant="body2"
               color="white"
               onClick={() => setApiType('graphql')}
+              data-cy="Docs-Tabs-Graphql-Query-Button"
               sx={{
                 textDecoration: apiType === 'graphql' ? 'underline' : 'none',
                 cursor: 'pointer',
@@ -57,6 +69,7 @@ export const ProvincePanel = () => {
             <Typography
               variant="body2"
               color="white"
+              data-cy="Docs-Tabs-Rest-Query-Button"
               onClick={() => setApiType('rest')}
               sx={{
                 textDecoration: apiType === 'rest' ? 'underline' : 'none',
@@ -89,7 +102,7 @@ export const ProvincePanel = () => {
             borderRadius: spacing(2),
           }}
         >
-          {apiType === 'rest' ? ClothesRestQuery : ClothesGraphQLQuery}
+          {apiType === 'rest' ? restQuery : graphQLQuery}
         </SyntaxHighlighter>
       </Stack>
       <Stack pt={6} borderRadius={spacing(2)} overflow="hidden">
@@ -103,9 +116,7 @@ export const ProvincePanel = () => {
             borderRadius: spacing(2),
           }}
         >
-          {apiType === 'rest'
-            ? ClothesRestQueryResult
-            : ClothesRestGraphQLResult}
+          {apiType === 'rest' ? restQueryResult : graphQLQueryResults}
         </SyntaxHighlighter>
       </Stack>
       <Stack pt={12}>
@@ -113,7 +124,7 @@ export const ProvincePanel = () => {
           Documentation
         </Typography>
 
-        <DocsTable data={ClothesQueryParameters} />
+        <DocsTable data={queryParameters} />
       </Stack>
     </Stack>
   );
