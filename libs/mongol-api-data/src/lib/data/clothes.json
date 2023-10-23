@@ -1,60 +1,74 @@
-[
-  {
-    "id": "1",
-    "name": "Deel",
-    "description": "The deel is a traditional Mongolian clothing item, usually made from silk, cotton, or wool. It has a distinctive design with a wide cut and high collar.",
-    "timePeriod": "13th - 21st centuries",
-    "materials": ["Silk", "Cotton", "Wool"],
-    "images": ["https://image-service-kappa.vercel.app/images/clothes/deel.jpg"]
-  },
-  {
-    "id": "2",
-    "name": "Tsaatan Coat",
-    "description": "The Tsaatan coat is worn by the Tsaatan people, an ethnic group of reindeer herders. It's made from reindeer hide and provides warmth in the harsh Mongolian climate.",
-    "timePeriod": "20th - 21st centuries",
-    "materials": ["Reindeer hide", "Fur"],
-    "images": [
-      "https://image-service-kappa.vercel.app/images/clothes/tsaatan-coat.jpg"
-    ]
-  },
-  {
-    "id": "3",
-    "name": "Khadag",
-    "description": "The khadag is a ceremonial silk scarf used in various occasions, symbolizing respect and good wishes. It's often presented as a sign of honor and appreciation.",
-    "timePeriod": "17th - 21st centuries",
-    "materials": ["Silk"],
-    "images": [
-      "https://image-service-kappa.vercel.app/images/clothes/khadag.jpg"
-    ]
-  },
-  {
-    "id": "4",
-    "name": "Zodog",
-    "description": "The zodog is a traditional Mongolian vest, typically worn by men. It's often made from colorful fabric and can be decorated with intricate patterns.",
-    "timePeriod": "18th - 21st centuries",
-    "materials": ["Fabric"],
-    "images": [
-      "https://image-service-kappa.vercel.app/images/clothes/zodog.jpg"
-    ]
-  },
-  {
-    "id": "5",
-    "name": "Gutal",
-    "description": "The gutal is a type of traditional Mongolian boots. They are durable and practical, designed to withstand the challenges of nomadic life.",
-    "timePeriod": "14th - 21st centuries",
-    "materials": ["Leather"],
-    "images": [
-      "https://image-service-kappa.vercel.app/images/clothes/gutal.jpg"
-    ]
-  },
-  {
-    "id": "6",
-    "name": "Khantaaz",
-    "description": "The khantaaz is a traditional Mongolian robe-like clothing item. It's made from silk and often worn during formal occasions.",
-    "timePeriod": "17th - 21st centuries",
-    "materials": ["Silk"],
-    "images": [
-      "https://image-service-kappa.vercel.app/images/clothes/khantaaz.jpg"
-    ]
+{
+  "data": [
+    {
+      "id": "1",
+      "name": "Deel",
+      "description": "The deel is a traditional Mongolian clothing item, usually made from silk, cotton, or wool. It has a distinctive design with a wide cut and high collar.",
+      "timePeriod": "13th - 21st centuries",
+      "materials": ["Silk", "Cotton", "Wool"],
+      "images": [
+        "https://image-service-kappa.vercel.app/images/clothes/deel.jpg"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Tsaatan Coat",
+      "description": "The Tsaatan coat is worn by the Tsaatan people, an ethnic group of reindeer herders. It's made from reindeer hide and provides warmth in the harsh Mongolian climate.",
+      "timePeriod": "20th - 21st centuries",
+      "materials": ["Reindeer hide", "Fur"],
+      "images": [
+        "https://image-service-kappa.vercel.app/images/clothes/tsaatan-coat.jpg"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Khadag",
+      "description": "The khadag is a ceremonial silk scarf used in various occasions, symbolizing respect and good wishes. It's often presented as a sign of honor and appreciation.",
+      "timePeriod": "17th - 21st centuries",
+      "materials": ["Silk"],
+      "images": [
+        "https://image-service-kappa.vercel.app/images/clothes/khadag.jpg"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Zodog",
+      "description": "The zodog is a traditional Mongolian vest, typically worn by men. It's often made from colorful fabric and can be decorated with intricate patterns.",
+      "timePeriod": "18th - 21st centuries",
+      "materials": ["Fabric"],
+      "images": [
+        "https://image-service-kappa.vercel.app/images/clothes/zodog.jpg"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Gutal",
+      "description": "The gutal is a type of traditional Mongolian boots. They are durable and practical, designed to withstand the challenges of nomadic life.",
+      "timePeriod": "14th - 21st centuries",
+      "materials": ["Leather"],
+      "images": [
+        "https://image-service-kappa.vercel.app/images/clothes/gutal.jpg"
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Khantaaz",
+      "description": "The khantaaz is a traditional Mongolian robe-like clothing item. It's made from silk and often worn during formal occasions.",
+      "timePeriod": "17th - 21st centuries",
+      "materials": ["Silk"],
+      "images": [
+        "https://image-service-kappa.vercel.app/images/clothes/khantaaz.jpg"
+      ]
+    }
+  ],
+  "graphqlQueryName": "getTraditionalClothes",
+  "restQueryName": "clothes",
+  "params": {
+    "id": "testID",
+    "name": "TestName",
+    "description": "testDescription",
+    "timePeriod": "TestPeriod",
+    "materials": "TestMaterial",
+    "images": "testImages"
   }
-]
+}

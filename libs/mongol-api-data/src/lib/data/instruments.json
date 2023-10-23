@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "name": "Morin Khuur",
+      "description": "A traditional horsehead fiddle with two strings, representing a horse's head and body.",
+      "images": [
+        "https://image-service-kappa.vercel.app/images/instruments/morin-khuur.jpg"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Yatga",
+      "description": "A traditional zither-like instrument with strings that are plucked.",
+      "images": [
+        "https://image-service-kappa.vercel.app/images/instruments/yatga.jpg"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Tovshuur",
+      "description": "A two-stringed lute with a long neck, often played in traditional Mongolian music.",
+      "images": [
+        "https://image-service-kappa.vercel.app/images/instruments/tovshuur.jpg"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Shanz",
+      "description": "A long-necked, three-stringed lute with a trapezoidal soundbox.",
+      "images": [
+        "https://image-service-kappa.vercel.app/images/instruments/shanz.jpg"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Byzaanchy",
+      "description": "A wind instrument made from a sheep's rib bones, producing a haunting sound.",
+      "images": [
+        "https://image-service-kappa.vercel.app/images/instruments/byzaanchy.jpg"
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Limbe",
+      "description": "A flute-like instrument made from bamboo, often used in Mongolian folk music.",
+      "images": [
+        "https://image-service-kappa.vercel.app/images/instruments/limbe.jpg"
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Khuuchir",
+      "description": "A jew's harp-like instrument made from metal or bamboo, producing a twanging sound.",
+      "images": [
+        "https://image-service-kappa.vercel.app/images/instruments/khuuchir.jpg"
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Yoochir",
+      "description": "A hammered dulcimer with metal strings that are struck with mallets.",
+      "images": [
+        "https://image-service-kappa.vercel.app/images/instruments/yoochir.jpg"
+      ]
+    }
+  ],
+  "graphqlQueryName": "getInstruments",
+  "restQueryName": "instruments",
+  "params": {
+    "id": "testID",
+    "name": "TestName",
+    "description": "testDescription",
+    "timePeriod": "TestPeriod",
+    "materials": "TestMaterial",
+    "images": "testImages"
+  }
+}

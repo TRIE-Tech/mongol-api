@@ -1,5 +1,22 @@
 import { HomePanel } from './panels';
-import { ProvincePanel } from './panels/ProvincePanel';
+import { CodePanel } from './panels/CodePanel';
+import {
+  ClothesDemoData,
+  InstrumentsDemoData,
+  ProvincesDemoData,
+  HistoricalToolsDemoData,
+  EthnicGroupsDemoData,
+  TouristAttractionsDemoData,
+} from '../../../../../libs/mongol-api-data/src/lib/demo';
+
+const totalDemoData = [
+  ClothesDemoData,
+  InstrumentsDemoData,
+  HistoricalToolsDemoData,
+  EthnicGroupsDemoData,
+  ProvincesDemoData,
+  TouristAttractionsDemoData,
+];
 
 export const TABS_DATA = [
   {
@@ -7,34 +24,17 @@ export const TABS_DATA = [
     value: 'home',
     panel: <HomePanel />,
   },
-  {
-    label: 'Provinces',
-    value: 'provinces',
-    panel: <ProvincePanel />,
-  },
-  {
-    label: 'Clothes',
-    value: 'clothes',
-    panel: <ProvincePanel />,
-  },
-  {
-    label: 'Instruments',
-    value: 'instruments',
-    panel: <ProvincePanel />,
-  },
-  {
-    label: 'Ethnic Groups',
-    value: 'ethnicGroups',
-    panel: <ProvincePanel />,
-  },
-  {
-    label: 'Tourist Attractions',
-    value: 'touristAttractions',
-    panel: <ProvincePanel />,
-  },
-  {
-    label: 'Historical Tools',
-    value: 'historicalTools',
-    panel: <ProvincePanel />,
-  },
+  ...totalDemoData.map(({ panelInfo, rest, graphql, queryParameters }) => ({
+    label: panelInfo.label,
+    value: panelInfo.value,
+    panel: (
+      <CodePanel
+        restQuery={rest.query}
+        restQueryResult={rest.result}
+        graphQLQuery={graphql.query}
+        graphQLQueryResults={graphql.result}
+        queryParameters={queryParameters}
+      />
+    ),
+  })),
 ];

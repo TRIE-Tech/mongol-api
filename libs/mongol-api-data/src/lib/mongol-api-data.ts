@@ -1,30 +1,30 @@
 import Clothes from './data/clothes.json';
-import EthnicGroups from './data/ethnic-group.json';
+import EthnicGroups from './data/ethnic-groups.json';
 import HistoricalTools from './data/historical-tools.json';
-import Instruments from './data/instrument.json';
-import Province from './data/province.json';
+import Instruments from './data/instruments.json';
+import Province from './data/provinces.json';
 import TouristAttractions from './data/tourist-attractions.json';
 
 export const clothesData = (): Array<Record<string, unknown>> => {
-  return Clothes;
+  return Clothes.data;
 };
 
 export const ethnicGroupsData = (): Array<Record<string, unknown>> => {
-  return EthnicGroups;
+  return EthnicGroups.data;
 };
 
 export const historicalToolsData = (): Array<Record<string, unknown>> => {
-  return HistoricalTools;
+  return HistoricalTools.data;
 };
 
 export const instrumentsData = (): Array<Record<string, unknown>> => {
-  return Instruments;
+  return Instruments.data;
 };
 
 export const provincesData = (): Array<Record<string, unknown>> => {
-  return Province;
+  return Province.data;
 };
 
 export const touristAttractionsData = () => {
-  return TouristAttractions;
+  return TouristAttractions.data;
 };
