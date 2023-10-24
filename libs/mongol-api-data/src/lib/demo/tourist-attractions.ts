@@ -1,4 +1,4 @@
-import { default as data } from '../data/tourist-attractions.json';
+import { default as touristAttractionsData } from '../data/tourist-attractions.json';
 import {
   generateGraphQLQuery,
   generateGraphQLQueryResult,
@@ -9,14 +9,20 @@ import {
 
 export const TouristAttractionsDemoData = {
   graphql: {
-    query: generateGraphQLQuery(data.data, data.graphqlQueryName),
-    result: generateGraphQLQueryResult(data.data, data.graphqlQueryName),
+    query: generateGraphQLQuery(
+      touristAttractionsData.data,
+      touristAttractionsData.graphqlQueryName
+    ),
+    result: generateGraphQLQueryResult(
+      touristAttractionsData.data,
+      touristAttractionsData.graphqlQueryName
+    ),
   },
   rest: {
-    query: generateRestQuery(data.restQueryName),
-    result: generateRestQueryResult(data.data),
+    query: generateRestQuery(touristAttractionsData.restQueryName),
+    result: generateRestQueryResult(touristAttractionsData.data),
   },
-  queryParameters: generateQueryParameters(data.params),
+  queryParameters: generateQueryParameters(touristAttractionsData.params),
   panelInfo: {
     label: 'Tourist Attractions',
     value: 'touristAttractions',

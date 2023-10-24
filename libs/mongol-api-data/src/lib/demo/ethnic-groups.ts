@@ -1,4 +1,4 @@
-import { default as data } from '../data/ethnic-groups.json';
+import { default as ethnicGroupsData } from '../data/ethnic-groups.json';
 import {
   generateGraphQLQuery,
   generateGraphQLQueryResult,
@@ -9,14 +9,20 @@ import {
 
 export const EthnicGroupsDemoData = {
   graphql: {
-    query: generateGraphQLQuery(data.data, data.graphqlQueryName),
-    result: generateGraphQLQueryResult(data.data, data.graphqlQueryName),
+    query: generateGraphQLQuery(
+      ethnicGroupsData.data,
+      ethnicGroupsData.graphqlQueryName
+    ),
+    result: generateGraphQLQueryResult(
+      ethnicGroupsData.data,
+      ethnicGroupsData.graphqlQueryName
+    ),
   },
   rest: {
-    query: generateRestQuery(data.restQueryName),
-    result: generateRestQueryResult(data.data),
+    query: generateRestQuery(ethnicGroupsData.restQueryName),
+    result: generateRestQueryResult(ethnicGroupsData.data),
   },
-  queryParameters: generateQueryParameters(data.params),
+  queryParameters: generateQueryParameters(ethnicGroupsData.params),
   panelInfo: {
     label: 'Ethnic Groups',
     value: 'ethnicGroups',

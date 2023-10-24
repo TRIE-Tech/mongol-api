@@ -1,4 +1,4 @@
-import { default as data } from '../data/historical-tools.json';
+import { default as historicalToolsData } from '../data/historical-tools.json';
 import {
   generateGraphQLQuery,
   generateGraphQLQueryResult,
@@ -9,14 +9,20 @@ import {
 
 export const HistoricalToolsDemoData = {
   graphql: {
-    query: generateGraphQLQuery(data.data, data.graphqlQueryName),
-    result: generateGraphQLQueryResult(data.data, data.graphqlQueryName),
+    query: generateGraphQLQuery(
+      historicalToolsData.data,
+      historicalToolsData.graphqlQueryName
+    ),
+    result: generateGraphQLQueryResult(
+      historicalToolsData.data,
+      historicalToolsData.graphqlQueryName
+    ),
   },
   rest: {
-    query: generateRestQuery(data.restQueryName),
-    result: generateRestQueryResult(data.data),
+    query: generateRestQuery(historicalToolsData.restQueryName),
+    result: generateRestQueryResult(historicalToolsData.data),
   },
-  queryParameters: generateQueryParameters(data.params),
+  queryParameters: generateQueryParameters(historicalToolsData.params),
   panelInfo: {
     label: 'Historical Tools',
     value: 'historicalTools',
