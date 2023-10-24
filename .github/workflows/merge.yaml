@@ -1,0 +1,30 @@
+name: Merge Action
+on:
+  pull_request:
+    types:
+      - closed
+jobs:
+  if_merged:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    env:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: 1.0.4
+      - run: bun install -y
+      - name: Install Vercel CLI
+        run: bun add --global vercel@latest
+      - name: Get NX BASE and NX HEAD
+        uses: nrwl/nx-set-shas@v4
+      - name: Generating Preview
+        id: preview-deployment
+        run: |
+          export NX_BASE=${{ env.NX_BASE }}
+          export NX_HEAD=${{ env.NX_HEAD }}
+          export VERCEL_TOKEN=${{ env.VERCEL_TOKEN }}
+          bash ./tools/scripts/merge.sh
