@@ -34,7 +34,7 @@ files=$(git diff --cached --name-status)
 matches=$(echo "$files" | grep -oE "$pattern" | tr ' ' '\n' | sort | uniq)
 
 for match in $matches; do
-    if [[ $match == "in" || $match == "projects" || $match == "yarn" || $match == "mongol-api-data" ]]; then
+    if [[ $match == "in" || $match == "projects" || $match == "yarn" || $match == "mongol-api-data" || $match == "mongol-api" ]]; then
         echo "\n >  Skipped $match. \n"
     else
         echo "\n >${GREEN}Running ESLINT on $match. ${RESET}\n"
