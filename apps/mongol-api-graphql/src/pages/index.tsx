@@ -5,7 +5,7 @@ const Index = () => {
         <div className="container">
           <div id="welcome">
             <h1>
-              <span> Hello there, </span>
+              <span> Hello there </span>
               Welcome to mongol-api-graphql 👋
               <p style={{ paddingTop: '20px' }}>
                 To use, simply add &apos;/api/graphql&apos; to the end of the
