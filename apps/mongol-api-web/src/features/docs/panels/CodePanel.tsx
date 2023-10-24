@@ -34,8 +34,6 @@ export const CodePanel = (props: CodePanelTypes) => {
     }
   };
 
-  console.log(restQueryResult);
-
   return (
     <Stack pl={20} data-cy="Docs-Page-Provinces-Tab">
       <Stack

@@ -1,4 +1,4 @@
-import { default as data } from '../data/instruments.json';
+import { default as instrumentsData } from '../data/instruments.json';
 import {
   generateGraphQLQuery,
   generateGraphQLQueryResult,
@@ -9,14 +9,20 @@ import {
 
 export const InstrumentsDemoData = {
   graphql: {
-    query: generateGraphQLQuery(data.data, data.graphqlQueryName),
-    result: generateGraphQLQueryResult(data.data, data.graphqlQueryName),
+    query: generateGraphQLQuery(
+      instrumentsData.data,
+      instrumentsData.graphqlQueryName
+    ),
+    result: generateGraphQLQueryResult(
+      instrumentsData.data,
+      instrumentsData.graphqlQueryName
+    ),
   },
   rest: {
-    query: generateRestQuery(data.restQueryName),
-    result: generateRestQueryResult(data.data),
+    query: generateRestQuery(instrumentsData.restQueryName),
+    result: generateRestQueryResult(instrumentsData.data),
   },
-  queryParameters: generateQueryParameters(data.params),
+  queryParameters: generateQueryParameters(instrumentsData.params),
   panelInfo: {
     label: 'Instruments',
     value: 'instruments',

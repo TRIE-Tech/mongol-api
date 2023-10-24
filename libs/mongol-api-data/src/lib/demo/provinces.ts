@@ -1,4 +1,4 @@
-import { default as data } from '../data/provinces.json';
+import { default as provincesData } from '../data/provinces.json';
 import {
   generateGraphQLQuery,
   generateGraphQLQueryResult,
@@ -9,14 +9,20 @@ import {
 
 export const ProvincesDemoData = {
   graphql: {
-    query: generateGraphQLQuery(data.data, data.graphqlQueryName),
-    result: generateGraphQLQueryResult(data.data, data.graphqlQueryName),
+    query: generateGraphQLQuery(
+      provincesData.data,
+      provincesData.graphqlQueryName
+    ),
+    result: generateGraphQLQueryResult(
+      provincesData.data,
+      provincesData.graphqlQueryName
+    ),
   },
   rest: {
-    query: generateRestQuery(data.restQueryName),
-    result: generateRestQueryResult(data.data),
+    query: generateRestQuery(provincesData.restQueryName),
+    result: generateRestQueryResult(provincesData.data),
   },
-  queryParameters: generateQueryParameters(data.params),
+  queryParameters: generateQueryParameters(provincesData.params),
   panelInfo: {
     label: 'Provinces',
     value: 'provinces',

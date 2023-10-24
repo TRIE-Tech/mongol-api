@@ -1,4 +1,4 @@
-import { default as data } from '../data/clothes.json';
+import { default as clothesData } from '../data/clothes.json';
 import {
   generateGraphQLQuery,
   generateGraphQLQueryResult,
@@ -9,14 +9,17 @@ import {
 
 export const ClothesDemoData = {
   graphql: {
-    query: generateGraphQLQuery(data.data, data.graphqlQueryName),
-    result: generateGraphQLQueryResult(data.data, data.graphqlQueryName),
+    query: generateGraphQLQuery(clothesData.data, clothesData.graphqlQueryName),
+    result: generateGraphQLQueryResult(
+      clothesData.data,
+      clothesData.graphqlQueryName
+    ),
   },
   rest: {
-    query: generateRestQuery(data.restQueryName),
-    result: generateRestQueryResult(data.data),
+    query: generateRestQuery(clothesData.restQueryName),
+    result: generateRestQueryResult(clothesData.data),
   },
-  queryParameters: generateQueryParameters(data.params),
+  queryParameters: generateQueryParameters(clothesData.params),
   panelInfo: {
     label: 'Clothes',
     value: 'clothes',
