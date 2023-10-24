@@ -18,13 +18,34 @@ describe('Should test Docs page', () => {
     cy.get('[data-cy="Docs-Page-Provinces-Tab"]').should('be.visible');
   });
 
-  it('4. Should copy provinces code snippets', () => {
+  it('3. Should change graphql code snippet to rest code snippet', () => {
     cy.get('[data-cy="Docs-Tabs-Provinces"]').click();
     cy.get('[data-cy="Docs-Page-Provinces-Tab"]').should('be.visible');
+    cy.get('[data-cy="Docs-Tabs-Rest-Query-Button"]').click();
+  });
+
+  it('4. Should rest code snippet to graphql code snippet', () => {
+    cy.get('[data-cy="Docs-Tabs-Provinces"]').click();
+    cy.get('[data-cy="Docs-Page-Provinces-Tab"]').should('be.visible');
+    cy.get('[data-cy="Docs-Tabs-Rest-Query-Button"]').click();
+    cy.get('[data-cy="Docs-Tabs-Graphql-Query-Button"]').click();
+  });
+
+  it('5. Should copy graphql code snippets', () => {
+    cy.get('[data-cy="Docs-Tabs-Provinces"]').click();
+    cy.get('[data-cy="Docs-Page-Provinces-Tab"]').should('be.visible');
+    cy.get('[data-cy="Docs-Tabs-Graphql-Query-Button"]').click();
     cy.get('[data-cy="Docs-Page-Provinces-Panel-Copy-Icon-Button"]').click();
   });
 
-  it('5. Should catch when clicks on the copy icon on provinces code snippets', () => {
+  it('6. Should copy rest code snippets', () => {
+    cy.get('[data-cy="Docs-Tabs-Provinces"]').click();
+    cy.get('[data-cy="Docs-Page-Provinces-Tab"]').should('be.visible');
+    cy.get('[data-cy="Docs-Tabs-Rest-Query-Button"]').click();
+    cy.get('[data-cy="Docs-Page-Provinces-Panel-Copy-Icon-Button"]').click();
+  });
+
+  it('7. Should catch when clicks on the copy icon on provinces code snippets', () => {
     cy.get('[data-cy="Docs-Tabs-Provinces"]').click();
     cy.get('[data-cy="Docs-Page-Provinces-Tab"]').should('be.visible');
     cy.window().then((win) => {
