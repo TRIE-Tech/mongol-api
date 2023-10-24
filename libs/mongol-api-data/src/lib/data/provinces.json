@@ -1,0 +1,182 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "name": "Ulaanbaatar",
+      "area": 4704,
+      "population": 1473000,
+      "capital": "Ulaanbaatar",
+      "soums": ["Bayanzürkh", "Sükhbaatar", "Chingeltei"]
+    },
+    {
+      "id": "2",
+      "name": "Khentii",
+      "area": 80000,
+      "population": 72238,
+      "capital": "Öndörkhaan",
+      "soums": ["Baruun-Urt", "Dadal", "Chinggis"]
+    },
+    {
+      "id": "3",
+      "name": "Bayan-Ölgii",
+      "area": 45000,
+      "population": 89332,
+      "capital": "Ölgii",
+      "soums": ["Ulgii", "Altai", "Tsengel"]
+    },
+    {
+      "id": "4",
+      "name": "Bayankhongor",
+      "area": 116000,
+      "population": 77527,
+      "capital": "Bayankhongor",
+      "soums": ["Bayankhongor", "Bayantsagaan", "Jinst"]
+    },
+    {
+      "id": "5",
+      "name": "Bulgan",
+      "area": 48100,
+      "population": 49294,
+      "capital": "Bulgan",
+      "soums": ["Bulgan", "Bayangol", "Mogod"]
+    },
+    {
+      "id": "6",
+      "name": "Darkhan-Uul",
+      "area": 12200,
+      "population": 133126,
+      "capital": "Darkhan",
+      "soums": ["Darkhan", "Erdenet", "Kharaa"]
+    },
+    {
+      "id": "7",
+      "name": "Dornod",
+      "area": 123600,
+      "population": 75487,
+      "capital": "Choibalsan",
+      "soums": ["Khalkh Gol", "Chuluut", "Bayan-Uul"]
+    },
+    {
+      "id": "8",
+      "name": "Dornogovi",
+      "area": 123800,
+      "population": 71586,
+      "capital": "Sainshand",
+      "soums": ["Sainshand", "Matad", "Dalanzadgad"]
+    },
+    {
+      "id": "9",
+      "name": "Dundgovi",
+      "area": 74300,
+      "population": 51339,
+      "capital": "Mandalgovi",
+      "soums": ["Mandalgovi", "Delgerkhaan", "Adaatsag"]
+    },
+    {
+      "id": "10",
+      "name": "Govi-Altai",
+      "area": 55200,
+      "population": 56976,
+      "capital": "Altai",
+      "soums": ["Altai", "Tsetsen-Uul", "Chandmani"]
+    },
+    {
+      "id": "11",
+      "name": "Govi-Sümber",
+      "area": 152000,
+      "population": 16015,
+      "capital": "Sainshand",
+      "soums": ["Sainshand", "Mandal-Ovoo", "Darvi"]
+    },
+    {
+      "id": "12",
+      "name": "Khovd",
+      "area": 76300,
+      "population": 92030,
+      "capital": "Khovd",
+      "soums": ["Khovd", "Ölgiy", "Buyant"]
+    },
+    {
+      "id": "13",
+      "name": "Khövsgöl",
+      "area": 100600,
+      "population": 127402,
+      "capital": "Mörön",
+      "soums": ["Mörön", "Renchinlkhümbe", "Tosontsengel"]
+    },
+    {
+      "id": "14",
+      "name": "Orkhon",
+      "area": 84000,
+      "population": 84029,
+      "capital": "Erdenet",
+      "soums": ["Erdenet", "Bulgan", "Bayangol"]
+    },
+    {
+      "id": "15",
+      "name": "Övörkhangai",
+      "area": 82000,
+      "population": 107580,
+      "capital": "Arvaikheer",
+      "soums": ["Arvaikheer", "Jargalant", "Uyanga"]
+    },
+    {
+      "id": "16",
+      "name": "Selenge",
+      "area": 41200,
+      "population": 115038,
+      "capital": "Sükhbaatar",
+      "soums": ["Sükhbaatar", "Chuluut", "Bayan-Uul"]
+    },
+    {
+      "id": "17",
+      "name": "Sükhbaatar",
+      "area": 81000,
+      "population": 47084,
+      "capital": "Baruun-Urt",
+      "soums": ["Baruun-Urt", "Mörön", "Chuluut"]
+    },
+    {
+      "id": "18",
+      "name": "Töv",
+      "area": 74200,
+      "population": 121457,
+      "capital": "Zuunmod",
+      "soums": ["Zuunmod", "Bayandelger", "Batsumber"]
+    },
+    {
+      "id": "19",
+      "name": "Uvs",
+      "area": 69900,
+      "population": 69010,
+      "capital": "Ulaangom",
+      "soums": ["Ulaangom", "Uvs", "Ulaangom"]
+    },
+    {
+      "id": "20",
+      "name": "Zavkhan",
+      "area": 82000,
+      "population": 71071,
+      "capital": "Uliastai",
+      "soums": ["Uliastai", "Zavkhan", "Bayankhongor"]
+    },
+    {
+      "id": "21",
+      "name": "Umnugovi",
+      "area": 165400,
+      "population": 75871,
+      "capital": "Dalanzadgad",
+      "soums": ["Dalanzadgad", "Khanbogd", "Gurvantes"]
+    }
+  ],
+  "graphqlQueryName": "getProvinces",
+  "restQueryName": "provinces",
+  "params": {
+    "id": "testID",
+    "name": "TestName",
+    "description": "testDescription",
+    "timePeriod": "TestPeriod",
+    "materials": "TestMaterial",
+    "images": "testImages"
+  }
+}

@@ -1,4 +1,4 @@
-import { default as data } from '../data/clothes.json';
+import { default as data } from '../data/tourist-attractions.json';
 import {
   generateGraphQLQuery,
   generateGraphQLQueryResult,
@@ -7,7 +7,7 @@ import {
   generateRestQueryResult,
 } from '../utils';
 
-export const ClothesDemoData = {
+export const TouristAttractionsDemoData = {
   graphql: {
     query: generateGraphQLQuery(data.data, data.graphqlQueryName),
     result: generateGraphQLQueryResult(data.data, data.graphqlQueryName),
@@ -18,7 +18,7 @@ export const ClothesDemoData = {
   },
   queryParameters: generateQueryParameters(data.params),
   panelInfo: {
-    label: 'Clothes',
-    value: 'clothes',
+    label: 'Tourist Attractions',
+    value: 'touristAttractions',
   },
 };

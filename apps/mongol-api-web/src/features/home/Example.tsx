@@ -2,7 +2,7 @@ import { Button } from '@components';
 import { Box, Container, Stack, Typography, useTheme } from '@mui/material';
 import { useState } from 'react';
 import { CodeSnippet } from 'src/components/code-snippet';
-import { ClothesDocsData } from '../../../../../libs/mongol-api-data/src/lib/demo';
+import { ClothesDemoData } from '../../../../../libs/mongol-api-data/src/lib/demo';
 
 export const Example = () => {
   const { palette } = useTheme();
@@ -28,7 +28,7 @@ export const Example = () => {
             consectetur.
           </Typography>
           <Stack minWidth="100%" spacing={6} data-cy="Home-Example-Container">
-            <CodeSnippet value={ClothesDocsData.rest.query} maxWidth="1200px" />
+            <CodeSnippet value={ClothesDemoData.rest.query} maxWidth="1200px" />
             <Stack alignItems="flex-start" style={{ width: '180px' }}>
               <Button
                 onClick={handleTryButton}
@@ -40,7 +40,7 @@ export const Example = () => {
             </Stack>
             {open ? (
               <CodeSnippet
-                value={ClothesDocsData.rest.result}
+                value={ClothesDemoData.rest.result}
                 maxWidth="1200px"
                 testId="Example-Code-Snippet"
               />

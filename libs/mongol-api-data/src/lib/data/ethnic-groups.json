@@ -1,0 +1,51 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "name": "Khalkha",
+      "linguistic": "Mongolic",
+      "population": 2500000,
+      "images": [
+        "https://image-service-kappa.vercel.app/images/ethnic-groups/khalkha.jpg"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Buryat",
+      "linguistic": "Mongolic",
+      "population": 458000,
+      "images": [
+        "https://image-service-kappa.vercel.app/images/ethnic-groups/buryat.jpg"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Kazakh",
+      "linguistic": "Turkic",
+      "population": 101000,
+      "images": [
+        "https://image-service-kappa.vercel.app/images/ethnic-groups/kazakh.jpg"
+      ]
+    },
+
+    {
+      "id": "4",
+      "name": "Uriankhai",
+      "linguistic": "Mongolic",
+      "population": 5000,
+      "images": [
+        "https://image-service-kappa.vercel.app/images/ethnic-groups/uriankhai.jpg"
+      ]
+    }
+  ],
+  "graphqlQueryName": "getEthnicGroups",
+  "restQueryName": "ethnicGroups",
+  "params": {
+    "id": "testID",
+    "name": "TestName",
+    "description": "testDescription",
+    "timePeriod": "TestPeriod",
+    "materials": "TestMaterial",
+    "images": "testImages"
+  }
+}
