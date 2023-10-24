@@ -43,12 +43,13 @@ IFS=$'\n' read -d '' -ra project_names <<<"$matches"
 echo $project_names
 
 for name in "${project_names[@]}"; do
-    if [ "$name" = "mongol-api-data" ]; then
+    if [ "$name" = "mongol-api-rest" ] || [ "$name" = "mongol-api-graphql" ] || [ "$name" = "mongol-api-web" ] || [ "$name" = "mongol-api-images-service" ]; then
+        echo "$name"
+        print_message "$GREEN" "Step 6: Deploying $name to preview"
+        deploy_and_get_preview_link "$name"
+    else
         continue
     fi
-    echo $name
-    print_message "$GREEN" "Step 6: Deploying $name to preview"
-    deploy_and_get_preview_link "$name"
 done
 
 if [ -n "$action_output" ]; then
