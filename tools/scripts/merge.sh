@@ -16,7 +16,6 @@ print_message() {
 
 deploy_to_prod() {
     local project="$1"
-    print_message "$GREEN" "Step 6: Deploying $project to production"
     local output_vercel
     output_vercel=$(bunx nx deploy-prod "$project")
     local production_link
@@ -37,8 +36,6 @@ fi
 pattern=$(echo "$affected_projects" | grep -oE '[a-zA-Z0-9-]+')
 
 matches=$(echo "$affected_files" | grep -oE "$pattern" | tr ' ' '\n' | sort -u)
-
-echo $matches
 
 IFS=$'\n' read -d '' -ra project_names <<<"$matches"
 
