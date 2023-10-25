@@ -5,6 +5,7 @@ import {
   instrumentsData,
   provincesData,
   touristAttractionsData,
+  historicalFiguresData,
 } from '@mongol-api-data';
 import app from '../src/main';
 import request from 'supertest';
@@ -50,6 +51,13 @@ describe('Should fetch data from each router', () => {
     expect(response.status).toBe(200);
     expect(response.body).toHaveProperty('provinces');
     expect(response.body.provinces).toEqual(provincesData());
+  });
+
+  it('Should test get /historicalFigures endpoint', async () => {
+    const response = await request(app).get('/historicalFigures');
+    expect(response.status).toBe(200);
+    expect(response.body).toHaveProperty('historicalFigures');
+    expect(response.body.historicalFigures).toEqual(historicalFiguresData());
   });
 
   it('Should test get /', async () => {

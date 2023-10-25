@@ -6,6 +6,7 @@ import historicalToolsRouter from '../src/router/historical-tools';
 import instrumentsRouter from '../src/router/instruments';
 import touristAttractionsRouter from '../src/router/tourist-attractions';
 import provinceRouter from '../src/router/provinces';
+import historicalFiguresRouter from '../src/router/historical-figures';
 
 // Mocking the entire @mongol-api-data module
 jest.mock('@mongol-api-data', () => ({
@@ -27,6 +28,9 @@ jest.mock('@mongol-api-data', () => ({
   touristAttractionsData: jest.fn(() => {
     throw new Error('Simulated error');
   }),
+  historicalFiguresData: jest.fn(() => {
+    throw new Error('Simulated error');
+  }),
 }));
 
 const app = express();
@@ -36,6 +40,7 @@ app.use('/historicalTools', historicalToolsRouter);
 app.use('/instruments', instrumentsRouter);
 app.use('/touristAttractions', touristAttractionsRouter);
 app.use('/province', provinceRouter);
+app.use('/historicalFigures', historicalFiguresRouter);
 
 describe('Should throw error', () => {
   it('Should throw error when calling get clothes router', async () => {
@@ -70,6 +75,11 @@ describe('Should throw error', () => {
 
   it('Should throw error when calling get province router', async () => {
     const response = await request(app).get('/province');
+    expect(response.status).toBe(500);
+    expect(response.body).toEqual({ message: 'Internal error' });
+  });
+  it('Should throw error when calling get historical figures router', async () => {
+    const response = await request(app).get('/historicalFigures');
     expect(response.status).toBe(500);
     expect(response.body).toEqual({ message: 'Internal error' });
   });

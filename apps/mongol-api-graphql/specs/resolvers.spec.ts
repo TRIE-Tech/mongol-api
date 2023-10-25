@@ -1,9 +1,30 @@
-import { getTraditionalClothes } from '../src/resolvers/resolvers';
-import { clothesData } from '@mongol-api-data';
+import {
+  getEthnicGroups,
+  getHistoricalFigures,
+  getHistoricalTools,
+  getInstruments,
+  getProvinces,
+  getTouristAttractions,
+  getTraditionalClothes,
+} from '../src/resolvers/resolvers';
+import {
+  clothesData,
+  ethnicGroupsData,
+  historicalToolsData,
+  instrumentsData,
+  provincesData,
+  touristAttractionsData,
+  historicalFiguresData,
+} from '@mongol-api-data';
 
 jest.mock('@mongol-api-data', () => ({
   clothesData: jest.fn(),
   provincesData: jest.fn(),
+  ethnicGroupsData: jest.fn(),
+  historicalToolsData: jest.fn(),
+  touristAttractionsData: jest.fn(),
+  historicalFiguresData: jest.fn(),
+  instrumentsData: jest.fn(),
 }));
 
 describe('Should test all the resolvers', () => {
@@ -36,9 +57,9 @@ describe('Should test all the resolvers', () => {
       images: ['image_url_1_1', 'image_url_1_2'],
     };
 
-    (clothesData as jest.Mock).mockResolvedValue(mockProvinceDataResult);
+    (provincesData as jest.Mock).mockResolvedValue(mockProvinceDataResult);
 
-    const result = await getTraditionalClothes();
+    const result = await getProvinces();
     expect(result).toEqual(mockProvinceDataResult);
   });
 
@@ -52,9 +73,9 @@ describe('Should test all the resolvers', () => {
       images: ['image_url_1_1', 'image_url_1_2'],
     };
 
-    (clothesData as jest.Mock).mockResolvedValue(mockInstrumentDataResult);
+    (instrumentsData as jest.Mock).mockResolvedValue(mockInstrumentDataResult);
 
-    const result = await getTraditionalClothes();
+    const result = await getInstruments();
     expect(result).toEqual(mockInstrumentDataResult);
   });
 
@@ -69,9 +90,11 @@ describe('Should test all the resolvers', () => {
       images: ['image_url_1_1', 'image_url_1_2'],
     };
 
-    (clothesData as jest.Mock).mockResolvedValue(mockEthnicGroupDataResult);
+    (ethnicGroupsData as jest.Mock).mockResolvedValue(
+      mockEthnicGroupDataResult
+    );
 
-    const result = await getTraditionalClothes();
+    const result = await getEthnicGroups();
     expect(result).toEqual(mockEthnicGroupDataResult);
   });
 
@@ -85,9 +108,11 @@ describe('Should test all the resolvers', () => {
       images: ['image_url_1_1', 'image_url_1_2'],
     };
 
-    (clothesData as jest.Mock).mockResolvedValue(mockHistoricalToolDataResult);
+    (historicalToolsData as jest.Mock).mockResolvedValue(
+      mockHistoricalToolDataResult
+    );
 
-    const result = await getTraditionalClothes();
+    const result = await getHistoricalTools();
     expect(result).toEqual(mockHistoricalToolDataResult);
   });
 
@@ -102,11 +127,34 @@ describe('Should test all the resolvers', () => {
       images: ['image_url_1_1', 'image_url_1_2'],
     };
 
-    (clothesData as jest.Mock).mockResolvedValue(
+    (touristAttractionsData as jest.Mock).mockResolvedValue(
       mockTouristAttractionDataResult
     );
-
-    const result = await getTraditionalClothes();
+    const result = await getTouristAttractions();
     expect(result).toEqual(mockTouristAttractionDataResult);
+  });
+
+  it('6. getHistoricalFigures', async () => {
+    const mockHistoricalFigureDataResult = {
+      id: '10',
+      name: 'Yondonjamtsaa Tseyenpiliin',
+      dateOfBirth: '1896-12-30',
+      countryOfBirth: 'Mongolia',
+      dateOfDeath: '1938-03-08',
+      accomplishment: [
+        'A Mongolian poet, writer, and translator',
+        'Considered one of the most important figures in modern Mongolian literature',
+        'His works helped to promote Mongolian culture and identity during a time of great political and social upheaval',
+      ],
+      images: [
+        'https://image-service-kappa.vercel.app/images/people/yondonjamtsaa-tseyenpiliin.jpg',
+      ],
+    };
+
+    (historicalFiguresData as jest.Mock).mockResolvedValue(
+      mockHistoricalFigureDataResult
+    );
+    const result = await getHistoricalFigures();
+    expect(result).toEqual(mockHistoricalFigureDataResult);
   });
 });

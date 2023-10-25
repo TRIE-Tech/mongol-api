@@ -5,6 +5,7 @@ import {
   ethnicGroupsData,
   historicalToolsData,
   touristAttractionsData,
+  historicalFiguresData,
 } from '@mongol-api-data';
 import { graphqlErrorHandler } from './error';
 
@@ -22,6 +23,15 @@ export const getProvinces = () => {
     throw graphqlErrorHandler({ message: error as string });
   }
 };
+
+export const getHistoricalFigures = () => {
+  try {
+    return historicalFiguresData();
+  } catch (error) {
+    throw graphqlErrorHandler({ message: error as string });
+  }
+};
+
 export const getInstruments = () => {
   try {
     return instrumentsData();

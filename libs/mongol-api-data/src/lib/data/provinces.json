@@ -172,11 +172,11 @@
   "graphqlQueryName": "getProvinces",
   "restQueryName": "provinces",
   "params": {
-    "id": "testID",
-    "name": "TestName",
-    "description": "testDescription",
-    "timePeriod": "TestPeriod",
-    "materials": "TestMaterial",
-    "images": "testImages"
+    "id": "Unique identifier for each province",
+    "name": "Name of the province",
+    "area": "Total land area of the province (in square kilometers)",
+    "population": "Total population of the province",
+    "capital": "Name of the provincial capital city",
+    "soums": "List of soums or sub-districts within the province"
   }
 }

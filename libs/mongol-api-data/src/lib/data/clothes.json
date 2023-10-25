@@ -59,16 +59,66 @@
       "images": [
         "https://image-service-kappa.vercel.app/images/clothes/khantaaz.jpg"
       ]
+    },
+    {
+      "id": "7",
+      "name": "Dalai Deel",
+      "description": "The dalai deel is a special type of deel worn by monks. It's typically made from a deep yellow fabric and has a distinctive design.",
+      "timePeriod": "17th - 21st centuries",
+      "materials": ["Fabric"],
+      "images": [
+        "https://image-service-kappa.vercel.app/images/clothes/dalai-deel.jpg"
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Malgai",
+      "description": "The malgai is a traditional Mongolian hat. It's typically made from felt or fur and has a distinctive conical shape.",
+      "timePeriod": "13th - 21st centuries",
+      "materials": ["Felt", "Fur"],
+      "images": [
+        "https://image-service-kappa.vercel.app/images/clothes/malgai.jpg"
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Gutaal",
+      "description": "The gutaal is a type of traditional Mongolian jewelry. It's typically made from silver and worn on the chest.",
+      "timePeriod": "17th - 21st centuries",
+      "materials": ["Silver"],
+      "images": [
+        "https://image-service-kappa.vercel.app/images/clothes/gutaal.jpg"
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Torgoo",
+      "description": "The torgoo is a type of traditional Mongolian belt. It's typically made from leather and decorated with intricate patterns.",
+      "timePeriod": "13th - 21st centuries",
+      "materials": ["Leather"],
+      "images": [
+        "https://image-service-kappa.vercel.app/images/clothes/torgoo.jpg"
+      ]
+    },
+    {
+      "id": "11",
+      "name": "Uuj",
+      "description": "The uuj is a type of traditional Mongolian cloak. It's typically made from sheepskin and worn during the winter to protect from the cold.",
+      "timePeriod": "13th - 21st centuries",
+      "materials": ["Sheepskin"],
+      "images": [
+        "https://image-service-kappa.vercel.app/images/clothes/uuj.jpg"
+      ]
     }
   ],
   "graphqlQueryName": "getTraditionalClothes",
   "restQueryName": "clothes",
   "params": {
-    "id": "testID",
-    "name": "TestName",
-    "description": "testDescription",
-    "timePeriod": "TestPeriod",
-    "materials": "TestMaterial",
-    "images": "testImages"
+    "id": " A unique identifier for each object",
+    "name": "The name of the clothing item",
+    "description": "A brief description of the clothing item, providing details about its characteristics, materials, and usage",
+    "timePeriod": "The historical period during which the clothing item was commonly worn",
+    "materials": "The primary materials used in the construction of the clothing item",
+    "images": "A URL pointing to an image of the clothing item, allowing for visual reference"
   }
 }
