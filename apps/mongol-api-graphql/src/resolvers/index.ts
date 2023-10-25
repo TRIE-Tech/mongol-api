@@ -5,6 +5,7 @@ import {
   getEthnicGroups,
   getHistoricalTools,
   getTouristAttractions,
+  getHistoricalFigures,
 } from './resolvers';
 
 export const resolvers = {
@@ -15,6 +16,7 @@ export const resolvers = {
     getInstruments,
     getEthnicGroups,
     getHistoricalTools,
+    getHistoricalFigures,
     getTouristAttractions,
   },
 };

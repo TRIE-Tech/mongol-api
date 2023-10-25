@@ -16,7 +16,6 @@ print_message() {
 
 deploy_and_get_preview_link() {
     local project="$1"
-    print_message "$GREEN" "Step 6: Deploying $project to preview"
     local output_vercel
     output_vercel=$(bunx nx preview "$project")
     local preview_link
