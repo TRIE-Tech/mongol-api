@@ -36,16 +36,69 @@
       "images": [
         "https://image-service-kappa.vercel.app/images/ethnic-groups/uriankhai.jpg"
       ]
+    },
+    {
+      "id": "5",
+      "name": "Tuvan",
+      "linguistic": "Turkic",
+      "population": 320000,
+      "images": [
+        "https://image-service-kappa.vercel.app/images/ethnic-groups/tuvan.jpg"
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Khoton",
+      "linguistic": "Mongolic",
+      "population": 10000,
+      "images": [
+        "https://image-service-kappa.vercel.app/images/ethnic-groups/khoton.jpg"
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Oirat",
+      "linguistic": "Mongolic",
+      "population": 320000,
+      "images": [
+        "https://image-service-kappa.vercel.app/images/ethnic-groups/oirat.jpg"
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Tsaatans",
+      "linguistic": "Mongolic",
+      "population": 450,
+      "images": [
+        "https://image-service-kappa.vercel.app/images/ethnic-groups/tsaatans.jpg"
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Daur",
+      "linguistic": "Mongolic",
+      "population": 100000,
+      "images": [
+        "https://image-service-kappa.vercel.app/images/ethnic-groups/daur.jpg"
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Evenki",
+      "linguistic": "Tungusic",
+      "population": 40000,
+      "images": [
+        "https://image-service-kappa.vercel.app/images/ethnic-groups/evenki.jpg"
+      ]
     }
   ],
   "graphqlQueryName": "getEthnicGroups",
   "restQueryName": "ethnicGroups",
   "params": {
-    "id": "testID",
-    "name": "TestName",
-    "description": "testDescription",
-    "timePeriod": "TestPeriod",
-    "materials": "TestMaterial",
-    "images": "testImages"
+    "id": "An identifier that uniquely distinguishes each ethnic group within the dataset.",
+    "name": "The name of the ethnic group'",
+    "linguistic": "The linguistic or language group to which the ethnic group belongs",
+    "population": "The estimated population size of the ethnic group. It provides information about the approximate number of individuals belonging to the group.",
+    "images": "A list of image URLs that represent the ethnic group visually. These images can be used to identify and learn more about the appearance and culture of each ethnic group."
   }
 }

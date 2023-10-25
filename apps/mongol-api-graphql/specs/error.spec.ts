@@ -1,5 +1,6 @@
 import {
   getEthnicGroups,
+  getHistoricalFigures,
   getHistoricalTools,
   getInstruments,
   getProvinces,
@@ -57,6 +58,14 @@ describe(' Should test resolver errors', () => {
   it('6. getTouristAttractions error', async () => {
     try {
       await getTouristAttractions();
+    } catch (error) {
+      expect(error).toBeDefined();
+    }
+  });
+
+  it('7. getHistoricalFigures error', async () => {
+    try {
+      await getHistoricalFigures();
     } catch (error) {
       expect(error).toBeDefined();
     }
