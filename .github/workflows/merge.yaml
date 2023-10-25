@@ -31,7 +31,7 @@ jobs:
           echo "PR Merger: $PR_MERGER"
           echo "PR Reviewer: $PR_REVIEWER"
            
-          if [ "$PR_MERGER" == "SomeUsername" ]; then
+          if [ "$PR_MERGER" == "amar9elbeg" ]; then
             echo "Merge stopped: PR Merger is not allowed to merge."
             exit 1  
           fi
