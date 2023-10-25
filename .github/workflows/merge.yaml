@@ -21,6 +21,20 @@ jobs:
         run: bun add --global vercel@latest
       - name: Get NX BASE and NX HEAD
         uses: nrwl/nx-set-shas@v4
+      - name: Check PR is merged to main
+        if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'main'
+        run: |
+          PR_AUTHOR="${{ github.event.pull_request.user.login }}"
+          PR_MERGER="${{ github.event.pull_request.merged_by.login }}"
+          PR_REVIEWER="${{ github.event.pull_request.requested_reviewers[0].login }}"
+          echo "PR Author: $PR_AUTHOR"
+          echo "PR Merger: $PR_MERGER"
+          echo "PR Reviewer: $PR_REVIEWER"
+           
+          if [ "$PR_MERGER" == "SomeUsername" ]; then
+            echo "Merge stopped: PR Merger is not allowed to merge."
+            exit 1  
+          fi
       - name: Generating Preview
         id: preview-deployment
         run: |
