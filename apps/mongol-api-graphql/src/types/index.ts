@@ -70,6 +70,16 @@ export const typeDefs = gql`
     images: [String]
   }
 
+  type HistoricalFigure {
+    id: String
+    name: String
+    dateOfBirth: String
+    countryOfBirth: String
+    dateOfDeath: String
+    accomplishment: [String]
+    images: [String]
+  }
+
   type Query {
     hello: String
     getTraditionalClothes: [TraditionalClothes]
@@ -78,5 +88,6 @@ export const typeDefs = gql`
     getEthnicGroups: [EthnicGroup]
     getHistoricalTools: [HistoricalTool]
     getTouristAttractions: [TouristAttraction]
+    getHistoricalFigures: [HistoricalFigure]
   }
 `;

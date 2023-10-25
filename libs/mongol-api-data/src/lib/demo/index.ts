@@ -4,3 +4,4 @@ export * from './historical-tools';
 export * from './instruments';
 export * from './provinces';
 export * from './tourist-attractions';
+export * from './historical-figures';

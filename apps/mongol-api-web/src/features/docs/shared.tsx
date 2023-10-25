@@ -6,10 +6,12 @@ import {
   ProvincesDemoData,
   HistoricalToolsDemoData,
   EthnicGroupsDemoData,
+  HistoricalPeopleDemoData,
   TouristAttractionsDemoData,
 } from '../../../../../libs/mongol-api-data/src/lib/demo';
 
 const totalDemoData = [
+  HistoricalPeopleDemoData,
   ClothesDemoData,
   InstrumentsDemoData,
   HistoricalToolsDemoData,

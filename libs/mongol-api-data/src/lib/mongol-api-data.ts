@@ -4,6 +4,7 @@ import HistoricalTools from './data/historical-tools.json';
 import Instruments from './data/instruments.json';
 import Province from './data/provinces.json';
 import TouristAttractions from './data/tourist-attractions.json';
+import HistoricalFigures from './data/historical-figures.json';
 
 export const clothesData = (): Array<Record<string, unknown>> => {
   return Clothes.data;
@@ -27,4 +28,8 @@ export const provincesData = (): Array<Record<string, unknown>> => {
 
 export const touristAttractionsData = () => {
   return TouristAttractions.data;
+};
+
+export const historicalFiguresData = () => {
+  return HistoricalFigures.data;
 };
