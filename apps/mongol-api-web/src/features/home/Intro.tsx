@@ -1,14 +1,20 @@
 import { Button } from '@components';
 import { Box, Container, Stack, Typography, useTheme } from '@mui/material';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export const Intro = () => {
   const { palette } = useTheme();
 
   return (
-    <Box bgcolor="#FAF8FB" py="228px" data-cy="Home-Intro-Container">
+    <Box
+      bgcolor="#FAF8FB"
+      py="228px"
+      data-cy="Home-Intro-Container"
+      sx={{ position: 'relative' }}
+    >
       <Container disableGutters sx={{ maxWidth: '1200px' }} maxWidth={false}>
-        <Stack direction="row">
+        <Stack direction="row" justifyContent={'space-between'}>
           <Stack
             direction="column"
             justifyContent="center"
@@ -28,6 +34,9 @@ export const Intro = () => {
                 <Button>Explore</Button>
               </Link>
             </Box>
+          </Stack>
+          <Stack position={'absolute'} top="-80px" right="0px">
+            <Image src={'/home.png'} alt="" width="780" height="880" />
           </Stack>
         </Stack>
       </Container>

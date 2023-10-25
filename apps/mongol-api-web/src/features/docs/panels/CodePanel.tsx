@@ -1,5 +1,12 @@
 import FileCopyIcon from '@mui/icons-material/FileCopy';
-import { Box, IconButton, Stack, Typography, useTheme } from '@mui/material';
+import {
+  Box,
+  IconButton,
+  Stack,
+  Tooltip,
+  Typography,
+  useTheme,
+} from '@mui/material';
 import { useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
@@ -77,17 +84,19 @@ export const CodePanel = (props: CodePanelTypes) => {
               REST
             </Typography>
           </Box>
-          <IconButton
-            onClick={copyToClipboard}
-            data-cy="Docs-Page-Provinces-Panel-Copy-Icon-Button"
-            sx={{
-              color: palette.common.white,
-              padding: '0px',
-              margin: '0px',
-            }}
-          >
-            <FileCopyIcon />
-          </IconButton>
+          <Tooltip title="Copy to Clipboard" placement="top">
+            <IconButton
+              onClick={copyToClipboard}
+              data-cy="Docs-Page-Provinces-Panel-Copy-Icon-Button"
+              sx={{
+                color: palette.common.white,
+                padding: '0px',
+                margin: '0px',
+              }}
+            >
+              <FileCopyIcon />
+            </IconButton>
+          </Tooltip>
         </Stack>
 
         <SyntaxHighlighter
