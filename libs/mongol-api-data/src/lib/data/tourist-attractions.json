@@ -111,16 +111,72 @@
       "images": [
         "https://image-service-kappa.vercel.app/images/tourist-attractions/terelj.jpg"
       ]
+    },
+    {
+      "id": "9",
+      "name": "Hustai National Park",
+      "description": "Hustai National Park is home to a herd of wild Przewalski's horses, which are considered to be the last truly wild horses in the world. The park also offers stunning landscapes, including forests and mountains.",
+      "address": {
+        "street": "",
+        "city": "",
+        "country": "Mongolia",
+        "postalCode": ""
+      },
+      "images": [
+        "https://image-service-kappa.vercel.app/images/tourist-attractions/hustai.jpg"
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Amarbayasgalant Monastery",
+      "description": "Amarbayasgalant Monastery is one of the largest and most important Buddhist monasteries in Mongolia. It's known for its beautiful temples, stupas, and the mummy of Zanabazar, a famous Mongolian Buddhist monk and artist.",
+      "address": {
+        "street": "",
+        "city": "Amarbayasgalant",
+        "country": "Mongolia",
+        "postalCode": ""
+      },
+      "images": [
+        "https://image-service-kappa.vercel.app/images/tourist-attractions/amarbayasgalant.jpg"
+      ]
+    },
+    {
+      "id": "11",
+      "name": "Bayanzag (Flaming Cliffs)",
+      "description": "Bayanzag is a paleontological site in the Gobi Desert known for its dinosaur fossils. It's also known for its colorful rock formations, which are said to resemble flames.",
+      "address": {
+        "street": "",
+        "city": "",
+        "country": "Mongolia",
+        "postalCode": ""
+      },
+      "images": [
+        "https://image-service-kappa.vercel.app/images/tourist-attractions/bayanzag.jpg"
+      ]
+    },
+
+    {
+      "id": "12",
+      "name": "Kharkhorin",
+      "description": "Kharkhorin was once the capital of the Mongol Empire. Today, it's a popular tourist destination known for its ancient ruins, including the Erdene Zuu Monastery.",
+      "address": {
+        "street": "",
+        "city": "Kharkhorin",
+        "country": "Mongolia",
+        "postalCode": ""
+      },
+      "images": [
+        "https://image-service-kappa.vercel.app/images/tourist-attractions/kharkhorin.jpg"
+      ]
     }
   ],
   "graphqlQueryName": "getTouristAttractions",
   "restQueryName": "touristAttractions",
   "params": {
-    "id": "testID",
-    "name": "TestName",
-    "description": "testDescription",
-    "timePeriod": "TestPeriod",
-    "materials": "TestMaterial",
-    "images": "testImages"
+    "id": "Unique identifier for each item",
+    "name": "Name of the tourist attraction",
+    "description": "A brief description of the tourist attraction",
+    "address": "A rough address of the location",
+    "images": "An array of image URLs showcasing the attraction"
   }
 }

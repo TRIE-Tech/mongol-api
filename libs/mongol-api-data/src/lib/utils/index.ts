@@ -24,14 +24,14 @@ export const generateGraphQLQueryResult = (
   data: DataType,
   queryName: string
 ) => {
-  const selectedData = data.slice(0, 2).map((item) => {
+  const selectedData = data.slice(0, 1).map((item) => {
     if (item.images) {
       const images = item.images as string[];
       item.images = images.map((image) => `${image}`);
     }
     return item;
   });
-  const additionalItemsCount = data.length - 2;
+  const additionalItemsCount = data.length - 1;
   const additionalItemsText = `${additionalItemsCount} more`;
 
   const result = {

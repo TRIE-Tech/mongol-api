@@ -1,0 +1,166 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "name": "Genghis Khan",
+      "dateOfBirth": "1162-04-05",
+      "countryOfBirth": "Mongolia",
+      "dateOfDeath": "1227-08-18",
+      "accomplishment": [
+        "United the Mongol tribes and established the Mongol Empire",
+        "Conquered vast swathes of territory in Asia and Europe",
+        "Introduced a number of reforms that helped to stabilize and unify the Mongol Empire",
+        "Expanded trade and cultural exchange across the Mongol Empire"
+      ],
+      "images": [
+        "https://image-service-kappa.vercel.app/images/clothes/deel.jpg"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Ögödei Khan",
+      "dateOfBirth": "1186-11-05",
+      "countryOfBirth": "Mongolia",
+      "dateOfDeath": "1241-12-11",
+      "accomplishment": [
+        "Expanded the Mongol Empire into China, Central Asia, and the Middle East",
+        "Established a system of roads and communication that helped to unify the empire",
+        "Promoted religious tolerance and trade",
+        "Built the Mongol capital city of Karakorum"
+      ],
+      "images": [
+        "https://image-service-kappa.vercel.app/images/clothes/mongol-warrior-costume.jpg"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Kublai Khan",
+      "dateOfBirth": "1215-09-23",
+      "countryOfBirth": "Mongolia",
+      "dateOfDeath": "1294-02-18",
+      "accomplishment": [
+        "Established the Yuan Dynasty in China",
+        "Expanded the Mongol Empire into Southeast Asia and Korea",
+        "Built the Grand Canal and other infrastructure projects",
+        "Promoted trade and cultural exchange between China and the rest of the world"
+      ],
+      "images": [
+        "https://image-service-kappa.vercel.app/images/people/kublai-khan.jpg"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Timur (Tamerlane)",
+      "dateOfBirth": "1336-04-08",
+      "countryOfBirth": "Mongolia",
+      "dateOfDeath": "1405-02-18",
+      "accomplishment": [
+        "Founded the Timurid Empire, which stretched from Central Asia to the Middle East",
+        "Conquered vast swathes of territory, including Persia, India, and Syria",
+        "Built a number of impressive architectural monuments, such as the Gur-e-Amir and the Bibi-Khanum Mosque"
+      ],
+      "images": [
+        "https://image-service-kappa.vercel.app/images/people/tamerlane.jpg"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Zanabazar",
+      "dateOfBirth": "1635-06-12",
+      "countryOfBirth": "Mongolia",
+      "dateOfDeath": "1723-12-27",
+      "accomplishment": [
+        "The First Jebtsundamba Khutuktu, the spiritual leader of Tibetan Buddhism in Mongolia",
+        "A renowned sculptor and artist, he created many important Buddhist works of art",
+        "Built the Erdene Zuu Monastery, the first Buddhist monastery in Mongolia"
+      ],
+      "images": [
+        "https://image-service-kappa.vercel.app/images/people/zanabazar.jpg"
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Galdan Boshugtu Khan",
+      "dateOfBirth": "1644-05-08",
+      "countryOfBirth": "Mongolia",
+      "dateOfDeath": "1697-04-03",
+      "accomplishment": [
+        "Unified the western Mongol tribes and established the Junggar Khanate",
+        "Expanded the Junggar Khanate into Central Asia and Siberia",
+        "Promoted Tibetan Buddhism in the Junggar Khanate"
+      ],
+      "images": [
+        "https://image-service-kappa.vercel.app/images/people/galdan-boshugtu-khan.jpg"
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Amarsanaa Khan",
+      "dateOfBirth": "1714-11-05",
+      "countryOfBirth": "Mongolia",
+      "dateOfDeath": "1757-02-21",
+      "accomplishment": [
+        "Rebelled against the Qing Dynasty and attempted to restore Mongol independence",
+        "Formed an alliance with Russia, but was eventually defeated by the Qing Dynasty"
+      ],
+      "images": [
+        "https://image-service-kappa.vercel.app/images/people/amarsanaa-khan.jpg"
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Damdin Sükhbaatar",
+      "dateOfBirth": "1886-02-20",
+      "countryOfBirth": "Mongolia",
+      "dateOfDeath": "1923-02-22",
+      "accomplishment": [
+        "Led the Mongolian Revolution of 1921, which overthrew the Qing Dynasty and established the Mongolian People's Republic",
+        "Served as the first Prime Minister of the Mongolian People's Republic"
+      ],
+      "images": [
+        "https://image-service-kappa.vercel.app/images/people/damdin-sukhbaatar.jpg"
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Hür-el Khan",
+      "dateOfBirth": "1880-08-03",
+      "countryOfBirth": "Mongolia",
+      "dateOfDeath": "1909-11-30",
+      "accomplishment": [
+        "Declared the independence of Mongolia from China in 1911",
+        "Established the Bogd Khanate of Mongolia",
+        "Reigned as the Bogd Khan of Mongolia until his death in 1924"
+      ],
+      "images": [
+        "https://image-service-kappa.vercel.app/images/people/hur-el-khan.jpg"
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Yondonjamtsaa Tseyenpiliin",
+      "dateOfBirth": "1896-12-30",
+      "countryOfBirth": "Mongolia",
+      "dateOfDeath": "1938-03-08",
+      "accomplishment": [
+        "A Mongolian poet, writer, and translator",
+        "Considered one of the most important figures in modern Mongolian literature",
+        "His works helped to promote Mongolian culture and identity during a time of great political and social upheaval"
+      ],
+      "images": [
+        "https://image-service-kappa.vercel.app/images/people/yondonjamtsaa-tseyenpiliin.jpg"
+      ]
+    }
+  ],
+  "graphqlQueryName": "getHistoricalFigures",
+  "restQueryName": "historicalFigures",
+  "params": {
+    "id": "A unique identifier for each object",
+    "name": "The name of the Mongolian historical figure",
+    "dateOfBirth": "The date of birth of the Mongolian historical figure",
+    "countryOfBirth": "The country of birth of the Mongolian historical figure",
+    "dateOfDeath": "The date of death of the Mongolian historical figure",
+    "accomplishment": "A list of the major accomplishments of the Mongolian historical figure",
+    "images": "A list of URLs pointing to images of the Mongolian historical figure, allowing for visual reference"
+  }
+}
