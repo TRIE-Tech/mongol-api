@@ -14,7 +14,7 @@ Explore the captivating world of Mongolian culture, tradition, and history with 
 
 These microservices work harmoniously, offering diverse ways to engage with Mongolian heritage and enhance your projects.
 
-In the spirit of collaboration and community, we are thrilled to announce that Mongol-API is now open source. You can contribute your passion for coding to this exciting project, helping shape the future of Mongol-API. Your insights and expertise can make this experience even more enriching for everyone. Let's embark on this journey together! 🌍✨
+In the spirit of collaboration and community, we are thrilled to announce that Mongol-API is now open source. You can contribute to this exciting project and help shape the future of Mongol-API. Your insights and expertise can make this experience even more enriching for everyone. Let's embark on this journey together! 🌍✨
 
 Explore, create, and innovate with Mongol-API today!
 
