@@ -9,6 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     env:
       VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      MONGOL_API_WEB_PRO_ID: ${{ secrets.MONGOL_API_WEB_PRO_ID }}
+      MONGOL_API_IMAGES_SERVICE_PRO_ID: ${{ secrets.MONGOL_API_IMAGES_SERVICE_PRO_ID }}
+      MONGOL_API_REST_PRO_ID: ${{ secrets.MONGOL_API_REST_PRO_ID }}
+      MONGOL_API_GRAPHQL_PRO_ID: ${{ secrets.MONGOL_API_GRAPHQL_PRO_ID }}
     steps:
       - uses: actions/checkout@v3
         with:

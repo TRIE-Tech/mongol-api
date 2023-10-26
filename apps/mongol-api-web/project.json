@@ -133,9 +133,9 @@
       "executor": "nx:run-commands",
       "options": {
         "commands": [
-          "bunx dotenv -v VERCEL_ORG_ID=o9MY67XW3sHiB6lhFI2pyFpD -v VERCEL_PROJECT_ID=prj_COQrb21Ab5LvltQ3G0NLBOBWJyO6 -- vercel pull --yes --environment=preview --token=$VERCEL_TOKEN",
+          "bunx dotenv -v VERCEL_ORG_ID=$VERCEL_ORG_ID -v VERCEL_PROJECT_ID=$MONGOL_API_WEB_PRO_ID -- vercel pull --yes --environment=preview --token=$VERCEL_TOKEN",
           "vercel build --token=$VERCEL_TOKEN",
-          "bunx dotenv -v VERCEL_ORG_ID=o9MY67XW3sHiB6lhFI2pyFpD -v VERCEL_PROJECT_ID=prj_COQrb21Ab5LvltQ3G0NLBOBWJyO6 -- vercel --prebuilt --token=$VERCEL_TOKEN"
+          "bunx dotenv -v VERCEL_ORG_ID=$VERCEL_ORG_ID -v VERCEL_PROJECT_ID=$MONGOL_API_WEB_PRO_ID -- vercel --prebuilt --token=$VERCEL_TOKEN"
         ],
         "parallel": false
       },
@@ -152,9 +152,9 @@
       "executor": "nx:run-commands",
       "options": {
         "commands": [
-          "bunx dotenv -v VERCEL_ORG_ID=o9MY67XW3sHiB6lhFI2pyFpD -v VERCEL_PROJECT_ID=prj_COQrb21Ab5LvltQ3G0NLBOBWJyO6 -- vercel pull --yes --environment=production --token=$VERCEL_TOKEN",
+          "bunx dotenv -v VERCEL_ORG_ID=$VERCEL_ORG_ID -v VERCEL_PROJECT_ID=$MONGOL_API_WEB_PRO_ID -- vercel pull --yes --environment=production --token=$VERCEL_TOKEN",
           "vercel build --prod --token=$VERCEL_TOKEN",
-          "bunx dotenv -v VERCEL_ORG_ID=o9MY67XW3sHiB6lhFI2pyFpD -v VERCEL_PROJECT_ID=prj_COQrb21Ab5LvltQ3G0NLBOBWJyO6 -- vercel --prebuilt --prod --token=$VERCEL_TOKEN"
+          "bunx dotenv -v VERCEL_ORG_ID=$VERCEL_ORG_ID -v VERCEL_PROJECT_ID=$MONGOL_API_WEB_PRO_ID -- vercel --prebuilt --prod --token=$VERCEL_TOKEN"
         ],
         "parallel": false
       },
