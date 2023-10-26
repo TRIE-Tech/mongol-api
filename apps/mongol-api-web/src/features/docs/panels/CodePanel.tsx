@@ -31,14 +31,21 @@ export const CodePanel = (props: CodePanelTypes) => {
 
   const { palette, spacing } = useTheme();
   const [apiType, setApiType] = useState('graphql');
+  const [toolTipText, setToolTipText] = useState('Copy to Clipboard');
 
   const copyToClipboard = async () => {
     const value = apiType === 'rest' ? restQuery : graphQLQuery;
     try {
       await navigator.clipboard.writeText(value);
+      setToolTipText('Copied!');
     } catch (error) {
       console.error('Failed to copy to clipboard:', error);
     }
+  };
+
+  const handleApi = async (type: string) => {
+    setApiType(type);
+    setToolTipText('Copy to Clipboard');
   };
 
   return (
@@ -59,7 +66,7 @@ export const CodePanel = (props: CodePanelTypes) => {
             <Typography
               variant="body2"
               color="white"
-              onClick={() => setApiType('graphql')}
+              onClick={() => handleApi('graphql')}
               data-cy="Docs-Tabs-Graphql-Query-Button"
               sx={{
                 textDecoration: apiType === 'graphql' ? 'underline' : 'none',
@@ -75,7 +82,7 @@ export const CodePanel = (props: CodePanelTypes) => {
               variant="body2"
               color="white"
               data-cy="Docs-Tabs-Rest-Query-Button"
-              onClick={() => setApiType('rest')}
+              onClick={() => handleApi('rest')}
               sx={{
                 textDecoration: apiType === 'rest' ? 'underline' : 'none',
                 cursor: 'pointer',
@@ -84,7 +91,7 @@ export const CodePanel = (props: CodePanelTypes) => {
               REST
             </Typography>
           </Box>
-          <Tooltip title="Copy to Clipboard" placement="top">
+          <Tooltip title={toolTipText} placement="top">
             <IconButton
               onClick={copyToClipboard}
               data-cy="Docs-Page-Provinces-Panel-Copy-Icon-Button"

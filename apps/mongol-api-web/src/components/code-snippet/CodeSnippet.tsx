@@ -2,6 +2,7 @@ import FileCopyIcon from '@mui/icons-material/FileCopy';
 import { Box, IconButton, Tooltip, useTheme } from '@mui/material';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { useState } from 'react';
 
 type CodeSnippetType = {
   value: string;
@@ -11,10 +12,12 @@ type CodeSnippetType = {
 
 export const CodeSnippet = ({ value, maxWidth, testId }: CodeSnippetType) => {
   const theme = useTheme();
+  const [toolTipText, setToolTipText] = useState('Copy to Clipboard');
 
   const copyToClipboard = async () => {
     try {
       await navigator.clipboard.writeText(value);
+      setToolTipText('Copied!');
     } catch (error) {
       console.error('Failed to copy to clipboard:', error);
     }
@@ -28,7 +31,7 @@ export const CodeSnippet = ({ value, maxWidth, testId }: CodeSnippetType) => {
       }}
       data-cy={testId}
     >
-      <Tooltip title="Copy to Clipboard" placement="top">
+      <Tooltip title={toolTipText} placement="top">
         <IconButton
           onClick={copyToClipboard}
           sx={{
