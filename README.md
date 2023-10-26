@@ -1,5 +1,7 @@
 # 🚀 Welcome to Mongol-API – Immerse Yourself in Mongolian Culture! 🌟
 
+<img src="api.png" />
+
 Explore the captivating world of Mongolian culture, tradition, and history with Mongol-API, your gateway to this rich heritage. We're excited to introduce four key microservices that will elevate your developer experience.
 
 🔗 **[Mongol-API Web](https://mongol-api.vercel.app/)**: Your hub for development documentation and essential information.
