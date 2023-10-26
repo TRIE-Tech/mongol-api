@@ -52,18 +52,10 @@
       "linguistic": "Mongolic",
       "population": 10000,
       "images": [
-        "https://image-service-kappa.vercel.app/images/ethnic-groups/khoton.jpg"
+        "https://image-service-kappa.vercel.app/images/ethnic-groups/khoton.jpeg"
       ]
     },
-    {
-      "id": "7",
-      "name": "Oirat",
-      "linguistic": "Mongolic",
-      "population": 320000,
-      "images": [
-        "https://image-service-kappa.vercel.app/images/ethnic-groups/oirat.jpg"
-      ]
-    },
+
     {
       "id": "8",
       "name": "Tsaatans",
@@ -71,24 +63,6 @@
       "population": 450,
       "images": [
         "https://image-service-kappa.vercel.app/images/ethnic-groups/tsaatans.jpg"
-      ]
-    },
-    {
-      "id": "9",
-      "name": "Daur",
-      "linguistic": "Mongolic",
-      "population": 100000,
-      "images": [
-        "https://image-service-kappa.vercel.app/images/ethnic-groups/daur.jpg"
-      ]
-    },
-    {
-      "id": "10",
-      "name": "Evenki",
-      "linguistic": "Tungusic",
-      "population": 40000,
-      "images": [
-        "https://image-service-kappa.vercel.app/images/ethnic-groups/evenki.jpg"
       ]
     }
   ],
