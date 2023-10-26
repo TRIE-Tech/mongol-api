@@ -9,7 +9,6 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "prepare": "husky install",
     "lint": "nx lint",
     "e2e": "nx e2e",
     "commit": "cz"
