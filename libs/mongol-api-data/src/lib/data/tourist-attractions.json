@@ -123,7 +123,7 @@
         "postalCode": ""
       },
       "images": [
-        "https://image-service-kappa.vercel.app/images/tourist-attractions/hustai.jpg"
+        "https://image-service-kappa.vercel.app/images/tourist-attractions/hustai.jpeg"
       ]
     },
     {
@@ -137,7 +137,7 @@
         "postalCode": ""
       },
       "images": [
-        "https://image-service-kappa.vercel.app/images/tourist-attractions/amarbayasgalant.jpg"
+        "https://image-service-kappa.vercel.app/images/tourist-attractions/amarbayasgalan-hiid.jpeg"
       ]
     },
     {
@@ -151,7 +151,7 @@
         "postalCode": ""
       },
       "images": [
-        "https://image-service-kappa.vercel.app/images/tourist-attractions/bayanzag.jpg"
+        "https://image-service-kappa.vercel.app/images/tourist-attractions/bayanzag.jpeg"
       ]
     },
 
@@ -166,7 +166,7 @@
         "postalCode": ""
       },
       "images": [
-        "https://image-service-kappa.vercel.app/images/tourist-attractions/kharkhorin.jpg"
+        "https://image-service-kappa.vercel.app/images/tourist-attractions/kharkhorin.jpeg"
       ]
     }
   ],

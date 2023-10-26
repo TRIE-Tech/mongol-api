@@ -6,7 +6,7 @@ const CustomApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>
-        <title>Welcome to mongol-api-graphql!</title>
+        <title>Welcome to mongol-api-graphql!!</title>
       </Head>
       <main className="app">
         <Component {...pageProps} />
