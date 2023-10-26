@@ -31,7 +31,7 @@ const HeaderLinks = () => {
   const { palette } = useTheme();
 
   return (
-    <Stack direction={'row'} spacing={24}>
+    <Stack direction={'row'} spacing={24} zIndex="1">
       <Link sx={{ cursor: 'pointer', textDecoration: 'none' }} href="/">
         <Typography
           variant="subtitle2"
