@@ -27,12 +27,12 @@ export const ResourcesBox = (props: ResourcesBoxType) => {
           <Stack
             bgcolor={palette.blue[100]}
             borderRadius={spacing(2)}
-            height="495px"
-            width="468px"
+            height="445px"
+            width="418px"
             position="relative"
             overflow="hidden"
           >
-            <Image src={href} alt="" fill />
+            <Image src={href} alt="" fill style={{ objectFit: 'cover' }} />
           </Stack>
           <Box pt={spacing(8)}>
             <Typography variant="subtitle1">{title}</Typography>
@@ -43,8 +43,8 @@ export const ResourcesBox = (props: ResourcesBoxType) => {
           <Stack
             bgcolor={palette.blue[200]}
             borderRadius={spacing(2)}
-            height="495px"
-            width="468px"
+            height="445px"
+            width="418px"
             position="relative"
             overflow="hidden"
             padding={spacing(8)}

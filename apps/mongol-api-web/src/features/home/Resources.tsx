@@ -1,29 +1,37 @@
 import { ResourcesBox } from '@components';
 import { Box, Container, Stack, Typography, useTheme } from '@mui/material';
 
-const ClothesRestQuery = `fetch('https://mongol-api.vercel.app/api/clothes')
-.then(res => res.json())
-.then(json => console.log(json))`;
+const ClothesRestQuery = `fetch('https://mongol-api.vercel.app/api/
+clothes')
+    .then(res => res.json())
+    .then(json => console.log(json))`;
 
-const TouristRestQuery = `fetch('https://mongol-api.vercel.app/api/tourist')
-  .then(res => res.json())
-  .then(json => console.log(json))`;
+const TouristRestQuery = `fetch('https://mongol-api.vercel.app/api/
+touristAttractions')
+    .then(res => res.json())
+    .then(json => console.log(json))`;
+
+const EthnicGroupRestQuery = `fetch('https://mongol-api.vercel.app/api/
+ethnicGroups')
+    .then(res => res.json())
+    .then(json => console.log(json))`;
 
 const ResourceData = [
-  {
-    title: 'Traditional Clothes API',
-    href: '/traditional-clothes.png',
-    codeSnippet: ClothesRestQuery,
-  },
   {
     title: 'Tourist Attractions API',
     href: '/tourist-attractions.png',
     codeSnippet: TouristRestQuery,
   },
   {
-    title: 'Mal Aj Ahui API',
-    href: '/tourist-attractions.png',
-    codeSnippet: TouristRestQuery,
+    title: 'Ethnic Groups API',
+    href: '/buryat.jpg',
+    codeSnippet: EthnicGroupRestQuery,
+  },
+
+  {
+    title: 'Traditional Clothes API',
+    href: '/clothes.png',
+    codeSnippet: ClothesRestQuery,
   },
 ];
 
@@ -32,12 +40,17 @@ export const Resources = () => {
   return (
     <Box bgcolor="#FAF8FB">
       <Container disableGutters sx={{ maxWidth: '1200px' }} maxWidth={false}>
-        <Stack justifyContent="center" py="60px">
+        <Stack justifyContent="center" py="100px">
           <Stack alignItems="center">
             <Typography color={palette.blue[200]} variant="h2">
               Resources & Examples
             </Typography>
-            <Typography color={palette.blue[200]} variant="subtitle1" py={8}>
+            <Typography
+              color={palette.blue[200]}
+              variant="subtitle1"
+              py={10}
+              pb={12}
+            >
               Here are some resources and examples to help you get started.
             </Typography>
           </Stack>
