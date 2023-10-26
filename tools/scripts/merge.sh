@@ -51,15 +51,16 @@ for name in "${project_names[@]}"; do
             print_message "$GREEN" "There are changes in $name"
             projects=("mongol-api-rest" "mongol-api-web" "mongol-api-graphql" "mongol-api-images-service")
             for project in "${projects[@]}"; do
-                deploy_and_get_preview_link "$project"
+                print_message "$GREEN" "Step 6: Deploying $project to Production"
+                deploy_to_prod "$project"
                 deployed_projects+=("$project")
             done
             ;;
 
         "mongol-api-rest" | "mongol-api-graphql" | "mongol-api-web" | "mongol-api-images-service")
             echo "$name"
-            print_message "$GREEN" "Step 6: Deploying $name to preview"
-            deploy_and_get_preview_link "$name"
+            print_message "$GREEN" "Step 6: Deploying $name to Production"
+            deploy_to_prod "$name"
             deployed_projects+=("$name")
             ;;
         esac

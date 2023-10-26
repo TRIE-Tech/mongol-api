@@ -21,7 +21,7 @@ Explore, create, and innovate with Mongol-API today!
 ## Meet the Developers 🖥️
 
 👨‍💻 [Duurenbayar Ulziiduuren](https://www.linkedin.com/in/duuree)
-👨‍💻 [Elbeg Amarbayasgalan](www.linkedin.com/in/elbeg-amar)
+👨‍💻 [Elbeg Amarbayasgalan](https://www.linkedin.com/in/elbeg-amar)
 👩‍💻 [Anujin Buyannemekh](https://www.linkedin.com/in/anujinb)
 
 ## Meet the Designer 🎨
