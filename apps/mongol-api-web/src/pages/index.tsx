@@ -4,7 +4,7 @@ import { Stack } from '@mui/material';
 
 const Index = () => {
   return (
-    <Stack minWidth={'1440px'}>
+    <Stack minWidth={'1400px'}>
       <Header backgroundColor="#FAF8FB" />
       <Intro />
       <Example />
