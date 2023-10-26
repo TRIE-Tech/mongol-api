@@ -47,54 +47,6 @@
       "images": [
         "https://image-service-kappa.vercel.app/images/instruments/limbe.jpg"
       ]
-    },
-    {
-      "id": "7",
-      "name": "Khuuchir",
-      "description": "A jew's harp-like instrument made from metal or bamboo, producing a twanging sound.",
-      "images": [
-        "https://image-service-kappa.vercel.app/images/instruments/khuuchir.jpg"
-      ]
-    },
-    {
-      "id": "8",
-      "name": "Yoochir",
-      "description": "A hammered dulcimer with metal strings that are struck with mallets.",
-      "images": [
-        "https://image-service-kappa.vercel.app/images/instruments/yoochir.jpg"
-      ]
-    },
-    {
-      "id": "9",
-      "name": "Topshur",
-      "description": "A long-necked, two-stringed lute with a resonating body, used in traditional Mongolian music.",
-      "images": [
-        "https://image-service-kappa.vercel.app/images/instruments/topshur.jpg"
-      ]
-    },
-    {
-      "id": "10",
-      "name": "Khoomei Singer",
-      "description": "A throat singer who produces unique overtone and undertone vocalizations using traditional Mongolian techniques.",
-      "images": [
-        "https://image-service-kappa.vercel.app/images/instruments/khoomei-singer.jpg"
-      ]
-    },
-    {
-      "id": "13",
-      "name": "Shudraga",
-      "description": "A bowed string instrument with a small soundbox, often used in Mongolian folk music.",
-      "images": [
-        "https://image-service-kappa.vercel.app/images/instruments/shudraga.jpg"
-      ]
-    },
-    {
-      "id": "14",
-      "name": "Igil",
-      "description": "A two-stringed bowed instrument with a deep, resonant tone, used in Mongolian and Tuvan music.",
-      "images": [
-        "https://image-service-kappa.vercel.app/images/instruments/igil.jpg"
-      ]
     }
   ],
   "graphqlQueryName": "getInstruments",
