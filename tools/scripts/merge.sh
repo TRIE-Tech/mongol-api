@@ -41,13 +41,28 @@ IFS=$'\n' read -d '' -ra project_names <<<"$matches"
 
 echo $project_names
 
+deployed_projects=()
+
 for name in "${project_names[@]}"; do
-    if [ "$name" = "mongol-api-rest" ] || [ "$name" = "mongol-api-graphql" ] || [ "$name" = "mongol-api-web" ] || [ "$name" = "mongol-api-images-service" ]; then
-        echo "$name"
-        print_message "$GREEN" "Step 6: Deploying $name to production"
-        deploy_to_prod "$name"
-    else
-        continue
+    # Check if the project is not in the deployed_projects array
+    if [[ ! " ${deployed_projects[@]} " =~ " ${name} " ]]; then
+        case "$name" in
+        "mongol-api-data")
+            print_message "$GREEN" "There are changes in $name"
+            projects=("mongol-api-rest" "mongol-api-web" "mongol-api-graphql" "mongol-api-images-service")
+            for project in "${projects[@]}"; do
+                deploy_and_get_preview_link "$project"
+                deployed_projects+=("$project")
+            done
+            ;;
+
+        "mongol-api-rest" | "mongol-api-graphql" | "mongol-api-web" | "mongol-api-images-service")
+            echo "$name"
+            print_message "$GREEN" "Step 6: Deploying $name to preview"
+            deploy_and_get_preview_link "$name"
+            deployed_projects+=("$name")
+            ;;
+        esac
     fi
 done
 

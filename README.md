@@ -20,13 +20,13 @@ Explore, create, and innovate with Mongol-API today!
 
 ## Meet the Developers 🖥️
 
-👨‍💻 [Duurenbayar Ulziiduuren](https://github.com/DuurenbayarUlz)
-👨‍💻 [Elbeg Amarbayasgalan](https://github.com/amar9elbeg)
-👩‍💻 [Anujin Buyannemekh](https://github.com/Anujinnb)
+👨‍💻 [Duurenbayar Ulziiduuren](https://www.linkedin.com/in/duuree)
+👨‍💻 [Elbeg Amarbayasgalan](www.linkedin.com/in/elbeg-amar)
+👩‍💻 [Anujin Buyannemekh](https://www.linkedin.com/in/anujinb)
 
 ## Meet the Designer 🎨
 
-🎨 [Munkhkhuleg Tserenpurev](#)
+🎨 [Munkhkhuleg Tserenpurev](https://www.linkedin.com/in/munkhkhuleg-tserenpurev)
 
 ## Important Endpoints 🌐
 

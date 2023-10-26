@@ -23,17 +23,6 @@
       ]
     },
     {
-      "id": "3",
-      "name": "Horse Head Fiddle (Morin Khuur)",
-      "description": "A traditional Mongolian musical instrument resembling a horse's head, played with a bow.",
-      "timePeriod": "13th - 21st centuries",
-      "material": ["Wood", "Horsehair", "Strings"],
-      "usage": "Musical instrument",
-      "images": [
-        "https://image-service-kappa.vercel.app/images/historical-tools/morin-khuur.jpg"
-      ]
-    },
-    {
       "id": "4",
       "name": "Traditional Bow",
       "description": "A historical Mongolian bow, crafted from various materials and used for hunting and warfare.",
@@ -79,46 +68,13 @@
     },
     {
       "id": "8",
-      "name": "Traditional Horse Harness",
+      "name": "Traditional Horse Harness (Khazaar)",
       "description": "Historical Mongolian horse harness used to control and guide horses during various tasks.",
       "timePeriod": "12th - 21st centuries",
       "material": ["Leather", "Metal"],
       "usage": "Equestrian equipment",
       "images": [
-        "https://image-service-kappa.vercel.app/images/historical-tools/horse-harness.jpg"
-      ]
-    },
-    {
-      "id": "9",
-      "name": "Yurt (Ger)",
-      "description": "A portable, circular tent traditionally used by Mongolian nomads, made from felt and wood.",
-      "timePeriod": "13th - 21st centuries",
-      "material": ["Felt", "Wood"],
-      "usage": "Shelter",
-      "images": [
-        "https://image-service-kappa.vercel.app/images/historical-tools/yurt.jpg"
-      ]
-    },
-    {
-      "id": "10",
-      "name": "Mongol Bow",
-      "description": "A type of recurve bow used by the Mongols for hunting and warfare, known for its power and accuracy.",
-      "timePeriod": "12th - 19th centuries",
-      "material": ["Wood", "Animal horn", "Sinew"],
-      "usage": "Weapon",
-      "images": [
-        "https://image-service-kappa.vercel.app/images/historical-tools/mongol-bow.jpg"
-      ]
-    },
-    {
-      "id": "12",
-      "name": "Mongolian Spinning Wheel (Uruud)",
-      "description": "A tool used for spinning wool and other fibers, a vital part of traditional Mongolian textile production.",
-      "timePeriod": "13th - 21st centuries",
-      "material": ["Wood", "Metal"],
-      "usage": "Textile Equipment",
-      "images": [
-        "https://image-service-kappa.vercel.app/images/historical-tools/mongolian-spinning-wheel.jpg"
+        "https://image-service-kappa.vercel.app/images/historical-tools/horse-harness.jpeg"
       ]
     },
     {
@@ -129,29 +85,7 @@
       "material": ["Leather", "Wood"],
       "usage": "Equestrian Equipment",
       "images": [
-        "https://image-service-kappa.vercel.app/images/historical-tools/mongolian-horsewhip.jpg"
-      ]
-    },
-    {
-      "id": "14",
-      "name": "Traditional Lasso",
-      "description": "A historical Mongolian lasso, used to catch horses, other livestock, and wild animals.",
-      "timePeriod": "11th - 21st centuries",
-      "material": ["Leather", "Rope"],
-      "usage": "Tool",
-      "images": [
-        "https://image-service-kappa.vercel.app/images/historical-tools/lasso.jpg"
-      ]
-    },
-    {
-      "id": "15",
-      "name": "Traditional Camel Saddle",
-      "description": "A historical Mongolian saddle designed for camel riding.",
-      "timePeriod": "13th - 21st centuries",
-      "material": ["Leather", "Wood", "Metal"],
-      "usage": "Equestrian equipment",
-      "images": [
-        "https://image-service-kappa.vercel.app/images/historical-tools/camel-saddle.jpg"
+        "https://image-service-kappa.vercel.app/images/historical-tools/horsewhip.jpeg"
       ]
     }
   ],
