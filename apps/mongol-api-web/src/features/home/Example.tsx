@@ -11,7 +11,7 @@ export const Example = () => {
     setOpen(!open);
   };
   return (
-    <Box bgcolor="common.white" py="90px">
+    <Box bgcolor="common.white" py="0px">
       <Container disableGutters sx={{ maxWidth: '1200px' }} maxWidth={false}>
         <Stack
           direction="column"
@@ -24,8 +24,8 @@ export const Example = () => {
             Let&apos;s try it out!
           </Typography>
           <Typography color={palette.primary[500]} variant="subtitle1" pb={9}>
-            Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet
-            consectetur.
+            You can retrieve data from our API by following the example
+            provided.
           </Typography>
           <Stack minWidth="100%" spacing={6} data-cy="Home-Example-Container">
             <CodeSnippet value={ClothesDemoData.rest.query} maxWidth="1200px" />
