@@ -8,7 +8,7 @@ const CustomApp = ({ Component, pageProps }: AppProps) => {
     <>
       <Theme>
         <Head>
-          <title>Welcome to mongol-api-web!</title>
+          <title>Welcome to mongol-api-web!!</title>
           <link rel="icon" href="/logo.png" />
         </Head>
         <main className="app">
