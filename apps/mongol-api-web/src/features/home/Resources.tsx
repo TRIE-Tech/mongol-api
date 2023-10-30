@@ -1,18 +1,18 @@
 import { ResourcesBox } from '@components';
 import { Box, Container, Stack, Typography, useTheme } from '@mui/material';
 
-const ClothesRestQuery = `fetch('https://mongol-api.vercel.app/api/
-clothes')
+const ClothesRestQuery = `fetch('https://mongol-api-rest.vercel.app
+/clothes')
     .then(res => res.json())
     .then(json => console.log(json))`;
 
-const TouristRestQuery = `fetch('https://mongol-api.vercel.app/api/
-touristAttractions')
+const TouristRestQuery = `fetch('https://mongol-api-rest.vercel.app
+/touristAttractions')
     .then(res => res.json())
     .then(json => console.log(json))`;
 
-const EthnicGroupRestQuery = `fetch('https://mongol-api.vercel.app/api/
-ethnicGroups')
+const EthnicGroupRestQuery = `fetch('https://mongol-api-rest.vercel.app
+/ethnicGroups')
     .then(res => res.json())
     .then(json => console.log(json))`;
 

@@ -46,7 +46,7 @@ export const generateGraphQLQueryResult = (
 
 // Generate REST query
 export const generateRestQuery = (dataName: string) => {
-  return `fetch('https://mongol-api.vercel.app/api/${dataName}')
+  return `fetch('https://mongol-api-rest.vercel.app/${dataName}')
     .then(res => res.json())
     .then(json => console.log(json))`;
 };
