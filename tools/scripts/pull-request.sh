@@ -69,6 +69,7 @@ done
 
 if [ -n "$action_output" ]; then
     action_output="${action_output%, }"
+    action_output=$(echo "$action_output" | sed 's/, /,\n/g')
 fi
 echo "ACTION_OUTPUT=${action_output}" >>$GITHUB_ENV
 echo "::set-output name=action_output::${action_output}"
